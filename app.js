@@ -3,7 +3,11 @@
   "use strict";
 
   const LETTERS = ["A", "B", "C", "D", "E", "F"];
-  const STORE_KEY = "cr67_progress_v1";
+  const PROFILES_KEY = "cr67_profiles";
+  const ACTIVE_KEY = "cr67_active_profile";
+  const LEGACY_KEY = "cr67_progress_v1";
+  const progressKey = (id) => `cr67_progress_v1::${id}`;
+  const newId = () => "p" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
 
   const state = {
     all: [],          // full question bank
@@ -14,11 +18,41 @@
     revealed: {},     // sessionIndex -> bool (flash mode / revealed)
   };
 
-  // ---- Persistent store (missed set + seen set + session history) ----
-  const store = loadStore();
+  // ---- Profiles (each profile gets its own progress store) ----
+  let profiles = loadProfiles();
+  let activeId = localStorage.getItem(ACTIVE_KEY);
+  if (!profiles.some((p) => p.id === activeId)) {
+    activeId = profiles[0].id;
+    try { localStorage.setItem(ACTIVE_KEY, activeId); } catch {}
+  }
+
+  function loadProfiles() {
+    let list;
+    try { list = JSON.parse(localStorage.getItem(PROFILES_KEY)); } catch { list = null; }
+    if (!Array.isArray(list) || !list.length) {
+      // Bootstrap a Default profile, migrating any pre-profiles progress into it.
+      const id = "default";
+      list = [{ id, name: "Default" }];
+      try {
+        localStorage.setItem(PROFILES_KEY, JSON.stringify(list));
+        const legacy = localStorage.getItem(LEGACY_KEY);
+        if (legacy && !localStorage.getItem(progressKey(id))) {
+          localStorage.setItem(progressKey(id), legacy);
+        }
+        localStorage.setItem(ACTIVE_KEY, id);
+      } catch {}
+    }
+    return list;
+  }
+  function saveProfiles() {
+    try { localStorage.setItem(PROFILES_KEY, JSON.stringify(profiles)); } catch {}
+  }
+
+  // ---- Per-profile progress store (missed set + seen set + history + flags) ----
+  let store = loadStore();
   function loadStore() {
     let s;
-    try { s = JSON.parse(localStorage.getItem(STORE_KEY)); } catch { s = null; }
+    try { s = JSON.parse(localStorage.getItem(progressKey(activeId))); } catch { s = null; }
     s = s || {};
     s.missed = s.missed || {};
     s.seen = s.seen || {};
@@ -27,12 +61,15 @@
     return s;
   }
   function saveStore() {
-    try { localStorage.setItem(STORE_KEY, JSON.stringify(store)); } catch {}
+    try { localStorage.setItem(progressKey(activeId), JSON.stringify(store)); } catch {}
   }
 
   // ---- DOM ----
   const el = (id) => document.getElementById(id);
   const dom = {
+    profileSelect: el("profile-select"),
+    renameProfileBtn: el("rename-profile-btn"),
+    deleteProfileBtn: el("delete-profile-btn"),
     startScreen: el("start-screen"),
     quizScreen: el("quiz-screen"),
     resultsScreen: el("results-screen"),
@@ -107,6 +144,81 @@
     dom.modeFlash.setAttribute("aria-selected", mode === "flash");
     // If mid-session, re-render current card under new mode rules.
     if (!dom.quizScreen.classList.contains("hidden")) render();
+  }
+
+  // ---- Profiles UI ----
+  renderProfileSelect();
+  dom.profileSelect.addEventListener("change", (e) => {
+    const v = e.target.value;
+    if (v === "__new__") createProfile();
+    else switchProfile(v);
+  });
+  dom.renameProfileBtn.addEventListener("click", renameProfile);
+  dom.deleteProfileBtn.addEventListener("click", deleteProfile);
+
+  function renderProfileSelect() {
+    const sel = dom.profileSelect;
+    sel.innerHTML = "";
+    profiles.forEach((p) => {
+      const o = document.createElement("option");
+      o.value = p.id;
+      o.textContent = p.name;
+      if (p.id === activeId) o.selected = true;
+      sel.appendChild(o);
+    });
+    const nw = document.createElement("option");
+    nw.value = "__new__";
+    nw.textContent = "＋ New profile…";
+    sel.appendChild(nw);
+    dom.deleteProfileBtn.disabled = profiles.length <= 1;
+  }
+
+  function switchProfile(id) {
+    if (!profiles.some((p) => p.id === id)) { renderProfileSelect(); return; }
+    activeId = id;
+    try { localStorage.setItem(ACTIVE_KEY, id); } catch {}
+    store = loadStore();
+    dom.optOnlyMissed.checked = false;
+    dom.optOnlyFlagged.checked = false;
+    renderProfileSelect();
+    renderMissedOption();
+    renderHistory();
+    renderFlaggedOption();
+    showScreen("start");
+    const p = profiles.find((x) => x.id === id);
+    flashMsg(`Switched to "${p ? p.name : ""}".`);
+  }
+
+  function createProfile() {
+    const name = (prompt("Name for the new profile:") || "").trim();
+    if (!name) { renderProfileSelect(); return; } // revert select to current
+    const id = newId();
+    profiles.push({ id, name });
+    saveProfiles();
+    switchProfile(id); // starts with a fresh, empty progress store
+  }
+
+  function renameProfile() {
+    const cur = profiles.find((p) => p.id === activeId);
+    if (!cur) return;
+    const name = (prompt("Rename this profile:", cur.name) || "").trim();
+    if (!name) return;
+    cur.name = name;
+    saveProfiles();
+    renderProfileSelect();
+    flashMsg("Profile renamed.");
+  }
+
+  function deleteProfile() {
+    if (profiles.length <= 1) { alert("You can't delete your only profile."); return; }
+    const cur = profiles.find((p) => p.id === activeId);
+    if (!cur) return;
+    if (!confirm(`Delete profile "${cur.name}" and all of its progress on this device? This can't be undone.`)) return;
+    try { localStorage.removeItem(progressKey(cur.id)); } catch {}
+    profiles = profiles.filter((p) => p.id !== cur.id);
+    saveProfiles();
+    switchProfile(profiles[0].id);
+    flashMsg("Profile deleted.");
   }
 
   // ---- Start ----

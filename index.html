@@ -22,6 +22,15 @@
   <main id="app">
     <!-- Start screen -->
     <section id="start-screen" class="screen">
+      <div class="card profile-card">
+        <label for="profile-select" class="muted small">Profile</label>
+        <div class="profile-row">
+          <select id="profile-select" aria-label="Select profile"></select>
+          <button id="rename-profile-btn" class="text-btn" type="button">Rename</button>
+          <button id="delete-profile-btn" class="text-btn danger" type="button">Delete</button>
+        </div>
+      </div>
+
       <div class="card start-card">
         <h2>Ready to study?</h2>
         <p id="bank-summary" class="muted">Loading question bank…</p>
