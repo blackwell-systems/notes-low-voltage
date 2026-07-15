@@ -10,7 +10,10 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <h1>CR-67 Low Voltage</h1>
+      <div class="topbar-title">
+        <h1>CR-67 Low Voltage</h1>
+        <span id="active-profile" class="active-profile" title="Active profile"></span>
+      </div>
       <div class="mode-toggle" role="tablist" aria-label="Study mode">
         <button id="mode-quiz" class="mode-btn active" role="tab" aria-selected="true">Quiz</button>
         <button id="mode-flash" class="mode-btn" role="tab" aria-selected="false">Flashcards</button>
@@ -28,6 +31,11 @@
           <select id="profile-select" aria-label="Select profile"></select>
           <button id="rename-profile-btn" class="text-btn" type="button">Rename</button>
           <button id="delete-profile-btn" class="text-btn danger" type="button">Delete</button>
+        </div>
+        <div id="profile-edit" class="profile-edit hidden">
+          <input id="profile-name-input" type="text" maxlength="40" placeholder="Profile name" autocomplete="off" />
+          <button id="profile-save-btn" class="primary-btn small-btn" type="button">Save</button>
+          <button id="profile-cancel-btn" class="text-btn" type="button">Cancel</button>
         </div>
       </div>
 

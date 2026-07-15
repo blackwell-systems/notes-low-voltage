@@ -45,10 +45,19 @@ html, body {
   justify-content: space-between;
   gap: 12px;
 }
+.topbar-title { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
 .topbar h1 {
   font-size: 1.05rem;
   margin: 0;
   letter-spacing: 0.2px;
+}
+.active-profile {
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40vw;
 }
 .mode-toggle {
   display: inline-flex;
@@ -268,6 +277,23 @@ main {
   padding: 9px 10px;
   font-size: 0.95rem;
 }
+.profile-edit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+#profile-name-input {
+  flex: 1;
+  min-width: 0;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 9px 10px;
+  font-size: 0.95rem;
+}
+.small-btn { flex: 0 0 auto; padding: 9px 16px; font-size: 0.9rem; }
 
 /* ---- Score history ---- */
 .history-card { margin-top: 16px; text-align: left; }

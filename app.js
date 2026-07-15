@@ -67,9 +67,14 @@
   // ---- DOM ----
   const el = (id) => document.getElementById(id);
   const dom = {
+    activeProfile: el("active-profile"),
     profileSelect: el("profile-select"),
     renameProfileBtn: el("rename-profile-btn"),
     deleteProfileBtn: el("delete-profile-btn"),
+    profileEdit: el("profile-edit"),
+    profileNameInput: el("profile-name-input"),
+    profileSaveBtn: el("profile-save-btn"),
+    profileCancelBtn: el("profile-cancel-btn"),
     startScreen: el("start-screen"),
     quizScreen: el("quiz-screen"),
     resultsScreen: el("results-screen"),
@@ -147,14 +152,23 @@
   }
 
   // ---- Profiles UI ----
+  let profileEditMode = null; // "rename" | "new" | null
   renderProfileSelect();
+  updateActiveProfileLabel();
+
   dom.profileSelect.addEventListener("change", (e) => {
     const v = e.target.value;
-    if (v === "__new__") createProfile();
+    if (v === "__new__") openProfileEdit("new");
     else switchProfile(v);
   });
-  dom.renameProfileBtn.addEventListener("click", renameProfile);
+  dom.renameProfileBtn.addEventListener("click", () => openProfileEdit("rename"));
   dom.deleteProfileBtn.addEventListener("click", deleteProfile);
+  dom.profileSaveBtn.addEventListener("click", saveProfileEdit);
+  dom.profileCancelBtn.addEventListener("click", closeProfileEdit);
+  dom.profileNameInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); saveProfileEdit(); }
+    else if (e.key === "Escape") closeProfileEdit();
+  });
 
   function renderProfileSelect() {
     const sel = dom.profileSelect;
@@ -173,6 +187,47 @@
     dom.deleteProfileBtn.disabled = profiles.length <= 1;
   }
 
+  function updateActiveProfileLabel() {
+    const p = profiles.find((x) => x.id === activeId);
+    dom.activeProfile.textContent = p ? `👤 ${p.name}` : "";
+  }
+
+  // Inline name editor (reliable on mobile — no blocked prompt() dialogs).
+  function openProfileEdit(mode) {
+    profileEditMode = mode;
+    const cur = profiles.find((p) => p.id === activeId);
+    dom.profileNameInput.value = mode === "rename" && cur ? cur.name : "";
+    dom.profileNameInput.placeholder = mode === "new" ? "New profile name" : "Profile name";
+    dom.profileEdit.classList.remove("hidden");
+    dom.profileNameInput.focus();
+    dom.profileNameInput.select();
+  }
+  function closeProfileEdit() {
+    profileEditMode = null;
+    dom.profileEdit.classList.add("hidden");
+    renderProfileSelect(); // undo a "＋ New profile…" selection
+  }
+  function saveProfileEdit() {
+    const name = dom.profileNameInput.value.trim();
+    if (!name) { dom.profileNameInput.focus(); return; }
+    if (profileEditMode === "new") {
+      const id = newId();
+      profiles.push({ id, name });
+      saveProfiles();
+      profileEditMode = null;
+      dom.profileEdit.classList.add("hidden");
+      switchProfile(id); // fresh, empty progress store
+    } else if (profileEditMode === "rename") {
+      const cur = profiles.find((p) => p.id === activeId);
+      if (cur) { cur.name = name; saveProfiles(); }
+      profileEditMode = null;
+      dom.profileEdit.classList.add("hidden");
+      renderProfileSelect();
+      updateActiveProfileLabel();
+      flashMsg("Profile renamed.");
+    }
+  }
+
   function switchProfile(id) {
     if (!profiles.some((p) => p.id === id)) { renderProfileSelect(); return; }
     activeId = id;
@@ -180,33 +235,16 @@
     store = loadStore();
     dom.optOnlyMissed.checked = false;
     dom.optOnlyFlagged.checked = false;
+    dom.profileEdit.classList.add("hidden");
+    profileEditMode = null;
     renderProfileSelect();
+    updateActiveProfileLabel();
     renderMissedOption();
     renderHistory();
     renderFlaggedOption();
     showScreen("start");
     const p = profiles.find((x) => x.id === id);
     flashMsg(`Switched to "${p ? p.name : ""}".`);
-  }
-
-  function createProfile() {
-    const name = (prompt("Name for the new profile:") || "").trim();
-    if (!name) { renderProfileSelect(); return; } // revert select to current
-    const id = newId();
-    profiles.push({ id, name });
-    saveProfiles();
-    switchProfile(id); // starts with a fresh, empty progress store
-  }
-
-  function renameProfile() {
-    const cur = profiles.find((p) => p.id === activeId);
-    if (!cur) return;
-    const name = (prompt("Rename this profile:", cur.name) || "").trim();
-    if (!name) return;
-    cur.name = name;
-    saveProfiles();
-    renderProfileSelect();
-    flashMsg("Profile renamed.");
   }
 
   function deleteProfile() {
