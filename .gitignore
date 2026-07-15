@@ -1,0 +1,7 @@
+# Raw source photos — 633MB of screen pics, not needed by the site.
+# The diagrams we keep live in media/ (committed).
+assets/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

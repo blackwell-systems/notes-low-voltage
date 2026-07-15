@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CR-67 Low Voltage — Practice Quiz</title>
+  <meta name="description" content="Practice quiz for the CR-67 Low Voltage Communications Systems exam." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1>CR-67 Low Voltage</h1>
+      <div class="mode-toggle" role="tablist" aria-label="Study mode">
+        <button id="mode-quiz" class="mode-btn active" role="tab" aria-selected="true">Quiz</button>
+        <button id="mode-flash" class="mode-btn" role="tab" aria-selected="false">Flashcards</button>
+      </div>
+    </div>
+    <div class="progressbar"><div id="progress-fill" class="progressbar-fill"></div></div>
+  </header>
+
+  <main id="app">
+    <!-- Start screen -->
+    <section id="start-screen" class="screen">
+      <div class="card start-card">
+        <h2>Ready to study?</h2>
+        <p id="bank-summary" class="muted">Loading question bank…</p>
+        <label class="opt-check">
+          <input type="checkbox" id="opt-shuffle" checked />
+          <span>Shuffle questions</span>
+        </label>
+        <label class="opt-check">
+          <input type="checkbox" id="opt-onlymissed" />
+          <span>Only questions I've missed before</span>
+        </label>
+        <button id="start-btn" class="primary-btn" disabled>Start</button>
+        <p id="resume-line" class="muted small hidden"></p>
+      </div>
+    </section>
+
+    <!-- Question screen -->
+    <section id="quiz-screen" class="screen hidden">
+      <div class="card question-card">
+        <div class="q-meta">
+          <span id="q-counter" class="muted small"></span>
+          <span id="q-id" class="muted small"></span>
+        </div>
+        <h2 id="q-text" class="q-text"></h2>
+        <figure id="q-media" class="q-media hidden">
+          <img id="q-media-img" alt="Reference chart or diagram for this question" />
+        </figure>
+        <div id="q-options" class="options"></div>
+        <div id="q-explanation" class="explanation hidden">
+          <h3>Explanation</h3>
+          <p id="q-explanation-text"></p>
+          <div id="q-references" class="references"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="prev-btn" class="ghost-btn">‹ Prev</button>
+        <button id="reveal-btn" class="primary-btn hidden">Show answer</button>
+        <button id="next-btn" class="primary-btn">Next ›</button>
+      </div>
+    </section>
+
+    <!-- Results screen -->
+    <section id="results-screen" class="screen hidden">
+      <div class="card">
+        <h2>Session complete</h2>
+        <p id="score-line" class="score-line"></p>
+        <div id="score-breakdown" class="muted"></div>
+        <div class="controls center">
+          <button id="review-missed-btn" class="ghost-btn">Review missed</button>
+          <button id="restart-btn" class="primary-btn">Start over</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="muted small">Practice material. Verify against current NEC/NFPA before relying on any answer.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

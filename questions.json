@@ -1,0 +1,2336 @@
+{
+  "meta": {
+    "title": "CR-67 Low Voltage Communications Systems",
+    "count": 160
+  },
+  "questions": [
+    {
+      "id": "11891",
+      "question": "In addition to the required working clearance measured from the enclosure front, the work space in front of an electrical panel board operating at 120 volts to ground shall have a width of at least?",
+      "options": [
+        "48 inches",
+        "36 inches",
+        "24 inches",
+        "30 inches"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 110.26(A)(2) (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2008: 110.26(A)(2) (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "11967",
+      "question": "Unprotected alarm system wiring is installed in bored holes in wood studs. What minimum distance from the nearest edge of the stud shall each hole be bored?",
+      "options": [
+        "1-1/4 inches",
+        "1 inch",
+        "2-1/2 inches",
+        "1-1/2 inches"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 300.4 (A)(1)",
+        "NFPA 70: National Electrical Code 2008 : 300.4 (A)(1)"
+      ]
+    },
+    {
+      "id": "12580",
+      "question": "What conductor type is recommended for use in a wet location is:",
+      "options": [
+        "THHX",
+        "THHN",
+        "TFE",
+        "XHHW"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NEC 2017 (NFPA 70): 310.104, table(s) 310.104(A)",
+        "NEC 2008 (NFPA 70): 310.13; table(s) 310.13(a)-310.13(e)"
+      ]
+    },
+    {
+      "id": "12662",
+      "question": "The grounding conductors on a CATV system coax cable shall be a minimum of _____ size awg.",
+      "options": [
+        "18 AWG",
+        "16 AWG",
+        "14 AWG",
+        "20 AWG"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 70: National Electrical Code 2017: 820.100(A)(3) (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2008: 820.100.A.3 (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "12663",
+      "question": "Given: An Electrical service drop of 208Y/120V runs above and parallel to a communications service drop. What minimum separation must be maintained between these drops?",
+      "options": [
+        "18 inches",
+        "24 inches",
+        "6 inches",
+        "12 inches"
+      ],
+      "answerIndex": 3,
+      "explanation": "Math Help: Given: An Electrical service drop of 208Y/120V runs above and parallel to a communications service drop. What minimum separation must be maintained between these drops?",
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 800...",
+        "NFPA 70: National Electrical Code 2008 : 800.44(A)...",
+        "NFPA 70: National Electrical Code Tabs 2017 : 800.44(A)(4)",
+        "NFPA 70: National Electrical Code 2008 : 800.44(A)(4)"
+      ]
+    },
+    {
+      "id": "12832",
+      "question": "An antenna is installed on a dwelling for a signal reception. What is the smallest size copper grounding conductor allowed?",
+      "options": [
+        "size 10 AWG",
+        "size 17 AWG",
+        "size 8 AWG",
+        "size 12 AWG"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 810.21(H)",
+        "NFPA 70: National Electrical Code 2008 : 810.21(H)"
+      ]
+    },
+    {
+      "id": "12963",
+      "question": "Given: The coaxial cable on a cable TV system is inside a building where electrical power conductors are NOT in the same raceways or cable trays. What minimum separation must this coaxial cable have from the electric power lines?",
+      "options": [
+        "6 inches",
+        "2 inches",
+        "8 inches",
+        "4 inches"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code 2023 : 800.133(B) (Not allowed in Test)",
+        "NFPA 70: National Electrical Code 2017 : 820.133(A)(2) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "13074",
+      "question": "Rigid Metal Conduit is required to be supported at least every how many feet",
+      "options": [
+        "8",
+        "10",
+        "3",
+        "5"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 344.30(B)(1)",
+        "NFPA 70: National Electrical Code 2008 : 344.30(B)(1)"
+      ]
+    },
+    {
+      "id": "13079",
+      "question": "Equipment that is fastened in place has exposed noncurrent carrying metal parts that are likely to become energized. This equipment shall be grounded if it is within what minimum vertical distance from the ground or from grounded metal objects?",
+      "options": [
+        "9 feet or 108 inches",
+        "10 feet or 120 inches",
+        "8 feet or 96 inches",
+        "7 feet or 84 inches"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 70: National Electrical Code 2023: 250.110(1) (Not allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 250.110(1) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "13097",
+      "question": "Optical fiber cable in a vertical run, inside a shaft shall be of type?",
+      "options": [
+        "OFCR or OFNR",
+        "OCFD or OCFG",
+        "FPLR or FPLP",
+        "CMPR or CLXR"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code 2023 : 770.179(B) (Not allowed in Test)",
+        "NFPA 70: National Electrical Code 2017 : Table 770.179(B) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "13105",
+      "question": "Given: The amount of power that a coax cable is permitted to deliver when used in a CATV system is limited by the NEC. What is the maximum voltage that a coax in a CATV system may deliver if the coax is supplied by a transformer?",
+      "options": [
+        "24 volts",
+        "48 volts",
+        "110 volts",
+        "60 volts"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 820.15",
+        "NFPA 70: National Electrical Code 2017: 820.15",
+        "NFPA 70: National Electrical Code 2008: 820.15"
+      ]
+    },
+    {
+      "id": "13198",
+      "question": "Refer to the illustration, what is the total resistance of this circuit?",
+      "options": [
+        "10 ohms",
+        "25 ohms",
+        "5 ohms",
+        "15 ohms"
+      ],
+      "answerIndex": 0,
+      "explanation": "Refer to the illustration, what is the total resistance of this circuit? The 1, 6 and 3 ohm resistors are in series: 1 + 6 + 3 = 10 ohms. This then makes two 10 ohm resistors in parallel. RT = R1 x R2 / R1 + R2 (10 x 10 = 100) / (10 + 10 = 20) = 5 ohms. This makes 1, 6, 3, and 10 ohm portion of the circuit look like 5 ohms to the rest of the circuit. This 5 ohms is in series with the 2 and 3 ohm resistors so they can be added together to equal 10 ohms; 2 + 5 + 3 = 10 ohms total",
+      "references": [
+        "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition",
+        "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : 276-",
+        "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : 276-279"
+      ],
+      "media": "media/13198.jpg",
+      "mediaDescription": "Circuit diagram popup dialog titled 'Diagram'. A 10 VOLTS battery source. Top branch left: 2 ohms resistor; bottom branch left: 3 ohms resistor. Middle: 10 ohms resistor (vertical). Right side: top 1 ohm resistor, bottom 3 ohms resistor, and a 6 ohms resistor (vertical on far right). The 1, 6, and 3 ohm resistors are in series (=10 ohms), which is in parallel with the 10 ohm resistor (=5 ohms), then in series with the 2 and 3 ohm resistors (2+5+3=10 ohms total)."
+    },
+    {
+      "id": "13282",
+      "question": "Type CMR communications cable may be installed in an environmental air duct _____.",
+      "options": [
+        "only if the cable is properly grounded",
+        "under no conditions, communication cable must be run outside of air ducts",
+        "only if all penetrations in the duct are sealed and the cable is protected from abrasions",
+        "only if the cable is installed in some electrical metal conduit"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 800.154, table 800.154(a)",
+        "NFPA 70: National Electrical Code 2008 : 820.154(A), 300.22"
+      ]
+    },
+    {
+      "id": "13340",
+      "question": "A low voltage cable needs to be installed from a central alarm panel, through a fire resistance rated wall to a heat detector in an attached garage. According to the NEC what provisions, if any, shall be made where the cable penetrates the fire resistance wall?",
+      "options": [
+        "the openings around the penetrations must be fire-stopped using approved methods",
+        "no special provisions must be made",
+        "no penetrations of any kind may be made through a fire resistance rated wall",
+        "junction boxes must be installed on either side of the wall and connected with a conduit nipple"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 300.21 (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017 : 300.21 (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2008 : 300.21 (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "13623",
+      "question": "For general wiring, what type of cable containing one or more conductors is approved for direct burial in the earth.",
+      "options": [
+        "XHHW",
+        "THHN",
+        "USE",
+        "THW"
+      ],
+      "answerIndex": 2,
+      "explanation": "310.7 Direct-Burial Conductors. Conductors used for direct-burial applications shall be of a type identified for such use. Cables rated above 2000 volts shall be shielded. 338.2 Definitions Service-Entrance Cable. A single conductor or multiconductor assembly provided with or without an overall covering, primarily used for services, and of the following types: Type SE. Service-entrance cable having a flame-retardant, moisture-resistant covering. Type USE. Service-entrance cable, identified for underground use, having a moisture-resistant covering, but not required to have a flame-retardant covering.",
+      "references": [
+        "NEC 2017: 310.10(F), 338.2",
+        "NFPA 70: National Electrical Code 2008: 310.7, 338.2",
+        "NFPA 70: National Electrical Code Tabs 2017: 310.10(F), 338.2 (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 310.10(F), 338.2 (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2008: 310.7, 338.2 (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "13892",
+      "question": "What is the MINIMUM number of inches that open conductors for telephone signals inside a building shall be separated from open conductors of light or power?",
+      "options": [
+        "2 inches",
+        "1 inch",
+        "3 inches",
+        "4 inches"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code 2023: 800.133(B) (Not allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 800.133(A)(2) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "13929",
+      "question": "Conductors for power limited fire alarm circuits that are not protected by a raceway are permitted in plenum if they are type?",
+      "options": [
+        "FPLP",
+        "NPLFR",
+        "FPLR",
+        "FPL"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 760.179(D), Table 760.154",
+        "NFPA 70: National Electrical Code 2017: 760.179(D), Table 760.154",
+        "NFPA 70: National Electrical Code 2008: 760.154(A)"
+      ]
+    },
+    {
+      "id": "14189",
+      "question": "Communication cables in a vertical run in a shaft shall be which of the following types?",
+      "options": [
+        "CMR",
+        "CMP",
+        "CM",
+        "CMG"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: Table 800.154(d) (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: Table 800.154(d) (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2008: 800.154(B)(1) (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "14197",
+      "question": "All of the following types of conductors can be used in a wet location EXCEPT?",
+      "options": [
+        "UF",
+        "THHN",
+        "USE",
+        "THW"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NEC 2017 (NFPA 70): table 310.104(A)",
+        "NEC 2008 (NFPA 70): 310.13, table 310.13"
+      ]
+    },
+    {
+      "id": "14201",
+      "question": "Open communication wire and cables from the protector to the equipment communication circuit conductors shall be separated from conductors of Class I circuits by what minimum distance?",
+      "options": [
+        "3 inches",
+        "1 inch",
+        "4 inches",
+        "2 inches"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 800.133(A)(2)"
+      ]
+    },
+    {
+      "id": "14240",
+      "question": "The amount of time that a proprietary station has to record a signal after it has been sent from an annunciator is _____.",
+      "options": [
+        "90 seconds",
+        "30 seconds",
+        "60 seconds",
+        "120 seconds"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 72 2016: 26.6.5.1.1(1)"
+      ]
+    },
+    {
+      "id": "14241",
+      "question": "An intermittent alarm trouble signal must sound at least once every _____ seconds, with a minimum duration of 1/2 second.",
+      "options": [
+        "15 seconds",
+        "10 seconds",
+        "5 seconds",
+        "30 seconds"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 72: National Fire Alarm Code, 2007 Edition : 4.4.3.5.3",
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.14.3",
+        "NFPA 72: National Fire Alarm and Signaling Code 2010 : 10.12.3"
+      ]
+    },
+    {
+      "id": "14244",
+      "question": "Of the following types of cable, which one is rated for both plenum and raceways use?",
+      "options": [
+        "CMP",
+        "CMG",
+        "CMR",
+        "CM"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 800.154, Table 800.154(d), fig. 800.154",
+        "NFPA 70: National Electrical Code 2017 : 800.154, Table 800.154(d), fig. 800.154",
+        "NFPA 70: National Electrical Code 2008 : 800.154(A)"
+      ]
+    },
+    {
+      "id": "14249",
+      "question": "Heat detectors mounted on the ceiling shall be a minimum of ______ off the wall.",
+      "options": [
+        "12 inches",
+        "24 inches",
+        "18 inches",
+        "4 inches"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 29.8.4.3"
+      ]
+    },
+    {
+      "id": "51429",
+      "question": "CATV cables must maintain _____ distance between lightning conductors.",
+      "options": [
+        "2 feet",
+        "8 feet",
+        "6 feet",
+        "4 feet"
+      ],
+      "answerIndex": 2,
+      "explanation": "800.53 Separation from Lightning Conductors. Where practicable, a separation of at least 1.8 m (6 ft) shall be maintained between lightning conductors and all communication wires and cables and CATV type coaxial cables on buildings.",
+      "references": [
+        "NFPA 70: National Electrical Code 2023: 800.53 (Not allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 800.53 (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "51459",
+      "question": "How many feet from a bathroom should a fire alarm, smoke alarm or fire detector be installed?",
+      "options": [
+        "1 foot",
+        "3 feet",
+        "2 feet",
+        "4 feet"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 29.8.3.4(6)"
+      ]
+    },
+    {
+      "id": "51514",
+      "question": "In fire alarms, what type cable is used in ducts and plenums or other spaces for environmental air ?",
+      "options": [
+        "NPLF",
+        "FPL",
+        "NPLFR",
+        "NPLFP"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code 2023 : 760.53(B)(2) (Not allowed in Test)",
+        "NFPA 70: National Electrical Code 2017 : 760.53(B)(2) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "51964",
+      "question": "Possible phrasing... When the free ends for testing are touched to a closed circuit of not too high resistance, the bell rings. If the circuit is _____, the bell will not ring. OR Two #18 conductors, one is connected to a bell and one is connected to ground in conduit. When the two wire are connected together the bell rings, when not connected together the circuit is:",
+      "options": [
+        "Open",
+        "connected properly",
+        "grounded properly",
+        "Shorted"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "52027",
+      "question": "A fire alarm system shall require a visible notification device when the ambient sound is greater than?",
+      "options": [
+        "100 dBa",
+        "110 dBa",
+        "115 dBa",
+        "105 dBa"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.4.1.1 (Allowed)"
+      ]
+    },
+    {
+      "id": "52224",
+      "question": "Vertical 18 AWG communication conductors in raceways shall be supported every:",
+      "options": [
+        "10 feet",
+        "100 feet",
+        "50 feet",
+        "25 feet"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NEC 2017 (NFPA 70): table 300.19(A)",
+        "NEC 2008 (NFPA 70): 800.110, 300.19(A) to table 300.19(A)"
+      ]
+    },
+    {
+      "id": "52587",
+      "question": "Refer to the illustration, what type of switch is this?",
+      "options": [
+        "Double pole, single throw",
+        "Double pole, double throw",
+        "Single pole, double throw",
+        "Single pole, single throw"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Ugly's Electrical References 2023 : 126 (Not allowed in Test)"
+      ],
+      "media": "media/52587.jpg",
+      "mediaDescription": "A 'Diagram' popup dialog showing an enlarged electrical switch schematic. The schematic depicts a switch with two input lines on the left (two poles). Each pole has a movable contact arm; the upper arm connects to a common node then can throw between an upper output line and a lower output line, and similarly the lower pole. A dashed vertical line links the two switch arms (ganged mechanical linkage), and there are multiple output lines (four) on the right. This represents a double pole, double throw (DPDT) switch. Text: 'Click to open image in new window' and a 'Close' button."
+    },
+    {
+      "id": "52646",
+      "question": "Fire alarm circuits shall be identified at ______.",
+      "options": [
+        "All terminal and junction locations",
+        "the panel",
+        "the controller",
+        "the detectors only"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code 2017: 760.30",
+        "NFPA 70: National Electrical Code 2008: 760.30"
+      ]
+    },
+    {
+      "id": "52845",
+      "question": "What is used to get a true measure of voltage?",
+      "options": [
+        "Resistance meter",
+        "Voltmeter",
+        "Ammeter",
+        "Ohmmeter"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Understanding and Servicing Alarm Systems 3rd Edition : 1.5.1 (Not allowed in Test)",
+        "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : pg. 222 (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "52954",
+      "question": "Which type of circuit has components that look like a ladder?",
+      "options": [
+        "Parallel/series",
+        "Series",
+        "Series/parallel",
+        "Parallel"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : pg. 269"
+      ]
+    },
+    {
+      "id": "53183",
+      "question": "What is the minimum multi-conductor non-power limited wire size allowed for a fire alarm?",
+      "options": [
+        "18 awg",
+        "20 awg",
+        "14 awg",
+        "16 awg"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code 2023: 760.53, 760.176(A) (Not allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 760.53, 760.176(A) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "53481",
+      "question": "The secondary power supply shall automatically provide power to the protected premises fire alarm system within how many seconds whenever the primary power supply fails to provide the minimum voltage required for proper operation.",
+      "options": [
+        "10 seconds",
+        "15 seconds",
+        "30 seconds",
+        "20 seconds"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 72 2016: 10.6.6.1"
+      ]
+    },
+    {
+      "id": "53482",
+      "question": "A secondary power supply providing power to a fire alarm system shall have the capacity to provide power under quiescent load (system operating in a non alarm condition) for a minimum of _____.",
+      "options": [
+        "6 hours",
+        "12 hours",
+        "24 hours",
+        "48 hours"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.6.7.2.1"
+      ]
+    },
+    {
+      "id": "53612",
+      "question": "Refer to the illustration, What type of chart is this?",
+      "options": [
+        "Peak Wave",
+        "Oscilloscope",
+        "Non Peak wave",
+        "Sine Wave"
+      ],
+      "answerIndex": 3,
+      "explanation": "Refer to the illustration, What type of chart is this? Sinusoidal Waveform The waveform for alternating-current circuits is symmetrical, with positive above and negative below the zero reference level. For most alternating-current circuits, the waveform is called a sine wave or a sinusoidal waveform.",
+      "media": "media/53612.jpg",
+      "mediaDescription": "Enlarged Diagram popup ('Click to open image in new window'): oscilloscope grid graph of a sinusoidal (sine) waveform. Y-axis labeled 'VOLTS = .5/DIV' (vertical), X-axis labeled X, origin at 0. The curve shows multiple cycles; point A marked at a positive peak/crest and point B marked at a negative trough/valley. A dashed horizontal line marks the zero reference level with positive above and negative below."
+    },
+    {
+      "id": "54121",
+      "question": "What type of wire is to be used for common direct burial?",
+      "options": [
+        "TW",
+        "THHN",
+        "USE",
+        "THN"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "54122",
+      "question": "According to the NEC, Class 1 circuits are allowed a minimum wire size of ______ AWG.",
+      "options": [
+        "22",
+        "18",
+        "24",
+        "16"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 725.49",
+        "NFPA 70: National Electrical Code 2017: 725.49",
+        "NFPA 70: National Electrical Code 2008: 725.49"
+      ]
+    },
+    {
+      "id": "54123",
+      "question": "What is the color of an equipment grounding conductor?",
+      "options": [
+        "green with yellow stripe",
+        "orange",
+        "blue",
+        "yellow"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 250.119",
+        "NFPA 70: National Electrical Code 2017: 250.119",
+        "NFPA 70: National Electrical Code 2008: 250.119"
+      ]
+    },
+    {
+      "id": "54124",
+      "question": "What are the disadvantages of fiber optics over copper? or All of the following are advantages of fiber optic cable over copper cable except:",
+      "options": [
+        "performance",
+        "electrical immunity",
+        "cost",
+        "security"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "54125",
+      "question": "Any of the following can impact and change the temperature of conductors and insulation except:",
+      "options": [
+        "adjacent load carrying conductors",
+        "ambient temperature",
+        "current load to the conductors",
+        "applied voltage to the conductors"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 310.15(A)(3)(informational note)",
+        "NFPA 70: National Electrical Code 2017: 310.15(A)(3)(informational note)"
+      ]
+    },
+    {
+      "id": "54126",
+      "question": "According to the NEC, openings around electrical penetrations through fire-resistant-rated walls, partitions, floors, or ceilings shall be _____ using approved methods to maintain the fire resistance rating.",
+      "options": [
+        "avoided",
+        "caulked",
+        "made using back to back j-boxes",
+        "fire-stopped"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 300.21 (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017 : 300.21 (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54127",
+      "question": "Type ______ communications cable may be installed in both plenums and shafts.",
+      "options": [
+        "CMP",
+        "CNPL",
+        "CMR",
+        "CMB"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 800.154, table(s) 800.154(a),(d)",
+        "NFPA 70: National Electrical Code 2017 : 800.154, table(s) 800.154(a),(d)"
+      ]
+    },
+    {
+      "id": "54128",
+      "question": "Cables installed through fire resistant rated walls, partitions, floors, or ceilings must be ______.",
+      "options": [
+        "in conduit",
+        "firestopped",
+        "sealed",
+        "caulked"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 640.3, 300.21",
+        "NFPA 70: National Electrical Code 2017: 640.3, 300.21"
+      ]
+    },
+    {
+      "id": "54129",
+      "question": "Interconnecting cables under raised floors that support information technology equipment shall be _____.",
+      "options": [
+        "Type NM",
+        "type CL1",
+        "Type DP",
+        "Type CS"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 645.5(E)(2)(5) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54130",
+      "question": "Optical fiber cables installed exposed on the surface of ceilings and sidewalls shall be supported by the building structure in such a manner that the cable will not be _____.",
+      "options": [
+        "painted",
+        "damaged by normal building use",
+        "seen by the occupants",
+        "hidden by pictures"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 770.24",
+        "NFPA 70: National Electrical Code 2017 : 770.24"
+      ]
+    },
+    {
+      "id": "54131",
+      "question": "In communication circuits, the primary protector shall be located _____ to the point of entrance.",
+      "options": [
+        "as close as practicable",
+        "below",
+        "as far as it can be from",
+        "above"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 800.90(B) (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 800.90(B) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54132",
+      "question": "After an alarm is installed in service, how long until a sensitivity test is required?",
+      "options": [
+        "1 year",
+        "5 years",
+        "2 years",
+        "6 months"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 72 2016: 14.4.4.3.1"
+      ]
+    },
+    {
+      "id": "54133",
+      "question": "What is the industry accepted maximum length of a cable run for video using RG-59U cable?",
+      "options": [
+        "1000 ft",
+        "600 ft",
+        "900 ft",
+        "500 ft"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition : p.77"
+      ]
+    },
+    {
+      "id": "54134",
+      "question": "The secondary power supply for a supervising station facility shall have a sufficient capacity to operate the fire alarm system in a non alarm condition for a minimum of _____ hours, and at the end of the period to provide for annunciation of all notification appliances for a minimum of _____ minutes.",
+      "options": [
+        "1, 24",
+        "24, 1",
+        "5, 24",
+        "24, 5"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.6.7.2.1"
+      ]
+    },
+    {
+      "id": "54135",
+      "question": "In a corridor with high lumen strobe notification appliances, what is the maximum spacing between units?",
+      "options": [
+        "59 feet",
+        "75 feet",
+        "25 feet",
+        "100 feet"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.5.5.5.5"
+      ]
+    },
+    {
+      "id": "54136",
+      "question": "Activation of the initiating device shall occur within _____ of waterflow at the alarm-initiating device.",
+      "options": [
+        "30 seconds",
+        "90 seconds",
+        "10 seconds",
+        "120 seconds"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 72: National Fire Alarm Code, 2007 Edition : 5.11.2",
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.12.2"
+      ]
+    },
+    {
+      "id": "54137",
+      "question": "How do you test a tamper switch on a sprinkler system?",
+      "options": [
+        "turn knob 2 turns to the left",
+        "depress the switch and listen for a click",
+        "turn knob 2 turns to the right",
+        "short out the terminals"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "54138",
+      "question": "What is the minimum decibel level at pillow level for an audible appliance installed to provide signal to a sleeping area?",
+      "options": [
+        "50 db",
+        "25 db",
+        "75 db",
+        "100db"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.4.5.1 (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54139",
+      "question": "A tamper valve (control valve switch) shall be operated and signal receipt shall be verified within the first ______ turns of the hand wheel.",
+      "options": [
+        "three",
+        "one",
+        "two",
+        "one-half"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.16.1.2",
+        "NFPA 72: National Fire Alarm and Signaling Code 2010 : 14.4.2.2 table 10.4.2.2."
+      ]
+    },
+    {
+      "id": "54140",
+      "question": "What is the lowest allowed dB level above ambient sound for an alarm system in a sleeping area?",
+      "options": [
+        "20 db",
+        "5 db",
+        "15 db",
+        "10 db"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 72: National Fire Alarm Code, 2007 Edition : 18.4.5.1",
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.4.5.1"
+      ]
+    },
+    {
+      "id": "54141",
+      "question": "A bonding jumper not smaller than ______ copper shall be connected between the community antenna television system's grounding electrode and the power grounding electrode system at the building served where separate electrodes are used.",
+      "options": [
+        "8 awg",
+        "4 awg",
+        "10 awg",
+        "6 awg"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code 2017: 820.100(D)"
+      ]
+    },
+    {
+      "id": "54142",
+      "question": "Coaxial cables entering a mobile home must be grounded within _____ of the exterior wall of the mobile home it serves.",
+      "options": [
+        "30 feet",
+        "50 feet",
+        "20 feet",
+        "10 feet"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 820.93"
+      ]
+    },
+    {
+      "id": "54143",
+      "question": "In a store CL2P is being replaced in a plenum. Which of the following cable types is permissible for substitution?",
+      "options": [
+        "CMR",
+        "CL3R",
+        "CMG",
+        "CL3P"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NEC 2017 (NFPA 70): 725.154, Table 725.154(A)"
+      ]
+    },
+    {
+      "id": "54144",
+      "question": "In a store CL3P is being replaced in a plenum. Which of the following cable types is permissible for substitution?",
+      "options": [
+        "CL2R",
+        "CMP",
+        "CMX",
+        "CMG"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 725.154(A), Table 725",
+        "NFPA 70: National Electrical Code 2017: 725.154(A), Table 725.15",
+        "NFPA 70: National Electrical Code 2008: 725.154.G to table 725.1"
+      ]
+    },
+    {
+      "id": "54145",
+      "question": "Which of the following is suitable for use in a plenum?",
+      "options": [
+        "OFN",
+        "OFC",
+        "OFNR",
+        "OFNP"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 770.179",
+        "NFPA 70: National Electrical Code 2017 : 770.179"
+      ]
+    },
+    {
+      "id": "54146",
+      "question": "At what maximum distance down from the ceiling shall the top of a smoke detector be located if installed on a sidewall?",
+      "options": [
+        "24 inches",
+        "12 inches",
+        "6 inches",
+        "18 inches"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.7.3.2.1"
+      ]
+    },
+    {
+      "id": "54147",
+      "question": "What is the maximum size overcurrent device allowable on a non power limited fire alarm (NPLFA) system using 16 AWG conductors?",
+      "options": [
+        "20 amp",
+        "15 amp",
+        "5 amp",
+        "10 amp"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code 2023: 760.43 (Not allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 760.43 (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54148",
+      "question": "Which fiber optic cable can be used in a free air ceiling that is 60 feet long?",
+      "options": [
+        "CMP",
+        "OFCR",
+        "OFCG",
+        "OFC"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 770.179(D) (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 770.179(D) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54149",
+      "question": "All of the following methods are acceptable methods for bonding except: or What type of bonding is NOT recommended in a panel?",
+      "options": [
+        "sheet metal screws",
+        "pressure connectors",
+        "clamps",
+        "lugs"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 250.70 (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 250.70 (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54150",
+      "question": "What is the maximum square footage used for calculations for a smoke detector?",
+      "options": [
+        "900 sq ft",
+        "1200 sq ft",
+        "300 sq ft",
+        "600 sq ft"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.7.3.2.3.1 (1) (Allowed)"
+      ]
+    },
+    {
+      "id": "54151",
+      "question": "An electrically conductive path from the point of a ground fault on a wiring system through normally non-current-carrying conductors, equipment, or the earth to the electrical supply source is known as _____.",
+      "options": [
+        "conductivity",
+        "shortest path",
+        "ground fault current path",
+        "grounded system"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NEC 2017 (NFPA 70): Article 100, Definitions"
+      ]
+    },
+    {
+      "id": "54152",
+      "question": "After the second required calibration test of a smoke detector (1st annual inspection), if sensitivity tests indicate that the device has remained within its listed and marked sensitivity range, the length of time between calibration tests shall be permitted to be extended to a maximum of _____.",
+      "options": [
+        "2 years",
+        "10 years",
+        "1 year",
+        "5 years"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 14.4.4.3.3"
+      ]
+    },
+    {
+      "id": "54155",
+      "question": "Which fiber optic cable can be used in an enviromental duct?",
+      "options": [
+        "OFNG",
+        "OFNP or OFCP",
+        "OFC",
+        "OFN"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 770.179(A)",
+        "NFPA 70: National Electrical Code 2017 : 770.179(A)"
+      ]
+    },
+    {
+      "id": "54157",
+      "question": "Current flow that reverses directions continuously is called?",
+      "options": [
+        "digital",
+        "direct",
+        "Alternating",
+        "analog"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "Understanding and Servicing Alarm Systems 3rd Edition: pg. 208"
+      ]
+    },
+    {
+      "id": "54158",
+      "question": "An equipment rack is usally:",
+      "options": [
+        "in the way",
+        "8 foot high",
+        "24 to 30 inches wide",
+        "mounted in back of a room for convienence"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "54159",
+      "question": "What type of circuit should not be used to power a fire alarm system?",
+      "options": [
+        "general",
+        "laundry room",
+        "dedicated",
+        "GFCI"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 760.41(B) (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017 : 760.41(B) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54160",
+      "question": "The most common size of communication cables used in the united states are?",
+      "options": [
+        "16 - 20 awg",
+        "22 - 26 awg",
+        "18 - 24 awg",
+        "20 - 24 awg"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "Telecommunications Wiring : pg. 28"
+      ]
+    },
+    {
+      "id": "54161",
+      "question": "A circuit has one 20 ohm, one 30 ohm, and one 40 ohm resistors that are connected in parallel on a 120 volt line, what is the total resistance?",
+      "options": [
+        "6.1 ohms",
+        "12.8 ohms",
+        "18.6 ohms",
+        "9.2 ohms"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : pg. 275"
+      ]
+    },
+    {
+      "id": "54162",
+      "question": "The working space in front of a 48 inch wide panel board shall have a width of at least?",
+      "options": [
+        "48 inches",
+        "60 inches",
+        "30 inches",
+        "36 inches"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 110.26(A)(2)"
+      ]
+    },
+    {
+      "id": "54163",
+      "question": "Two conductive metals joined to complete a safety circuit is called?",
+      "options": [
+        "bonded",
+        "grounded",
+        "strapped",
+        "ground"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: Article 100, Definitions",
+        "NFPA 70: National Electrical Code 2017: Article 100, Definitions"
+      ]
+    },
+    {
+      "id": "54197",
+      "question": "What grounding type is best suited for an antenna?",
+      "options": [
+        "ground radials",
+        "copper pipe",
+        "Tree and Limb",
+        "Ring"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Antenna Toolkit: pg. 244"
+      ]
+    },
+    {
+      "id": "54198",
+      "question": "Another name for a Sine Wave is?",
+      "options": [
+        "Linear load",
+        "Sinusoidal waveform",
+        "Phase",
+        "Nonsymetrical waveform"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Live Sound Reinforcement : p.28"
+      ]
+    },
+    {
+      "id": "54199",
+      "question": "In a residence, besides smoke detectors, where may a heat detector be installed?",
+      "options": [
+        "Bathroom",
+        "Hallway",
+        "Bedroom",
+        "Dining room"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : A.29.8.4"
+      ]
+    },
+    {
+      "id": "54201",
+      "question": "Ampacity means?",
+      "options": [
+        "ohms",
+        "amperes",
+        "load",
+        "volts"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : Article 100, Definitions",
+        "NFPA 70: National Electrical Code 2017 : Article 100 definitions",
+        "NFPA 70: National Electrical Code 2008 : Article 100 definitions"
+      ]
+    },
+    {
+      "id": "54206",
+      "question": "Which of the following best describes what a Balun is?",
+      "options": [
+        "balanced transformer",
+        "circuit",
+        "load",
+        "breaker"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "id": "54208",
+      "question": "Corrosion currents are usually measured in?",
+      "options": [
+        "watts",
+        "miniamps",
+        "milliamps",
+        "kilowatts"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "54209",
+      "question": "What is the maximum bandwidth of a standard television channel?",
+      "options": [
+        "6 MHz",
+        "7 MHz",
+        "6.5 MHz",
+        "7.5 MHz"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition: page 12 (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "54210",
+      "question": "In what reference would you find accepted industry practices for mechanical execution of work performed on optical fiber cables and raceways?",
+      "options": [
+        "NEC",
+        "ANSI/NECA/BICSI 568-2006",
+        "ANSI/NECA/FOA 301-2009",
+        "NESC"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 770.24 informational note. (see help note)",
+        "NFPA 70: National Electrical Code 2017 : 770.24 informational note. (see additional note)"
+      ]
+    },
+    {
+      "id": "54211",
+      "question": "What is a causes of hums and buzzes in a sound system?",
+      "options": [
+        "ground loop problems",
+        "bad trnsformer",
+        "broken and exposed wiring",
+        "insufficient ground"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Live Sound Reinforcement: Page 213, 279"
+      ]
+    },
+    {
+      "id": "54212",
+      "question": "Communications cables shall have a voltage rating of not less than _____ volts.",
+      "options": [
+        "300",
+        "250",
+        "50",
+        "30"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 800.179",
+        "NFPA 70: National Electrical Code 2017 : 800.179",
+        "NFPA 70: National Electrical Code 2008 : 800.179"
+      ]
+    },
+    {
+      "id": "54213",
+      "question": "What type of connector is used for RG-6 cabling?",
+      "options": [
+        "F",
+        "N",
+        "ST",
+        "RCA"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition: p.139-140 (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "54214",
+      "question": "What is the minimum size grounding conductor for communications circuits?",
+      "options": [
+        "8 awg",
+        "12 awg",
+        "14 AWG",
+        "10 awg"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 800.100(A)(3)",
+        "NFPA 70: National Electrical Code 2017 : 800.100(A)(3)"
+      ]
+    },
+    {
+      "id": "54215",
+      "question": "Communications cables installed in ducts and plenums shall be type ______.",
+      "options": [
+        "CMR",
+        "CMX",
+        "CL2",
+        "CMP"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: Table 800.179(A)",
+        "NFPA 70: National Electrical Code 2017: Table 800.179(A)"
+      ]
+    },
+    {
+      "id": "54216",
+      "question": "Communications cables installed in vertical runs in a shaft shall be Type ______.",
+      "options": [
+        "CMP",
+        "CMD",
+        "CL2",
+        "CMR"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 800.1...",
+        "NFPA 70: National Electrical Code 2017 : 800.179(B)"
+      ]
+    },
+    {
+      "id": "54217",
+      "question": "A Class 2 conductor in the same cable with communication circuits shall be listed and treated as _____.",
+      "options": [
+        "low voltage",
+        "high voltage",
+        "not counting",
+        "communications cable"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 725.139(D)(1)",
+        "NFPA 70: National Electrical Code 2017 : 725.139(D)(1)"
+      ]
+    },
+    {
+      "id": "54218",
+      "question": "Any intentional alteration of frequency response including tone control is termed ____.",
+      "options": [
+        "equalization",
+        "calibration",
+        "volume",
+        "bass response"
+      ],
+      "answerIndex": 0,
+      "explanation": "d) Equalizers. The term equalization was originally applied to the process of electronically compensating for deficiencies in the ability of a component or system to accurately reproduce sounds or audio signals. Generally, the term (EQ for short) is now applied to any intentional alteration of frequency response including tone control-whether for practical or creative reasons.",
+      "references": [
+        "Live Sound Reinforcement : p.9"
+      ]
+    },
+    {
+      "id": "54219",
+      "question": "A crossover is confined to a band of frequencies for which a component is responsible. This is accomplished by:",
+      "options": [
+        "a frequency dividing network.",
+        "a multiplexer.",
+        "a duplexer.",
+        "a limiter."
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Live Sound Reinforcement : p.12"
+      ]
+    },
+    {
+      "id": "54220",
+      "question": "Single mode fiber cable does not experience modal dispersion and is not limited by bandwidth, rather it is limited by _____.",
+      "options": [
+        "attenuation caused by the electronic devices within the system",
+        "resistor configuration",
+        "capacitor size",
+        "central core size"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Telecommunications Wiring : p.4.2 (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "54221",
+      "question": "Fiber cable splicing, which consists of aligning two clean fibers end to end and joining them with an electric arc, is called _____.",
+      "options": [
+        "linking",
+        "welding",
+        "fusion splicing",
+        "brazing"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition: p.202"
+      ]
+    },
+    {
+      "id": "54222",
+      "question": "You will find difficulty using UF cable underground because:",
+      "options": [
+        "gophers will eat it.",
+        "it is hard to bend.",
+        "it breaks easily.",
+        "it has a soft plastic coating"
+      ],
+      "answerIndex": 0,
+      "explanation": "You will find difficulty using UF cable underground because: UF insulation is a tough plastic that is not affected by water or acid in the soil. However, gophers and ground squirrels love it. The small additional cost of metal conduit is an investment well made.",
+      "references": [
+        "Telecommunications Wiring: 2nd ed Page 165",
+        "Telecommunications Wiring: 2nd ed Page (number cut off, matches Page 165)"
+      ]
+    },
+    {
+      "id": "54223",
+      "question": "A line has 12 volts at the start, with a 3.2 ohm resistor in line. There is only 1.2 volts at the switch. Why?",
+      "options": [
+        "low battery",
+        "short ?",
+        "bad switch",
+        "?"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "54225",
+      "question": "Two buildings that are each 25 feet tall and have communications cable between them, NO lightning protection is needed unless they are:",
+      "options": [
+        "60 feet apart",
+        "150 feet apart",
+        "100 feet apart",
+        "75 feet apart"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NEC 2017 (NFPA 70): 800.90 Note 2(2)",
+        "NEC 2008 (NFPA 70): 800.90"
+      ]
+    },
+    {
+      "id": "54312",
+      "question": "How many waterflow actuators are allowed on one fire alarm power circuit?",
+      "options": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016: 23.8.5.5.2"
+      ]
+    },
+    {
+      "id": "54343",
+      "question": "Where a plenum is for environmental air (return plenum), how shall CATVX cable be installed in this area?",
+      "options": [
+        "with Plenum rated cable",
+        "within PVC conduit",
+        "with heavy duty hangers",
+        "within metal conduit"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 820.154, Table 820.154(a)"
+      ]
+    },
+    {
+      "id": "54365",
+      "question": "What type of cable is allowed for vertical runs in a 3 story apartment building?",
+      "options": [
+        "CATV",
+        "CATVX",
+        "CATVR",
+        "CATVP"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NEC 2017 (NFPA 70): 820.179(B)"
+      ]
+    },
+    {
+      "id": "54419",
+      "question": "What is the minimum distance required between a non power limited fire alarm cable and a power limited fire alarm cable that does not have a divider?",
+      "options": [
+        "1/2 inch (.50)",
+        "1/4 inch (.25)",
+        "1 inch (1.0)",
+        "3/4 inch (.75)"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 760.136(D)(1)"
+      ]
+    },
+    {
+      "id": "54564",
+      "question": "A CATV cable has nominal voltage of 63 volts to ground, what should be done?",
+      "options": [
+        "Double the ground",
+        "Nothing, leave it alone",
+        "Ground at the last pole",
+        "Bonded to the service ground"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 820.100(D)"
+      ]
+    },
+    {
+      "id": "54566",
+      "question": "Power limited fire alarm (PLFA) circuits must be installed in RMC or metal raceway when passing through a wall to a height of _____ above the floor.",
+      "options": [
+        "5 feet",
+        "7 feet",
+        "8 feet",
+        "6 feet"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code 2017: 760.130(B)(2) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54579",
+      "question": "What minimum distance that shall be maintained between lightning conductors and communication cables?",
+      "options": [
+        "0.61 m (2 feet)",
+        "1.8 m (6 feet)",
+        "0.91 m (3 feet)",
+        "2.44 m (8 feet)"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 800.53",
+        "NFPA 70: National Electrical Code 2017: 800.53"
+      ]
+    },
+    {
+      "id": "54580",
+      "question": "Which of the following degrees of slope is considered a flat or level ceiling?",
+      "options": [
+        "5 degrees",
+        "12 degrees",
+        "20 degrees",
+        "8 degrees"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 3.3.36.1"
+      ]
+    },
+    {
+      "id": "54581",
+      "question": "What is the maximum length recommended for RG-59U cable?",
+      "options": [
+        "100 feet",
+        "1000 feet",
+        "500 feet",
+        "2000 feet"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition : p.78"
+      ]
+    },
+    {
+      "id": "54582",
+      "question": "Refer to the illustration, What is the voltage Y to A?",
+      "options": [
+        "1.5 volts",
+        "1 volt",
+        ".5 volts",
+        "2 volts"
+      ],
+      "answerIndex": 1,
+      "explanation": "Refer to the illustration, What is the voltage Y to A? Looking at the diagram, note that it says .5 Volts/DIV. This is \"volts per division\". Each square, or division, is .5, therefore, count the divisions between Y and A, and multiply by .5",
+      "media": "media/54582.jpg",
+      "mediaDescription": "Diagram popup titled 'Diagram'. Oscilloscope-style waveform display on a grid. Y-axis labeled 'VOLTS = .5/DIV', X-axis labeled 'TIME = 10ms/DIV'. Shows a sine wave. Point 'Y' is marked on the y-axis (horizontal dashed reference line at the sine wave's mid/zero level). Point 'A' is marked at a wave peak (upper), point 'B' is marked at a wave trough (lower). The dashed reference from Y goes to peak A. Caption below: 'Click to open image in new window'. Belongs to Question ID 54582 / Question 87. Per the associated help, count divisions between Y and A and multiply by .5; A is 2 divisions above Y = 1 volt."
+    },
+    {
+      "id": "54583",
+      "question": "Refer to the illustration, What is the time A to C?",
+      "options": [
+        "50 ms",
+        "25 ms",
+        "75 ms",
+        "10 ms"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Telecommunications Distribution Methods Manual: Telecommunication Distribution Methods Manual 12th ed Vol 1 Page 1-17, 18"
+      ],
+      "media": "media/54583.jpg",
+      "mediaDescription": "Oscilloscope/waveform diagram (labeled 'Diagram (click to enlarge)'). A sine wave is plotted on a grid. Vertical axis labeled 'VOLTS' with '5V/DIV'. Horizontal axis labeled 'X' with 'TIME = 10ms/DIV'. Points marked on the waveform: A (first positive peak), Y (a horizontal reference/dashed line at mid-level), B (a trough/lower point), C (a later point on the dashed reference line to the right). The waveform spans from point A to point C across 5 horizontal divisions, giving 5 x 10ms = 50 ms."
+    },
+    {
+      "id": "54584",
+      "question": "Refer to the illustration, What is the time between waves?",
+      "options": [
+        "80 ms",
+        "20 ms",
+        "40 ms",
+        "100 ms"
+      ],
+      "answerIndex": 2,
+      "explanation": "Refer to the illustration, What is the time between waves? Note: 10 ms/DIV ( /DIV = \"per division\") each box, or division, is equal to 10 ms. Count the divisions and multiply by 10.",
+      "references": [
+        "Telecommunications Distribution Methods Manual : 1-17"
+      ],
+      "media": "media/54584.jpg",
+      "mediaDescription": "Oscilloscope-style diagram (click to enlarge) on a grid. Y-axis labeled VOLTS = 5/DIV, X-axis labeled TIME = 10ms/DIV. A sine-like waveform crosses the grid with point A marked at a peak (upper region) and point B marked at a trough (lower region). The time between the two waves/points spans 4 divisions = 40 ms."
+    },
+    {
+      "id": "54585",
+      "question": "When running communication cables in plenums you can use:",
+      "options": [
+        "CMR.",
+        "CMR in rigid conduit only with a nonmetalic covering",
+        "CMR in rigid conduit without an overall nonmetallic covering.",
+        "CMR in plastic conduit"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 800.113(C)(7) (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017: 800.113(C)(7) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54586",
+      "question": "What is the best type of ground for a vertical antenna?",
+      "options": [
+        "Multi communication circular spacing",
+        "Single",
+        "Radial",
+        "Multi communication linear spacing"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "Antenna Toolkit : p.244"
+      ]
+    },
+    {
+      "id": "54587",
+      "question": "These numbers, 1080P, 960i, 720i, 540i refer to:",
+      "options": [
+        "scan lines, progressive or interlaced.",
+        "lines of resolution.",
+        "number of pixels.",
+        "frequencey."
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Practical Home Theater - A Guide to Video and Audio Systems : Page 20,21"
+      ]
+    },
+    {
+      "id": "54588",
+      "question": "Which of the following type of conductors can be used in a wet location if listed for such use?",
+      "options": [
+        "CL2X",
+        "CMX",
+        "CL3",
+        "PLTC"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 725.179(E)",
+        "NFPA 70: National Electrical Code 2017 : 725.179(E)"
+      ]
+    },
+    {
+      "id": "54589",
+      "question": "What is the maximum square foot of coverage allowed for a fire detection device?",
+      "options": [
+        "12,500 sq ft",
+        "22,500 sq ft",
+        "5,520 sq ft",
+        "15,500 sq ft"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 72 2016: A.10.17.5 (partially cut off)"
+      ]
+    },
+    {
+      "id": "54590",
+      "question": "An electronic division of frequency is accomplished with what device?",
+      "options": [
+        "tunner",
+        "fader",
+        "crossover",
+        "mixer"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "Live Sound Reinforcement : p.12"
+      ]
+    },
+    {
+      "id": "54592",
+      "question": "What conductor type is recommended for wet locations?",
+      "options": [
+        "PFA",
+        "THHN",
+        "THHW",
+        "XHH"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 310.10(B) (Allowed in Test)",
+        "NFPA 70: National Electrical Code 2017 : 310.10(B) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "54593",
+      "question": "A raised floor carrying cables is referred to as:",
+      "options": [
+        "plenum",
+        "cable try",
+        "conduit",
+        "raceway"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : Article 100, Raceway",
+        "NFPA 70: National Electrical Code 2017 : Article 100, Raceway",
+        "NFPA 70: National Electrical Code 2008 : Article 100, Raceway"
+      ]
+    },
+    {
+      "id": "54610",
+      "question": "A fire alarm system has a fault, how often must the system send notification of the fault?",
+      "options": [
+        "Every 48 hours.",
+        "Every 5 days.",
+        "Every 30 days.",
+        "Every 24 hours."
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.14.10.7"
+      ]
+    },
+    {
+      "id": "54611",
+      "question": "Which of the following best describes a twin lead antenna?",
+      "options": [
+        "Two parallel conductors buried in an insulating material that spans between the conductors.",
+        "Two separate conductors wraped together.",
+        "Two parallel conductors insulated and grounded.",
+        "Two conductors twisted together."
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Antenna Toolkit : p.56"
+      ]
+    },
+    {
+      "id": "54612",
+      "question": "What is the most common gage for an antenna wire?",
+      "options": [
+        "18 awg",
+        "14 awg",
+        "22 awg",
+        "20 awg"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Antenna Toolkit : p.51"
+      ]
+    },
+    {
+      "id": "54613",
+      "question": "In a data network two or more points are connected together each of the two points have two connections each, what type of network is this?",
+      "options": [
+        "Star",
+        "Point to Point",
+        "Bus",
+        "Ring"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition: p.19-20"
+      ]
+    },
+    {
+      "id": "54614",
+      "question": "An analog CCTV camera with an output for video has what type of connection?",
+      "options": [
+        "Composite",
+        "BNC",
+        "Component",
+        "RCA"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition : p.77-78"
+      ]
+    },
+    {
+      "id": "54615",
+      "question": "Which component converts an electrical signal to an audible sound?",
+      "options": [
+        "Mixer",
+        "Fader",
+        "Tuner",
+        "Driver"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "Live Sound Reinforcement : p.141"
+      ]
+    },
+    {
+      "id": "54620",
+      "question": "A Television is receiving a poor signal, which of the following will NOT improve this?",
+      "options": [
+        "Removing the splitters",
+        "Using a larger antenna",
+        "Realigning the antenna",
+        "Adding a balun transformer"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "Practical Home Theater - A Guide to Video and Audio Systems : p.240-241"
+      ]
+    },
+    {
+      "id": "54622",
+      "question": "A communication cable entering a building has moisture from condensation, what should be done?",
+      "options": [
+        "Add a compression fitting",
+        "Firestop",
+        "Fill conduit with an approved sealant",
+        "Use a type listed for wet locations"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NEC 2017 (NFPA 70): 300.7(A)",
+        "NEC 2008 (NFPA 70): 300.7(A)"
+      ]
+    },
+    {
+      "id": "54623",
+      "question": "Fiber Optic cables can be installed next to powered circuits of what maximum voltage?",
+      "options": [
+        "880 volts",
+        "600 volts",
+        "90 volts",
+        "1000 volts"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 770.133",
+        "NFPA 70: National Electrical Code 2017 : 770.133"
+      ]
+    },
+    {
+      "id": "54624",
+      "question": "In an unoccupied commercial building, what is the minimum number of fire detectors required?",
+      "options": [
+        "2",
+        "3",
+        "0",
+        "1"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 23.11.7"
+      ]
+    },
+    {
+      "id": "54625",
+      "question": "At what point should a Fire Alarm cable or system be marked or labeled?",
+      "options": [
+        "At the controller",
+        "At the panel",
+        "At the detectors only",
+        "At each fire alarm and each controller"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 29.11.1 (Allowed)"
+      ]
+    },
+    {
+      "id": "54626",
+      "question": "A 12 volt system with a load drawing .25 amps is equal to how many watts or power?",
+      "options": [
+        "6.00 watts",
+        "0.30 watts",
+        "3.00 watts",
+        "00.3 watts"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "id": "54628",
+      "question": "Which type of cable can be used for vertical runs?",
+      "options": [
+        "CATVZ",
+        "CATVR",
+        "CATVX",
+        "CATVY"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 820.154, Table 820.154",
+        "NFPA 70: National Electrical Code 2017: 820.154, Table 820.154(a)",
+        "NFPA 70: National Electrical Code 2008: 820.154(B)(1)"
+      ]
+    },
+    {
+      "id": "54634",
+      "question": "What type of wire can you run in a single story church building for amp to speaker hookup?",
+      "options": [
+        "CL4x",
+        "CL2",
+        "CL2x",
+        "CL3x"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 725.179(C)",
+        "NFPA 70: National Electrical Code 2017 : 725.179(C)",
+        "NFPA 70: National Electrical Code 2008 : 725.179(C)"
+      ]
+    },
+    {
+      "id": "54638",
+      "question": "Analog that converts to digital is called?",
+      "options": [
+        "BBD",
+        "ADD",
+        "ACD",
+        "ADC"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "Live Sound Reinforcement : p.137"
+      ]
+    },
+    {
+      "id": "54751",
+      "question": "What is the maximum CFM that a smoke detector may be installed in unless it is specifically designed and listed for a greater CFM?",
+      "options": [
+        "600 CFM",
+        "800 CFM",
+        "300 CFM",
+        "400 CFM"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016: 17.7.1.8"
+      ]
+    },
+    {
+      "id": "54752",
+      "question": "Fire alarm system batteries should be tested for how long?",
+      "options": [
+        "per manufacturer's recommendation",
+        "30 minutes",
+        "90 minutes",
+        "60 minutes"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 72: National Fire Alarm Code, 2007 Edition: 10.4.4",
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016: 14.4.4, Table 14.4.3.2",
+        "NFPA 72: National Fire Alarm and Signaling Code 2010: 14.4.5(6)"
+      ]
+    },
+    {
+      "id": "54754",
+      "question": "What is a disadvantage of copper-clad steel core wire when used for antenna's?",
+      "options": [
+        "kinks and knots easily",
+        "Difficult to find for antenna's",
+        "Corrodes easily",
+        "?"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Antenna Toolkit: p.51"
+      ]
+    },
+    {
+      "id": "54907",
+      "question": "The grounding electrode conductor for a DC system shall not be smaller than ______ copper or 6 AWG aluminum.",
+      "options": [
+        "6 AWG",
+        "8 AWG",
+        "12 AWG",
+        "10 AWG"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 250.166(B)",
+        "NFPA 70: National Electrical Code 2008 : 250.166(B)"
+      ]
+    },
+    {
+      "id": "54952",
+      "question": "The secondary power supply for emergency voice/alarm communications service shall be capable of operating the system under quiescent load for a minimum of 24 hours and then shall be capable of operating the system during a fire or other emergency condition for a period of _____ at maximum connected load.",
+      "options": [
+        "15 minutes",
+        "30 minutes",
+        "10 minutes",
+        "5 minutes"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 72: National Fire Alarm Code, 2007 Edition : 4.4.1.5.3.1 (Not allowed in Test)",
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.6.7.2.1.2 (Allowed)",
+        "NFPA 72: National Fire Alarm and Signaling Code 2010 : 10.5.6.3.1 (Not allowed)"
+      ]
+    },
+    {
+      "id": "54958",
+      "question": "How is a reed switch operated?",
+      "options": [
+        "Pull",
+        "Magnet",
+        "Air",
+        "Sstring"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Understanding and Servicing Alarm Systems 3rd Edition : p.236"
+      ]
+    },
+    {
+      "id": "54960",
+      "question": "An elevator shaft has sprinkler installed that is rated at 155 degrees, 2 feet away is a heat detector, what temperature rating shall the detector have?",
+      "options": [
+        "5 dgrees",
+        "20 dgrees",
+        "135 degrees",
+        "155 degrees"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 21.4"
+      ]
+    },
+    {
+      "id": "54961",
+      "question": "OFNP cable can be substituted with:",
+      "options": [
+        "OFCP",
+        "None",
+        "OFN",
+        "OFCR"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017: 770.154",
+        "NFPA 70: National Electrical Code 2017: 770.154",
+        "NFPA 70: National Electrical Code 2008: 770.154(E)"
+      ]
+    },
+    {
+      "id": "54962",
+      "question": "If a substitution of materials is needed, who can approve the change:",
+      "options": [
+        "Manufacture",
+        "Contractor",
+        "Authority Having Jurisdiction",
+        "Owner"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NEC 2017 (NFPA 70): 80.2 Annex H",
+        "NEC 2008 (NFPA 70): 80.2 Annex H"
+      ]
+    },
+    {
+      "id": "54963",
+      "question": "A commercial building is being wired, what type of wire may be used?",
+      "options": [
+        "CL2X",
+        "CL2",
+        "CLRG",
+        "CLRA"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : 725.179(C)",
+        "NFPA 70: National Electrical Code 2017 : 725.179(C)",
+        "NFPA 70: National Electrical Code 2008 : 725.179(C)"
+      ]
+    },
+    {
+      "id": "54964",
+      "question": "How is power increased in an audio system?",
+      "options": [
+        "Tuner",
+        "crossover",
+        "Fader",
+        "Gain"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "Live Sound Reinforcement : p.5 (Not allowed in Test)"
+      ]
+    },
+    {
+      "id": "54965",
+      "question": "Which of the following is not a device?",
+      "options": [
+        "sprinkler",
+        "speaker",
+        "heat detector",
+        "smoke detector"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 72 2016: 3.3.66, 3.3.66..., 3.3.172"
+      ]
+    },
+    {
+      "id": "54966",
+      "question": "How long should a secondary power source battery after a trouble signal, be capable of producing an alarm signal?",
+      "options": [
+        "10 minutes",
+        "7 minutes",
+        "5 minutes",
+        "4 minutes"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 29.6.4(3)(d)"
+      ]
+    },
+    {
+      "id": "55299",
+      "question": "What is the most common type of cable TV topology?",
+      "options": [
+        "bus",
+        "ring",
+        "hierarchical",
+        "star"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition: page 19"
+      ]
+    },
+    {
+      "id": "55426",
+      "question": "How high off the floor does an audible device need to be?",
+      "options": [
+        "7.5 feet",
+        "15.0 feet",
+        "12.5 feet",
+        "10.0 feet"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 72: National Fire Alarm Code, 2007 Edition : 7.4.7",
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.4.8",
+        "NFPA 72: National Fire Alarm and Signaling Code 2010 : 18.4.8"
+      ]
+    },
+    {
+      "id": "116909",
+      "question": "Frequency is measured in _____.",
+      "options": [
+        "Amps",
+        "Hertz",
+        "Volts",
+        "Wavelengths"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Telecommunications Wiring : Page 15"
+      ]
+    },
+    {
+      "id": "116910",
+      "question": "Impedance is measured in _____.",
+      "options": [
+        "Amps",
+        "Hertz",
+        "Ohms",
+        "Volts"
+      ],
+      "answerIndex": 2,
+      "explanation": "Impedance is a parameter that applies to alternating current (ac) signals. Like resistance, impedance is expressed in ohms, but it has both a magnitude and a phase component."
+    },
+    {
+      "id": "116928",
+      "question": "What does OFNP stand for?",
+      "options": [
+        "Nonconductive optic fiber riser cable",
+        "Nonconductive optical fiber plenum cable",
+        "Conductive optic fiber general purpose cable",
+        "Conductive optical fiber plenum cable"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 70: National Electrical Code Tabs 2017 : table 770.179",
+        "NFPA 70: National Electrical Code 2017 : table 770.179",
+        "NFPA 70: National Electrical Code 2008 : table 770.179"
+      ]
+    },
+    {
+      "id": "116929",
+      "question": "What is the minimum mounting height of a signaling strobe?",
+      "options": [
+        "84 inches",
+        "80 inches",
+        "90 inches",
+        "96 inches"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "NFPA 72: National Fire Alarm Code, 2007 Edition : 7.5.4.1",
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.5.5.1",
+        "NFPA 72: National Fire Alarm and Signaling Code 2010 : 18.5.4.1"
+      ]
+    },
+    {
+      "id": "117714",
+      "question": "What is the maximum distance to a manual pull station?",
+      "options": [
+        "100 feet",
+        "50 feet",
+        "200 feet",
+        "25 feet"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 72: National Fire Alarm Code, 2007 Edition : 5.13.8 (Not allowed in Test)",
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.14.8.5 (Allowed in Test)",
+        "NFPA 72: National Fire Alarm and Signaling Code 2010 : 17.14.8 (Not allowed)"
+      ]
+    },
+    {
+      "id": "118018",
+      "question": "Prior to the point of entry, coax needs to be separated from an electric light by _____.",
+      "options": [
+        "2 inches",
+        "3 inches",
+        "1 inch",
+        "4 inches"
+      ],
+      "answerIndex": 3,
+      "references": [
+        "NFPA 70: National Electrical Code 2017 : 820.44(E)(1) (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "120059",
+      "question": "When is a ceiling not considered smooth?",
+      "options": [
+        "when beams and joists extend no more than 2 inches below ceiling",
+        "when there is nothing below the ceiling surface",
+        "when beams and joists extend no more than 4 inches below ceiling",
+        "when beams and joists extend no more than 6 inches below ceiling"
+      ],
+      "answerIndex": 2,
+      "references": [
+        "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 3.3.38.3 (Allowed in Test)"
+      ]
+    },
+    {
+      "id": "120253",
+      "question": "What is the minimum required separation between a coaxial cable and electric light or power conductors?",
+      "options": [
+        "2 inches",
+        "4 inches",
+        "1 inch",
+        "6 inches"
+      ],
+      "answerIndex": 0,
+      "references": [
+        "NFPA 70: National Electrical Code 2017: 820.133(A)(2)"
+      ]
+    },
+    {
+      "id": "120288",
+      "question": "Which of the following cable types is most commonly used for desktop data transmission in structured cabling systems?",
+      "options": [
+        "Fiber Optic",
+        "Unshielded Twisted Pair (UTP)",
+        "Coaxial",
+        "Shielded Twisted Pair (STP)"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition : 20"
+      ]
+    },
+    {
+      "id": "120289",
+      "question": "Which term refers to the ability of a fiber optic cable to transmit multiple wavelengths without interference?",
+      "options": [
+        "Propagation",
+        "Bandwidth",
+        "Attenuation",
+        "Crosstalk"
+      ],
+      "answerIndex": 1,
+      "references": [
+        "Data, Voice, and Video Cabling 3rd Edition : 283"
+      ]
+    }
+  ]
+}
