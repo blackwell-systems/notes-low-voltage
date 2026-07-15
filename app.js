@@ -14,11 +14,17 @@
     revealed: {},     // sessionIndex -> bool (flash mode / revealed)
   };
 
-  // ---- Persistent store (missed history + last score) ----
+  // ---- Persistent store (missed set + seen set + session history) ----
   const store = loadStore();
   function loadStore() {
-    try { return JSON.parse(localStorage.getItem(STORE_KEY)) || { missed: {}, seen: {} }; }
-    catch { return { missed: {}, seen: {} }; }
+    let s;
+    try { s = JSON.parse(localStorage.getItem(STORE_KEY)); } catch { s = null; }
+    s = s || {};
+    s.missed = s.missed || {};
+    s.seen = s.seen || {};
+    s.history = s.history || [];   // [{ts, correct, answered, pct}]
+    s.flagged = s.flagged || {};   // {questionId: true} — "mark for later"
+    return s;
   }
   function saveStore() {
     try { localStorage.setItem(STORE_KEY, JSON.stringify(store)); } catch {}
@@ -34,6 +40,9 @@
     startBtn: el("start-btn"),
     optShuffle: el("opt-shuffle"),
     optOnlyMissed: el("opt-onlymissed"),
+    optOnlyFlagged: el("opt-onlyflagged"),
+    optOnlyFlaggedLabel: el("opt-onlyflagged-label"),
+    flagBtn: el("flag-btn"),
     resumeLine: el("resume-line"),
     modeQuiz: el("mode-quiz"),
     modeFlash: el("mode-flash"),
@@ -54,6 +63,11 @@
     scoreBreakdown: el("score-breakdown"),
     reviewMissedBtn: el("review-missed-btn"),
     restartBtn: el("restart-btn"),
+    historyPanel: el("history-panel"),
+    historyList: el("history-list"),
+    historySummary: el("history-summary"),
+    clearHistoryBtn: el("clear-history-btn"),
+    exitBtn: el("exit-btn"),
   };
 
   // ---- Load bank ----
@@ -76,6 +90,8 @@
         dom.optOnlyMissed.parentElement.classList.add("hidden");
       }
       document.title = `${title} — Practice Quiz`;
+      renderHistory();
+      renderFlaggedOption();
     })
     .catch((err) => {
       dom.bankSummary.textContent = "Could not load questions.json — is it deployed alongside index.html?";
@@ -97,17 +113,78 @@
 
   // ---- Start ----
   dom.startBtn.addEventListener("click", startSession);
-  dom.restartBtn.addEventListener("click", () => showScreen("start"));
+  dom.restartBtn.addEventListener("click", () => { renderHistory(); showScreen("start"); });
   dom.reviewMissedBtn.addEventListener("click", () => {
     dom.optOnlyMissed.checked = true;
     startSession();
   });
+  dom.exitBtn.addEventListener("click", () => { renderHistory(); renderFlaggedOption(); showScreen("start"); });
+
+  // ---- Mark for later (flag) ----
+  dom.flagBtn.addEventListener("click", () => {
+    const q = state.queue[state.idx];
+    if (!q) return;
+    if (store.flagged[q.id]) delete store.flagged[q.id];
+    else store.flagged[q.id] = true;
+    saveStore();
+    updateFlagBtn(q);
+  });
+
+  function updateFlagBtn(q) {
+    const on = !!store.flagged[q.id];
+    dom.flagBtn.classList.toggle("on", on);
+    dom.flagBtn.setAttribute("aria-pressed", on);
+    dom.flagBtn.textContent = on ? "★ Marked" : "☆ Mark";
+  }
+
+  function renderFlaggedOption() {
+    const n = Object.keys(store.flagged).length;
+    if (n > 0) {
+      dom.optOnlyFlaggedLabel.classList.remove("hidden");
+      dom.optOnlyFlaggedLabel.querySelector("span").textContent =
+        `Only questions I marked for later (${n})`;
+    } else {
+      dom.optOnlyFlaggedLabel.classList.add("hidden");
+      dom.optOnlyFlagged.checked = false;
+    }
+  }
+  dom.clearHistoryBtn.addEventListener("click", () => {
+    if (confirm("Clear your score history? (Your 'missed questions' list is kept.)")) {
+      store.history = [];
+      saveStore();
+      renderHistory();
+    }
+  });
+
+  // ---- Score history ----
+  function renderHistory() {
+    const h = store.history;
+    if (!h.length) { dom.historyPanel.classList.add("hidden"); return; }
+    dom.historyPanel.classList.remove("hidden");
+    const pcts = h.map((r) => r.pct);
+    const best = Math.max(...pcts);
+    const avg = Math.round(pcts.reduce((a, b) => a + b, 0) / pcts.length);
+    dom.historySummary.textContent = `${h.length} session${h.length === 1 ? "" : "s"} · best ${best}% · avg ${avg}%`;
+    dom.historyList.innerHTML = "";
+    h.slice().reverse().slice(0, 10).forEach((r) => {
+      const li = document.createElement("li");
+      const when = new Date(r.ts).toLocaleDateString(undefined, { month: "short", day: "numeric" }) +
+        " " + new Date(r.ts).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+      li.innerHTML = `<span class="h-score">${r.correct}/${r.answered}</span>` +
+        `<span class="h-pct">${r.pct}%</span><span class="h-when">${when}</span>`;
+      dom.historyList.appendChild(li);
+    });
+  }
 
   function startSession() {
     let pool = state.all.slice();
+    if (dom.optOnlyFlagged.checked) {
+      const flagged = pool.filter((q) => store.flagged[q.id]);
+      if (flagged.length) pool = flagged;
+    }
     if (dom.optOnlyMissed.checked) {
-      pool = pool.filter((q) => store.missed[q.id]);
-      if (pool.length === 0) pool = state.all.slice();
+      const missed = pool.filter((q) => store.missed[q.id]);
+      if (missed.length) pool = missed;
     }
     if (dom.optShuffle.checked) shuffle(pool);
     state.queue = pool;
@@ -155,6 +232,7 @@
     dom.qCounter.textContent = `Question ${state.idx + 1} of ${n}`;
     dom.qId.textContent = q.id ? `ID ${q.id}` : "";
     dom.qText.textContent = q.question;
+    updateFlagBtn(q);
     dom.progressFill.style.width = `${((state.idx + 1) / n) * 100}%`;
 
     // Media
@@ -238,14 +316,22 @@
     });
     if (state.mode === "flash" || answered === 0) {
       // Nothing scored in flashcard mode — just return to start.
+      renderHistory();
       showScreen("start");
       return;
     }
     const pct = Math.round((correct / answered) * 100);
+    // Log this session to persistent history.
+    store.history.push({ ts: Date.now(), correct, answered, pct });
+    if (store.history.length > 200) store.history = store.history.slice(-200);
+    saveStore();
+
     dom.scoreLine.textContent = `${correct} / ${answered}  (${pct}%)`;
     const missedNow = Object.keys(store.missed).length;
+    const best = Math.max(...store.history.map((r) => r.pct));
     dom.scoreBreakdown.textContent =
-      `${answered} answered this session. ${missedNow} question${missedNow === 1 ? "" : "s"} still in your missed list.`;
+      `${answered} answered this session. Best: ${best}%. ` +
+      `${missedNow} question${missedNow === 1 ? "" : "s"} still in your missed list.`;
     dom.reviewMissedBtn.classList.toggle("hidden", missedNow === 0);
     showScreen("results");
   }

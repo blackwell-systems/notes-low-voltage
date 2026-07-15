@@ -11,6 +11,7 @@
   --correct-bg: #113a22;
   --wrong: #ef4444;
   --wrong-bg: #3a1414;
+  --flag: #f5b342;
   --radius: 14px;
   --maxw: 760px;
 }
@@ -233,7 +234,61 @@ main {
   text-align: center;
 }
 
+/* ---- Question meta / flag button ---- */
+.q-meta-right { display: flex; align-items: center; gap: 12px; }
+.flag-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.flag-btn:hover { border-color: var(--flag); color: var(--flag); }
+.flag-btn.on { background: rgba(245, 179, 66, 0.15); border-color: var(--flag); color: var(--flag); }
+
+/* ---- Score history ---- */
+.history-card { margin-top: 16px; text-align: left; }
+.history-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.history-head h3 { margin: 0; font-size: 1rem; }
+.text-btn {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.text-btn:hover { color: var(--text); }
+.history-list { list-style: none; margin: 12px 0 0; padding: 0; }
+.history-list li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.history-list .h-score { color: var(--text); font-weight: 600; }
+.history-list .h-pct {
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 44px;
+  text-align: right;
+}
+.history-list .h-when { color: var(--muted); font-size: 0.8rem; min-width: 88px; text-align: right; }
+
 @media (max-width: 480px) {
   .topbar h1 { font-size: 0.95rem; }
   .q-text { font-size: 1.12rem; }
+  .flag-btn { font-size: 0.72rem; padding: 4px 8px; }
 }
