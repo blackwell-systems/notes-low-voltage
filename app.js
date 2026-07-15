@@ -68,6 +68,10 @@
     historySummary: el("history-summary"),
     clearHistoryBtn: el("clear-history-btn"),
     exitBtn: el("exit-btn"),
+    exportBtn: el("export-btn"),
+    importBtn: el("import-btn"),
+    importFile: el("import-file"),
+    dataMsg: el("data-msg"),
   };
 
   // ---- Load bank ----
@@ -79,17 +83,10 @@
                typeof q.answerIndex === "number" && q.answerIndex >= 0
       );
       const title = (data.meta && data.meta.title) || "CR-67 Low Voltage";
-      const missedCount = Object.keys(store.missed).length;
       dom.bankSummary.textContent = `${state.all.length} questions loaded.`;
       dom.startBtn.disabled = state.all.length === 0;
-      if (missedCount > 0) {
-        dom.optOnlyMissed.parentElement.classList.remove("hidden");
-        dom.resumeLine.textContent = `You have ${missedCount} previously missed question${missedCount === 1 ? "" : "s"}.`;
-        dom.resumeLine.classList.remove("hidden");
-      } else {
-        dom.optOnlyMissed.parentElement.classList.add("hidden");
-      }
       document.title = `${title} — Practice Quiz`;
+      renderMissedOption();
       renderHistory();
       renderFlaggedOption();
     })
@@ -155,6 +152,97 @@
       renderHistory();
     }
   });
+
+  function renderMissedOption() {
+    const n = Object.keys(store.missed).length;
+    if (n > 0) {
+      dom.optOnlyMissed.parentElement.classList.remove("hidden");
+      dom.resumeLine.textContent = `You have ${n} previously missed question${n === 1 ? "" : "s"}.`;
+      dom.resumeLine.classList.remove("hidden");
+    } else {
+      dom.optOnlyMissed.parentElement.classList.add("hidden");
+      dom.resumeLine.classList.add("hidden");
+    }
+  }
+
+  // ---- Export / import progress ----
+  dom.exportBtn.addEventListener("click", () => {
+    const payload = {
+      app: "cr67-low-voltage-quiz",
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      progress: {
+        missed: store.missed,
+        seen: store.seen,
+        flagged: store.flagged,
+        history: store.history,
+      },
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `cr67-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    flashMsg("Progress exported.");
+  });
+
+  dom.importBtn.addEventListener("click", () => dom.importFile.click());
+  dom.importFile.addEventListener("change", (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result);
+        const p = data.progress || data;  // also accept a raw store object
+        if (!p || typeof p !== "object" || !("missed" in p || "history" in p || "flagged" in p)) {
+          throw new Error("unrecognized file");
+        }
+        const before = {
+          m: Object.keys(store.missed).length,
+          f: Object.keys(store.flagged).length,
+          h: store.history.length,
+        };
+        // Merge, never overwrite: union the sets, concat + dedupe history by timestamp.
+        Object.assign(store.missed, p.missed || {});
+        Object.assign(store.seen, p.seen || {});
+        Object.assign(store.flagged, p.flagged || {});
+        const seenTs = new Set(store.history.map((r) => r.ts));
+        (p.history || []).forEach((r) => {
+          if (r && typeof r.ts === "number" && !seenTs.has(r.ts)) {
+            store.history.push(r);
+            seenTs.add(r.ts);
+          }
+        });
+        store.history.sort((a, b) => a.ts - b.ts);
+        if (store.history.length > 200) store.history = store.history.slice(-200);
+        saveStore();
+        renderMissedOption();
+        renderHistory();
+        renderFlaggedOption();
+        const dM = Object.keys(store.missed).length - before.m;
+        const dF = Object.keys(store.flagged).length - before.f;
+        const dH = store.history.length - before.h;
+        flashMsg(`Imported and merged: +${dH} sessions, +${dF} marked, +${dM} missed.`);
+      } catch (err) {
+        flashMsg("Import failed — that doesn't look like a valid progress file.");
+      } finally {
+        dom.importFile.value = "";  // let the same file be re-selected later
+      }
+    };
+    reader.readAsText(file);
+  });
+
+  let msgTimer;
+  function flashMsg(text) {
+    dom.dataMsg.textContent = text;
+    clearTimeout(msgTimer);
+    msgTimer = setTimeout(() => { dom.dataMsg.textContent = ""; }, 6000);
+  }
 
   // ---- Score history ----
   function renderHistory() {
