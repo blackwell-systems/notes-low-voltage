@@ -71,6 +71,7 @@
     exportBtn: el("export-btn"),
     importBtn: el("import-btn"),
     importFile: el("import-file"),
+    resetAllBtn: el("reset-all-btn"),
     dataMsg: el("data-msg"),
   };
 
@@ -235,6 +236,22 @@
       }
     };
     reader.readAsText(file);
+  });
+
+  dom.resetAllBtn.addEventListener("click", () => {
+    if (confirm("Reset ALL progress on this device? This permanently deletes your score history, marked-for-later questions, and missed-questions list. Consider exporting first.")) {
+      store.missed = {};
+      store.seen = {};
+      store.flagged = {};
+      store.history = [];
+      saveStore();
+      dom.optOnlyMissed.checked = false;
+      dom.optOnlyFlagged.checked = false;
+      renderMissedOption();
+      renderHistory();
+      renderFlaggedOption();
+      flashMsg("All progress reset.");
+    }
   });
 
   let msgTimer;
