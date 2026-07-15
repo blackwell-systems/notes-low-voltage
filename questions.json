@@ -36,7 +36,7 @@
     },
     {
       "id": "12580",
-      "question": "What conductor type is recommended for use in a wet location is:",
+      "question": "What conductor type is recommended for use in a wet location?",
       "options": [
         "THHX",
         "THHN",
@@ -51,7 +51,7 @@
     },
     {
       "id": "12662",
-      "question": "The grounding conductors on a CATV system coax cable shall be a minimum of _____ size awg.",
+      "question": "The grounding conductors on a CATV system coax cable shall be a minimum of _____ size AWG.",
       "options": [
         "18 AWG",
         "16 AWG",
@@ -74,7 +74,6 @@
         "12 inches"
       ],
       "answerIndex": 3,
-      "explanation": "Math Help: Given: An Electrical service drop of 208Y/120V runs above and parallel to a communications service drop. What minimum separation must be maintained between these drops?",
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 800...",
         "NFPA 70: National Electrical Code 2008 : 800.44(A)...",
@@ -183,7 +182,7 @@
         "15 ohms"
       ],
       "answerIndex": 0,
-      "explanation": "Refer to the illustration, what is the total resistance of this circuit? The 1, 6 and 3 ohm resistors are in series: 1 + 6 + 3 = 10 ohms. This then makes two 10 ohm resistors in parallel. RT = R1 x R2 / R1 + R2 (10 x 10 = 100) / (10 + 10 = 20) = 5 ohms. This makes 1, 6, 3, and 10 ohm portion of the circuit look like 5 ohms to the rest of the circuit. This 5 ohms is in series with the 2 and 3 ohm resistors so they can be added together to equal 10 ohms; 2 + 5 + 3 = 10 ohms total",
+      "explanation": "The 1, 6 and 3 ohm resistors are in series: 1 + 6 + 3 = 10 ohms. This then makes two 10 ohm resistors in parallel. RT = R1 x R2 / R1 + R2 (10 x 10 = 100) / (10 + 10 = 20) = 5 ohms. This makes 1, 6, 3, and 10 ohm portion of the circuit look like 5 ohms to the rest of the circuit. This 5 ohms is in series with the 2 and 3 ohm resistors so they can be added together to equal 10 ohms; 2 + 5 + 3 = 10 ohms total",
       "references": [
         "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition",
         "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : 276-",
@@ -425,7 +424,7 @@
     },
     {
       "id": "51964",
-      "question": "Possible phrasing... When the free ends for testing are touched to a closed circuit of not too high resistance, the bell rings. If the circuit is _____, the bell will not ring. OR Two #18 conductors, one is connected to a bell and one is connected to ground in conduit. When the two wire are connected together the bell rings, when not connected together the circuit is:",
+      "question": "Two #18 conductors: one connected to a bell and one connected to ground in conduit. When the two wires are connected together the bell rings; when not connected together, the circuit is _____.",
       "options": [
         "Open",
         "connected properly",
@@ -438,10 +437,10 @@
       "id": "52027",
       "question": "A fire alarm system shall require a visible notification device when the ambient sound is greater than?",
       "options": [
-        "100 dBa",
-        "110 dBa",
-        "115 dBa",
-        "105 dBa"
+        "100 dBA",
+        "110 dBA",
+        "115 dBA",
+        "105 dBA"
       ],
       "answerIndex": 3,
       "references": [
@@ -527,10 +526,10 @@
       "id": "53183",
       "question": "What is the minimum multi-conductor non-power limited wire size allowed for a fire alarm?",
       "options": [
-        "18 awg",
-        "20 awg",
-        "14 awg",
-        "16 awg"
+        "18 AWG",
+        "20 AWG",
+        "14 AWG",
+        "16 AWG"
       ],
       "answerIndex": 0,
       "references": [
@@ -576,7 +575,7 @@
         "Sine Wave"
       ],
       "answerIndex": 3,
-      "explanation": "Refer to the illustration, What type of chart is this? Sinusoidal Waveform The waveform for alternating-current circuits is symmetrical, with positive above and negative below the zero reference level. For most alternating-current circuits, the waveform is called a sine wave or a sinusoidal waveform.",
+      "explanation": "Sinusoidal Waveform The waveform for alternating-current circuits is symmetrical, with positive above and negative below the zero reference level. For most alternating-current circuits, the waveform is called a sine wave or a sinusoidal waveform.",
       "media": "media/53612.jpg",
       "mediaDescription": "Enlarged Diagram popup ('Click to open image in new window'): oscilloscope grid graph of a sinusoidal (sine) waveform. Y-axis labeled 'VOLTS = .5/DIV' (vertical), X-axis labeled X, origin at 0. The curve shows multiple cycles; point A marked at a positive peak/crest and point B marked at a negative trough/valley. A dashed horizontal line marks the zero reference level with positive above and negative below."
     },
@@ -625,7 +624,7 @@
     },
     {
       "id": "54124",
-      "question": "What are the disadvantages of fiber optics over copper? or All of the following are advantages of fiber optic cable over copper cable except:",
+      "question": "All of the following are advantages of fiber optic cable over copper cable EXCEPT:",
       "options": [
         "performance",
         "electrical immunity",
@@ -824,10 +823,10 @@
       "id": "54138",
       "question": "What is the minimum decibel level at pillow level for an audible appliance installed to provide signal to a sleeping area?",
       "options": [
-        "50 db",
-        "25 db",
-        "75 db",
-        "100db"
+        "50 dB",
+        "25 dB",
+        "75 dB",
+        "100 dB"
       ],
       "answerIndex": 2,
       "references": [
@@ -853,10 +852,10 @@
       "id": "54140",
       "question": "What is the lowest allowed dB level above ambient sound for an alarm system in a sleeping area?",
       "options": [
-        "20 db",
-        "5 db",
-        "15 db",
-        "10 db"
+        "20 dB",
+        "5 dB",
+        "15 dB",
+        "10 dB"
       ],
       "answerIndex": 2,
       "references": [
@@ -868,10 +867,10 @@
       "id": "54141",
       "question": "A bonding jumper not smaller than ______ copper shall be connected between the community antenna television system's grounding electrode and the power grounding electrode system at the building served where separate electrodes are used.",
       "options": [
-        "8 awg",
-        "4 awg",
-        "10 awg",
-        "6 awg"
+        "8 AWG",
+        "4 AWG",
+        "10 AWG",
+        "6 AWG"
       ],
       "answerIndex": 3,
       "references": [
@@ -983,7 +982,7 @@
     },
     {
       "id": "54149",
-      "question": "All of the following methods are acceptable methods for bonding except: or What type of bonding is NOT recommended in a panel?",
+      "question": "All of the following are acceptable methods for bonding EXCEPT:",
       "options": [
         "sheet metal screws",
         "pressure connectors",
@@ -1040,7 +1039,7 @@
     },
     {
       "id": "54155",
-      "question": "Which fiber optic cable can be used in an enviromental duct?",
+      "question": "Which fiber optic cable can be used in an environmental duct?",
       "options": [
         "OFNG",
         "OFNP or OFCP",
@@ -1069,12 +1068,12 @@
     },
     {
       "id": "54158",
-      "question": "An equipment rack is usally:",
+      "question": "An equipment rack is usually:",
       "options": [
         "in the way",
         "8 foot high",
         "24 to 30 inches wide",
-        "mounted in back of a room for convienence"
+        "mounted in back of a room for convenience"
       ],
       "answerIndex": 3
     },
@@ -1097,10 +1096,10 @@
       "id": "54160",
       "question": "The most common size of communication cables used in the united states are?",
       "options": [
-        "16 - 20 awg",
-        "22 - 26 awg",
-        "18 - 24 awg",
-        "20 - 24 awg"
+        "16 - 20 AWG",
+        "22 - 26 AWG",
+        "18 - 24 AWG",
+        "20 - 24 AWG"
       ],
       "answerIndex": 2,
       "references": [
@@ -1171,7 +1170,7 @@
         "Linear load",
         "Sinusoidal waveform",
         "Phase",
-        "Nonsymetrical waveform"
+        "Nonsymmetrical waveform"
       ],
       "answerIndex": 1,
       "references": [
@@ -1261,10 +1260,10 @@
     },
     {
       "id": "54211",
-      "question": "What is a causes of hums and buzzes in a sound system?",
+      "question": "What is a cause of hums and buzzes in a sound system?",
       "options": [
         "ground loop problems",
-        "bad trnsformer",
+        "bad transformer",
         "broken and exposed wiring",
         "insufficient ground"
       ],
@@ -1307,10 +1306,10 @@
       "id": "54214",
       "question": "What is the minimum size grounding conductor for communications circuits?",
       "options": [
-        "8 awg",
-        "12 awg",
+        "8 AWG",
+        "12 AWG",
         "14 AWG",
-        "10 awg"
+        "10 AWG"
       ],
       "answerIndex": 2,
       "references": [
@@ -1430,7 +1429,7 @@
         "it has a soft plastic coating"
       ],
       "answerIndex": 0,
-      "explanation": "You will find difficulty using UF cable underground because: UF insulation is a tough plastic that is not affected by water or acid in the soil. However, gophers and ground squirrels love it. The small additional cost of metal conduit is an investment well made.",
+      "explanation": "UF insulation is a tough plastic that is not affected by water or acid in the soil. However, gophers and ground squirrels love it. The small additional cost of metal conduit is an investment well made.",
       "references": [
         "Telecommunications Wiring: 2nd ed Page 165",
         "Telecommunications Wiring: 2nd ed Page (number cut off, matches Page 165)"
@@ -1441,7 +1440,7 @@
       "question": "A line has 12 volts at the start, with a 3.2 ohm resistor in line. There is only 1.2 volts at the switch. Why?",
       "options": [
         "low battery",
-        "short ?",
+        "short",
         "bad switch",
         "?"
       ],
@@ -1599,7 +1598,7 @@
         "2 volts"
       ],
       "answerIndex": 1,
-      "explanation": "Refer to the illustration, What is the voltage Y to A? Looking at the diagram, note that it says .5 Volts/DIV. This is \"volts per division\". Each square, or division, is .5, therefore, count the divisions between Y and A, and multiply by .5",
+      "explanation": "Looking at the diagram, note that it says .5 Volts/DIV. This is \"volts per division\". Each square, or division, is .5, therefore, count the divisions between Y and A, and multiply by .5",
       "media": "media/54582.jpg",
       "mediaDescription": "Diagram popup titled 'Diagram'. Oscilloscope-style waveform display on a grid. Y-axis labeled 'VOLTS = .5/DIV', X-axis labeled 'TIME = 10ms/DIV'. Shows a sine wave. Point 'Y' is marked on the y-axis (horizontal dashed reference line at the sine wave's mid/zero level). Point 'A' is marked at a wave peak (upper), point 'B' is marked at a wave trough (lower). The dashed reference from Y goes to peak A. Caption below: 'Click to open image in new window'. Belongs to Question ID 54582 / Question 87. Per the associated help, count divisions between Y and A and multiply by .5; A is 2 divisions above Y = 1 volt."
     },
@@ -1629,7 +1628,7 @@
         "100 ms"
       ],
       "answerIndex": 2,
-      "explanation": "Refer to the illustration, What is the time between waves? Note: 10 ms/DIV ( /DIV = \"per division\") each box, or division, is equal to 10 ms. Count the divisions and multiply by 10.",
+      "explanation": "Note: 10 ms/DIV ( /DIV = \"per division\") each box, or division, is equal to 10 ms. Count the divisions and multiply by 10.",
       "references": [
         "Telecommunications Distribution Methods Manual : 1-17"
       ],
@@ -1672,7 +1671,7 @@
         "scan lines, progressive or interlaced.",
         "lines of resolution.",
         "number of pixels.",
-        "frequencey."
+        "frequency."
       ],
       "answerIndex": 0,
       "references": [
@@ -1712,7 +1711,7 @@
       "id": "54590",
       "question": "An electronic division of frequency is accomplished with what device?",
       "options": [
-        "tunner",
+        "tuner",
         "fader",
         "crossover",
         "mixer"
@@ -1742,7 +1741,7 @@
       "question": "A raised floor carrying cables is referred to as:",
       "options": [
         "plenum",
-        "cable try",
+        "cable tray",
         "conduit",
         "raceway"
       ],
@@ -1772,7 +1771,7 @@
       "question": "Which of the following best describes a twin lead antenna?",
       "options": [
         "Two parallel conductors buried in an insulating material that spans between the conductors.",
-        "Two separate conductors wraped together.",
+        "Two separate conductors wrapped together.",
         "Two parallel conductors insulated and grounded.",
         "Two conductors twisted together."
       ],
@@ -1785,10 +1784,10 @@
       "id": "54612",
       "question": "What is the most common gage for an antenna wire?",
       "options": [
-        "18 awg",
-        "14 awg",
-        "22 awg",
-        "20 awg"
+        "18 AWG",
+        "14 AWG",
+        "22 AWG",
+        "20 AWG"
       ],
       "answerIndex": 1,
       "references": [
@@ -1998,10 +1997,10 @@
     },
     {
       "id": "54754",
-      "question": "What is a disadvantage of copper-clad steel core wire when used for antenna's?",
+      "question": "What is a disadvantage of copper-clad steel core wire when used for antennas?",
       "options": [
         "kinks and knots easily",
-        "Difficult to find for antenna's",
+        "Difficult to find for antennas",
         "Corrodes easily",
         "?"
       ],
@@ -2048,7 +2047,7 @@
         "Pull",
         "Magnet",
         "Air",
-        "Sstring"
+        "String"
       ],
       "answerIndex": 1,
       "references": [
@@ -2059,8 +2058,8 @@
       "id": "54960",
       "question": "An elevator shaft has sprinkler installed that is rated at 155 degrees, 2 feet away is a heat detector, what temperature rating shall the detector have?",
       "options": [
-        "5 dgrees",
-        "20 dgrees",
+        "5 degrees",
+        "20 degrees",
         "135 degrees",
         "155 degrees"
       ],
