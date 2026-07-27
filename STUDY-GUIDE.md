@@ -16,6 +16,40 @@ feels arbitrary, come back here and reread the "why" next to it.
 
 ---
 
+## What is on the test (topic breakdown)
+
+Here is roughly how the 160 practice questions split across topics. Two areas,
+**fire alarm** and **cable types**, together make up almost 60% of everything, so
+if you are short on time, master those first.
+
+```
+Fire alarm & detection (NFPA 72)  ████████████████   31%
+Cable types, ratings & wire       ██████████████     28%
+Grounding & bonding               ███████            13%
+Separation, clearance & support   █████              10%
+Electrical theory & measurement   █████              10%
+Audio, video & telecom            ███                 6%
+Codes, definitions & general      █                   2%
+```
+
+| Topic | Share | Where to study it |
+|-------|-------|-------------------|
+| Fire alarm & detection (NFPA 72) | ~31% | section 15 |
+| Cable types, ratings & wire | ~28% | sections 9, 10, 11, 12 |
+| Grounding & bonding | ~13% | section 13 |
+| Separation, clearance & support | ~10% | section 16 |
+| Electrical theory & measurement | ~10% | sections 1 to 8, and 18 |
+| Audio, video & telecom | ~6% | section 17 |
+| Codes, definitions & general | ~2% | section 14 |
+
+A note on these numbers: they are counted from *this 160-question practice bank*
+by assigning each question to its single best-fit topic, so they show where this
+bank puts its weight. Treat them as a study-priority guide, not the official exam
+blueprint, which the licensing body publishes separately. The takeaway holds
+either way: fire alarm rules and cable ratings dominate, so spend your time there.
+
+---
+
 ## Table of contents
 
 1. [Electricity in sixty seconds](#1-electricity-in-sixty-seconds)
