@@ -94,6 +94,7 @@
     modeFlash: el("mode-flash"),
     guideBtn: el("guide-btn"),
     guidePanel: el("guide-panel"),
+    guideResize: el("guide-resize"),
     guideBackdrop: el("guide-backdrop"),
     guideClose: el("guide-close"),
     guideContent: el("guide-content"),
@@ -206,6 +207,35 @@
     dom.guideBtn.setAttribute("aria-expanded", "false");
     document.body.classList.remove("no-scroll");
   }
+
+  // Resizable panel: drag the left edge; remember the width.
+  const GUIDE_W_KEY = "cr67_guide_width";
+  const clampGuideWidth = (w) => Math.max(320, Math.min(w, Math.round(window.innerWidth * 0.98)));
+  (function applySavedGuideWidth() {
+    const saved = parseInt(localStorage.getItem(GUIDE_W_KEY), 10);
+    if (saved) dom.guidePanel.style.width = clampGuideWidth(saved) + "px";
+  })();
+  let guideResizing = false;
+  dom.guideResize.addEventListener("pointerdown", (e) => {
+    guideResizing = true;
+    dom.guidePanel.classList.add("resizing");
+    try { dom.guideResize.setPointerCapture(e.pointerId); } catch {}
+    e.preventDefault();
+  });
+  dom.guideResize.addEventListener("pointermove", (e) => {
+    if (!guideResizing) return;
+    dom.guidePanel.style.width = clampGuideWidth(window.innerWidth - e.clientX) + "px";
+  });
+  function endGuideResize(e) {
+    if (!guideResizing) return;
+    guideResizing = false;
+    dom.guidePanel.classList.remove("resizing");
+    try { dom.guideResize.releasePointerCapture(e.pointerId); } catch {}
+    const w = parseInt(dom.guidePanel.style.width, 10);
+    if (w) { try { localStorage.setItem(GUIDE_W_KEY, w); } catch {} }
+  }
+  dom.guideResize.addEventListener("pointerup", endGuideResize);
+  dom.guideResize.addEventListener("pointercancel", endGuideResize);
 
   // ---- Profiles UI ----
   let profileEditMode = null; // "rename" | "new" | null

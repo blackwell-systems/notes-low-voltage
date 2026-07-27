@@ -439,6 +439,32 @@ body.no-scroll { overflow: hidden; }
   flex-direction: column;
 }
 .guide-panel.open { transform: translateX(0); }
+.guide-panel.resizing { transition: none; user-select: none; }
+
+.guide-resize {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 9px;
+  cursor: ew-resize;
+  z-index: 3;
+  touch-action: none;
+}
+.guide-resize::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 42px;
+  border-radius: 3px;
+  background: var(--border);
+  transition: background 0.15s;
+}
+.guide-resize:hover::before,
+.guide-panel.resizing .guide-resize::before { background: var(--accent); }
 
 .guide-panel-head {
   flex: 0 0 auto;
