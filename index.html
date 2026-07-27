@@ -14,9 +14,12 @@
         <h1>CR-67 Low Voltage</h1>
         <span id="active-profile" class="active-profile" title="Active profile"></span>
       </div>
-      <div class="mode-toggle" role="tablist" aria-label="Study mode">
-        <button id="mode-quiz" class="mode-btn active" role="tab" aria-selected="true">Quiz</button>
-        <button id="mode-flash" class="mode-btn" role="tab" aria-selected="false">Flashcards</button>
+      <div class="topbar-actions">
+        <div class="mode-toggle" role="tablist" aria-label="Study mode">
+          <button id="mode-quiz" class="mode-btn active" role="tab" aria-selected="true">Quiz</button>
+          <button id="mode-flash" class="mode-btn" role="tab" aria-selected="false">Flashcards</button>
+        </div>
+        <button id="guide-btn" class="guide-btn" type="button" aria-expanded="false" title="Open the study guide">📖 Guide</button>
       </div>
     </div>
     <div class="progressbar"><div id="progress-fill" class="progressbar-fill"></div></div>
@@ -124,6 +127,18 @@
   <footer class="footer">
     <span class="muted small">Practice material. Verify against current NEC/NFPA before relying on any answer.</span>
   </footer>
+
+  <!-- Study guide slide-out panel -->
+  <div id="guide-backdrop" class="guide-backdrop"></div>
+  <aside id="guide-panel" class="guide-panel" aria-hidden="true" aria-label="Study guide">
+    <div class="guide-panel-head">
+      <span class="guide-panel-title">📖 Study Guide</span>
+      <button id="guide-close" class="guide-close" type="button" aria-label="Close study guide">✕</button>
+    </div>
+    <div id="guide-content" class="guide-content" tabindex="0">
+      <p class="muted">Loading…</p>
+    </div>
+  </aside>
 
   <script src="app.js"></script>
 </body>

@@ -88,6 +88,11 @@
     resumeLine: el("resume-line"),
     modeQuiz: el("mode-quiz"),
     modeFlash: el("mode-flash"),
+    guideBtn: el("guide-btn"),
+    guidePanel: el("guide-panel"),
+    guideBackdrop: el("guide-backdrop"),
+    guideClose: el("guide-close"),
+    guideContent: el("guide-content"),
     progressFill: el("progress-fill"),
     qCounter: el("q-counter"),
     qId: el("q-id"),
@@ -149,6 +154,53 @@
     dom.modeFlash.setAttribute("aria-selected", mode === "flash");
     // If mid-session, re-render current card under new mode rules.
     if (!dom.quizScreen.classList.contains("hidden")) render();
+  }
+
+  // ---- Study guide side panel ----
+  let guideLoaded = false;
+  const isGuideOpen = () => dom.guidePanel.classList.contains("open");
+
+  dom.guideBtn.addEventListener("click", () => (isGuideOpen() ? closeGuide() : openGuide()));
+  dom.guideClose.addEventListener("click", closeGuide);
+  dom.guideBackdrop.addEventListener("click", closeGuide);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isGuideOpen()) closeGuide();
+  });
+  // In-panel table-of-contents links: scroll within the panel, not the page.
+  dom.guideContent.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const target = dom.guideContent.querySelector("#" + CSS.escape(a.getAttribute("href").slice(1)));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth", block: "start" }); }
+  });
+
+  function openGuide() {
+    dom.guidePanel.classList.add("open");
+    dom.guideBackdrop.classList.add("show");
+    dom.guidePanel.setAttribute("aria-hidden", "false");
+    dom.guideBtn.setAttribute("aria-expanded", "true");
+    document.body.classList.add("no-scroll");
+    if (!guideLoaded) {
+      guideLoaded = true; // don't retry-storm on failure; reset below if it fails
+      fetch("guide-content.html")
+        .then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then((html) => { dom.guideContent.innerHTML = html; })
+        .catch((err) => {
+          guideLoaded = false;
+          dom.guideContent.innerHTML =
+            '<p class="muted">Could not load the study guide. ' +
+            'You can read it on GitHub instead.</p>';
+          console.error(err);
+        });
+    }
+    dom.guideContent.focus();
+  }
+  function closeGuide() {
+    dom.guidePanel.classList.remove("open");
+    dom.guideBackdrop.classList.remove("show");
+    dom.guidePanel.setAttribute("aria-hidden", "true");
+    dom.guideBtn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("no-scroll");
   }
 
   // ---- Profiles UI ----
@@ -465,6 +517,7 @@
   });
 
   document.addEventListener("keydown", (e) => {
+    if (isGuideOpen()) return; // don't drive the quiz while reading the guide
     if (dom.quizScreen.classList.contains("hidden")) return;
     if (e.key === "ArrowRight") dom.nextBtn.click();
     else if (e.key === "ArrowLeft") dom.prevBtn.click();

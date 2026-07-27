@@ -5,12 +5,14 @@ Voltage Communications Systems exam leans on. No experience assumed. If you can
 read a ruler and do a little arithmetic, you can learn this.
 
 This guide was built by reading all 160 questions in the practice bank and
-pulling out the concepts they keep testing. It teaches the ideas the way this
-exam expects you to answer them. Codes change, so always confirm against the
-current NEC/NFPA before doing real work.
+pulling out the concepts they keep testing. It does not just list facts; it
+explains *why* each fact is true so the answers stick and so you can reason
+through a question you have never seen before. Codes change, so always confirm
+against the current NEC/NFPA before doing real work.
 
 **How to use it:** read a section, then go do those questions in the quiz app.
-The concepts stick a lot faster when you immediately practice them.
+The concepts stick a lot faster when you immediately practice them. When a number
+feels arbitrary, come back here and reread the "why" next to it.
 
 ---
 
@@ -39,257 +41,414 @@ The concepts stick a lot faster when you immediately practice them.
 
 ## 1. Electricity in sixty seconds
 
-Electricity is just **electrons moving through a wire**. Three words describe
-almost everything:
+Electricity is just **electrons drifting through a conductor**. A conductor is a
+material (copper, aluminum) whose outer electrons are loosely held, so a push can
+nudge them along from atom to atom. That collective nudge, repeated down the
+whole length of a wire, is an electric current. An insulator (the plastic jacket
+on the wire) holds its electrons tightly, so current cannot flow through it, and
+that is exactly why we wrap conductors in it.
 
-- **Voltage (volts, V):** the *push*. Think of it as water pressure in a pipe.
-- **Current (amperes, amps, A):** the *flow*. How much water actually moves.
-- **Resistance (ohms, Ω):** the *pushback*. A narrow or clogged pipe resists flow.
+Three quantities describe almost everything on this exam, and the easiest way to
+keep them straight is the **water-in-a-pipe** analogy. Imagine water flowing
+through plumbing:
 
-The water-pipe picture is worth memorizing because every exam question about
-volts, amps, and ohms is really this picture:
+- **Voltage (volts, V)** is the *pressure* pushing the water. No pressure, no
+  flow. Voltage is not the electricity itself; it is the potential difference,
+  the "want" to move, between two points. A 12 volt battery maintains 12 volts of
+  pressure between its two terminals whether or not anything is connected.
+- **Current (amperes, amps, A)** is the *rate of flow*, how much water actually
+  moves past a point each second. In electricity it is the number of electrons
+  per second. Nothing flows until the pressure has a complete loop to push
+  through, which is why a circuit must be a closed path.
+- **Resistance (ohms, Ω)** is the *pushback*, the friction that opposes flow. A
+  long, thin, or clogged pipe resists more than a short, fat, clean one. In a
+  wire, resistance comes from the electrons bumping into the atoms of the metal,
+  which is also why resistance turns electrical energy into heat.
 
-> More pressure (voltage) pushes more water (current). A narrower pipe (more
-> resistance) lets less water through.
+Hold this picture in your head:
 
-That single sentence is Ohm's Law in words.
+> More pressure (voltage) pushes more water (current). A narrower or longer pipe
+> (more resistance) lets less water through for the same pressure.
+
+That one sentence is Ohm's Law stated in plain words, and roughly a fifth of the
+exam is really just this picture wearing different costumes. Everything in the
+next few sections is built on it.
+
+One more idea that ties them together: **a circuit must be a complete loop.**
+Current leaves the source, travels through the load, and returns. Break the loop
+anywhere (a switch, a cut wire, a bad connection) and current stops everywhere in
+that loop. That is why a single failure can kill an entire run, and it is the
+heart of the troubleshooting questions later.
 
 ---
 
 ## 2. Ohm's Law
 
-The relationship between the three:
+Ohm's Law is the mathematical version of the water-pipe sentence. It is the most
+important equation on the exam because so many other ideas fall out of it:
 
 ```
 V = I × R
 ```
 
-Where **V** = volts, **I** = current in amps, **R** = resistance in ohms.
-(Engineers use "I" for current, from the French *intensité*.)
+Here **V** is volts, **I** is current in amps, and **R** is resistance in ohms.
+Engineers write current as "I" (from the French *intensité de courant*), which
+looks odd at first but is universal, so get comfortable with it.
 
-Rearrange it depending on what you are solving for:
+Read the equation as a story: the voltage you measure across something equals how
+much current is flowing times how hard that something resists. If either the
+current or the resistance goes up, the voltage across that element goes up too.
 
-| You want | Formula |
-|----------|---------|
-| Voltage  | V = I × R |
-| Current  | I = V ÷ R |
-| Resistance | R = V ÷ I |
+You will need all three arrangements depending on what the question gives you:
 
-**Memory trick, the "VIR triangle":** write V on top, I and R on the bottom.
-Cover the one you want; the other two show you the math.
+| You know | You want | Formula |
+|----------|----------|---------|
+| current and resistance | voltage | V = I × R |
+| voltage and resistance | current | I = V ÷ R |
+| voltage and current | resistance | R = V ÷ I |
+
+**The VIR triangle** is the fastest way to recall which is which without
+memorizing three formulas. Draw V on top, with I and R side by side underneath:
 
 ```
       ( V )
      ( I | R )
 ```
 
-Cover V, you see I × R. Cover I, you see V/R. Cover R, you see V/I.
+Cover the quantity you want with a finger and read what is left. Cover **V** and
+you see **I next to R**, meaning multiply: `V = I × R`. Cover **I** and you see
+**V over R**, meaning divide: `I = V ÷ R`. Cover **R** and you get `R = V ÷ I`.
+The triangle works because the layout literally encodes the algebra: things side
+by side multiply, things stacked divide.
+
+A quick intuition check you can apply to any answer: if you raise the resistance
+but keep the voltage fixed, current must *fall* (I = V/R, bigger bottom means
+smaller result). If your arithmetic ever says otherwise, you flipped the formula.
 
 ---
 
 ## 3. Power, watts, and the pie wheel
 
-**Power (watts, W)** is how much work the electricity does (heat, light,
-sound). The basic formula:
+Voltage and current describe the push and the flow. **Power** describes the
+actual *work* being done: heat in a resistor, light from a lamp, sound from a
+speaker, motion in a motor. Power is measured in **watts (W)**, and its base
+formula is simple:
 
 ```
 P = V × I      (watts = volts × amps)
 ```
 
-Example from the bank: a 12 volt system drawing 0.25 amps uses
-`12 × 0.25 = 3 watts`.
+Why does multiplying pressure by flow give work? Because power is energy per
+second, and moving more charge (current) across a bigger pressure difference
+(voltage) does proportionally more work each second. A trickle at high pressure
+and a flood at low pressure can deliver the same power.
 
-Combine with Ohm's Law and you also get `P = I² × R` and `P = V² ÷ R`. You do
-not need to memorize all of them; memorize `P = V × I` and `V = I × R`, and you
-can derive the rest.
+**Worked example from the bank:** a 12 volt system draws 0.25 amps. Power is
+`12 × 0.25 = 3 watts`. Notice how small the current is and how modest the power
+is; that is the whole point of "low voltage" work.
 
-**The Ohm's Law / Watt's Law wheel** puts all four quantities (V, I, R, P) in
-one circle so any two known values get you the other two. If you like charts,
-search "Ohm's Law pie wheel" and keep one handy.
+Because `V = I × R`, you can substitute and get two more forms without memorizing
+them as separate facts:
+
+- `P = I² × R` (substitute V = IR into P = VI). Useful when you know current and
+  resistance. Note the current is *squared*, so doubling current quadruples the
+  heat. This is why undersized wire overheats: a little extra current makes a lot
+  more heat.
+- `P = V² ÷ R` (substitute I = V/R). Useful when you know voltage and resistance.
+
+You only truly need to memorize two equations, `V = I × R` and `P = V × I`.
+Everything else is those two rearranged. If charts help you, the **Ohm's Law /
+Watt's Law pie wheel** arranges all four quantities (V, I, R, P) in a circle so
+that knowing any two gives you the other two at a glance. Keep one nearby while
+you practice, and after a dozen problems you will not need it.
 
 ---
 
 ## 4. Series vs parallel circuits
 
-How components are wired changes how you add up resistance.
+How components are connected decides how their resistances combine, and this is
+one of the most tested calculation skills on the exam. There are two basic
+arrangements, and it pays to recognize each on sight.
 
-**Series** (one path, components in a line, like a single chain):
+### Series: one single path
 
-- Current is the **same** everywhere.
-- Voltages **add up**.
-- Resistances **add up**: `R_total = R1 + R2 + R3 ...`
-- A **series** circuit that looks like a straight line; break it anywhere and
-  everything stops (old Christmas lights).
+In a series circuit the components sit in a line, one after another, like beads
+on a string. There is exactly one path for current.
 
-**Parallel** (multiple paths, like rungs of a ladder):
+- **Current is the same everywhere.** With only one path, every electron that
+  passes through the first component must pass through all the rest. There is
+  nowhere else to go.
+- **Voltages add up.** Each component takes a share of the source voltage, and
+  the shares must total the source. The volts have to go somewhere.
+- **Resistances add up.** `R_total = R1 + R2 + R3 ...` More components in a row
+  means more total friction, so total resistance climbs and current falls.
+- **One break stops everything.** Because there is a single path, an open switch
+  or broken wire anywhere kills the whole circuit. Old holiday light strings are
+  the classic example: one dead bulb and the whole strand goes out.
 
-- Voltage is the **same** across each branch.
-- Currents **add up**.
-- Resistance formula: `1 / R_total = 1/R1 + 1/R2 + 1/R3 ...`
-- For exactly **two** resistors there is a shortcut:
-  `R_total = (R1 × R2) ÷ (R1 + R2)` (often called "product over sum").
-- A circuit whose branches look like a **ladder** is parallel.
+### Parallel: multiple paths
 
-**Key fact the exam loves:** adding resistors in parallel *lowers* total
-resistance (you gave the current more paths). Total parallel resistance is
-always smaller than the smallest single resistor.
+In a parallel circuit the components bridge the same two points, like the rungs
+of a ladder. Current has several routes.
 
-**Worked example (from the diagram question):** a 10 volt circuit has 1, 6, and
-3 ohm resistors in series in one branch: `1 + 6 + 3 = 10 ohms`. That 10 ohm
-branch sits in parallel with another 10 ohm resistor:
-`(10 × 10) ÷ (10 + 10) = 100 ÷ 20 = 5 ohms`. That 5 ohms is then in series with
-a 2 and a 3 ohm resistor: `2 + 5 + 3 = 10 ohms total`.
+- **Voltage is the same across every branch.** Each branch connects the same two
+  nodes, so each sees the full source voltage.
+- **Currents add up.** The source current splits among the branches and rejoins
+  after, so the branch currents sum to the total.
+- **Resistance goes DOWN, and this surprises people.** Adding another branch
+  gives current one more path to take, which is like opening another checkout
+  lane: more lanes, less total congestion. The formula is
+  `1 / R_total = 1/R1 + 1/R2 + 1/R3 ...` For exactly two resistors there is the
+  "product over sum" shortcut: `R_total = (R1 × R2) ÷ (R1 + R2)`.
 
-**Another (all parallel):** 20, 30, and 40 ohm resistors in parallel:
-`1/20 + 1/30 + 1/40 = 0.05 + 0.0333 + 0.025 = 0.1083`, so
-`R_total = 1 ÷ 0.1083 ≈ 9.2 ohms`. Notice it is smaller than 20, the smallest
-resistor. That is your sanity check.
+**The single most useful sanity check on the whole exam:** total parallel
+resistance is always *smaller than the smallest individual resistor*. If you
+compute a parallel total that is bigger than one of the branches, you made an
+error. A circuit whose branches look like ladder rungs is parallel; a straight
+line of components is series.
+
+### Worked example (the diagram question, mixed circuit)
+
+A 10 volt source feeds a network. One branch has a 1, a 6, and a 3 ohm resistor
+in series, so add them: `1 + 6 + 3 = 10 ohms`. That combined 10 ohm branch sits
+in parallel with another 10 ohm resistor, so use product over sum:
+`(10 × 10) ÷ (10 + 10) = 100 ÷ 20 = 5 ohms`. That 5 ohm equivalent is then in
+series with a 2 and a 3 ohm resistor, so add again: `2 + 5 + 3 = 10 ohms total`.
+The trick is to collapse the circuit in stages, replacing each series or parallel
+cluster with its single equivalent value, until one number remains.
+
+### Worked example (all parallel)
+
+Three resistors, 20, 30, and 40 ohms, all in parallel across a 120 volt line.
+Add the reciprocals: `1/20 + 1/30 + 1/40 = 0.0500 + 0.0333 + 0.0250 = 0.1083`.
+Then invert: `R_total = 1 ÷ 0.1083 ≈ 9.2 ohms`. Sure enough, 9.2 is smaller than
+20, the smallest branch, so the answer passes the sanity check.
 
 ---
 
 ## 5. Voltage drop
 
-Every resistance "uses up" some voltage as current passes through it. The amount
-used up is `V = I × R` across that component. Add up all the drops in a series
-circuit and they equal the source voltage. This is **Kirchhoff's voltage law**,
-but you can just think "the volts have to go somewhere."
+Voltage drop is one specific consequence of Ohm's Law, and it powers most of the
+troubleshooting questions, so it earns its own section. The idea: whenever current
+flows through any resistance, some voltage is "used up" across that resistance,
+and the amount is `V = I × R`. Add up every drop around a series loop and the
+total exactly equals the source voltage. This is Kirchhoff's voltage law, but you
+can simply think, "the volts have to land somewhere, and they land in proportion
+to resistance."
 
-**Why this matters (a real bank question):** a line starts at 12 volts with a
-3.2 ohm resistor, but only 1.2 volts reaches the switch. Where did the other
-~10.8 volts go? Something in the path is eating the voltage that should not be:
-a bad connection or **bad switch** adding unexpected resistance. Unexpected
-voltage drop = unexpected resistance = a fault to hunt down.
+In a healthy circuit, voltage drops occur where you want them, mainly across the
+load that is doing the work. A problem shows up as voltage disappearing where it
+should not, which always means unexpected resistance has crept in, usually a
+corroded terminal, a loose connection, or a failing component.
+
+**The bank's classic example:** a line starts at 12 volts and has a known 3.2 ohm
+resistor, yet only 1.2 volts reaches the switch. Roughly 10.8 volts vanished
+before the switch. That much loss cannot be explained by the small intended
+resistor, so something in the path is adding resistance it should not. Among the
+choices, a **bad switch** (a failing contact adding resistance) is the culprit.
+The reasoning pattern to carry into the exam: *missing voltage means extra
+resistance, so go find the bad connection.*
 
 ---
 
 ## 6. AC, DC, and sine waves
 
-Two kinds of current:
+Electricity comes in two flavors, and communications work touches both.
 
-- **DC (direct current):** flows one direction only (batteries, most
-  electronics inside).
-- **AC (alternating current):** reverses direction continuously, back and forth
-  (wall power, signals on a line).
+- **DC, direct current,** flows in one direction only. Batteries supply DC, and
+  most electronics run on DC internally. If you graphed DC voltage over time it
+  would be a flat, steady line.
+- **AC, alternating current,** continuously reverses direction, sloshing back and
+  forth many times per second. Utility power is AC, and most signals riding on a
+  cable are AC. The phrase to recognize on the exam is "current that reverses
+  direction continuously," which is the definition of **alternating** current.
 
-When AC "reverses direction continuously," if you graph its voltage over time
-you get a smooth, repeating S-curve. That shape is a **sine wave**, also called
-a **sinusoidal waveform**. They are two names for the same thing. A sine wave is
-symmetrical: equal amount above the zero line (positive) and below it (negative).
+When you plot AC voltage against time, you do not get a jagged shape; you get a
+smooth, symmetrical, repeating curve that rises to a positive peak, falls through
+zero to a negative peak, and returns. That shape is a **sine wave**, also called a
+**sinusoidal waveform**. The exam treats those two terms as identical, and a
+question may simply ask "another name for a sine wave," expecting "sinusoidal
+waveform." The curve is symmetrical about a center zero line, equal amounts above
+(positive half) and below (negative half), which is a direct result of the
+current swinging equally in both directions.
 
-**Frequency** is how many complete cycles happen per second, measured in
-**Hertz (Hz)**. **Impedance** is AC's version of resistance (it includes
-frequency-dependent effects) and is still measured in **ohms**.
+Two more AC properties you should understand rather than just memorize:
+
+- **Frequency** is how many complete cycles the wave finishes each second,
+  measured in **Hertz (Hz)**. One full up-and-back trip is one cycle. Higher
+  frequency means the wave repeats faster, which matters for bandwidth and
+  signal behavior.
+- **Impedance** is AC's version of resistance. It still opposes current and is
+  still measured in **ohms**, but it also includes frequency-dependent effects
+  (from capacitance and inductance) that plain DC resistance does not. When a
+  question asks what impedance is measured in, the answer is **ohms**, the same
+  unit as resistance, because impedance is a generalized resistance for AC.
 
 ---
 
 ## 7. Reading an oscilloscope
 
-An **oscilloscope** draws a signal's voltage (vertical) against time
-(horizontal) on a grid of squares called **divisions**. The exam shows you a
-sine wave on a grid and asks you to read values. Two labels tell you the scale:
+An **oscilloscope** is a tool that draws a signal's voltage on the vertical axis
+against time on the horizontal axis, over a grid of squares called **divisions**.
+The exam shows a sine wave on such a grid and asks you to read a voltage or a time
+off it. This looks intimidating and is actually just counting squares, as long as
+you first find the scale.
 
-- **VOLTS = .5/DIV** means each vertical square is worth 0.5 volts.
-- **TIME = 10ms/DIV** means each horizontal square is worth 10 milliseconds.
+Two labels give you the scale, one per axis:
 
-Then it is just counting squares and multiplying:
+- **VOLTS = .5/DIV** means each vertical square represents 0.5 volts.
+- **TIME = 10ms/DIV** means each horizontal square represents 10 milliseconds.
 
-- **Voltage between two points** = (number of vertical divisions) × (volts per div).
-  Example: point A is 2 divisions above the reference line Y, at 0.5 V/div, so
+"Per division" is the key phrase. The scope is telling you the value of one
+square. From there:
+
+- **To read a voltage between two points,** count how many vertical divisions
+  separate them and multiply by the volts-per-division. If point A sits 2 squares
+  above the reference line Y and the scale is 0.5 V/div, then
   `2 × 0.5 = 1 volt`.
-- **Time between two points** = (number of horizontal divisions) × (time per div).
-  Example: 5 divisions apart at 10 ms/div = `5 × 10 = 50 ms`. Four divisions
-  between waves = `4 × 10 = 40 ms`.
+- **To read a time between two points,** count the horizontal divisions between
+  them and multiply by the time-per-division. Five squares at 10 ms/div is
+  `5 × 10 = 50 ms`. If two adjacent wave features are 4 squares apart at the same
+  scale, that is `4 × 10 = 40 ms`.
 
-**Remember:** find the per-division scale first, count divisions second,
-multiply third. That is the whole trick.
+The method never changes: **read the per-division scale first, count divisions
+second, multiply third.** Every scope question on this exam is that same three
+step routine, so once you have done two of them you have done all of them. As a
+bonus, the time for one full cycle is the wave's *period*, and frequency is just
+`1 ÷ period`, which connects this section back to Hertz.
 
 ---
 
 ## 8. Measuring instruments
 
-Match the meter to the quantity:
+Each electrical quantity has a matching meter, and the exam expects you to pair
+them correctly and know how each connects to the circuit.
 
-| Measures | Instrument | How it connects |
-|----------|-----------|-----------------|
-| Voltage  | **Voltmeter** | across the component (parallel) |
-| Current  | **Ammeter** | in the path (series) |
-| Resistance | **Ohmmeter** | across a de-energized component |
+| Measures | Instrument | How it connects | Why |
+|----------|-----------|-----------------|-----|
+| Voltage  | **Voltmeter** | across the component (parallel) | it compares the pressure at two points, so it taps both ends |
+| Current  | **Ammeter** | in the path (series) | all the current must flow through it to be counted |
+| Resistance | **Ohmmeter** | across a de-energized part | it sends its own tiny current and measures the pushback |
 
-To get a **true measure of voltage**, use a **voltmeter**. "Ampacity" is a
-different thing (see below), not something you read off a meter.
+To get a **true measure of voltage**, use a **voltmeter**, connected in parallel
+across whatever you are testing. A good voltmeter draws almost no current itself,
+so it reads the pressure without disturbing the circuit. An ammeter is the
+opposite: it must be placed in line so the whole current passes through it, and it
+adds almost no resistance so it does not choke the flow it is measuring.
 
-**Ampacity** = the maximum current (amperes) a conductor can carry continuously
-without overheating. What changes a conductor's temperature: the current through
-it, the surrounding (ambient) temperature, and nearby load-carrying conductors.
-Applied *voltage* by itself does not.
+Do not confuse measuring instruments with **ampacity**, which is not something you
+read off a meter at all. Ampacity is the maximum current a conductor can carry
+continuously without its insulation overheating. It is a property of the wire and
+its surroundings. Three things push a conductor's temperature up: the current
+flowing through it, the ambient temperature around it, and heat from nearby
+load-carrying conductors bundled with it. Notice what is *not* on that list: the
+applied voltage by itself does not change the conductor's temperature, because
+heat depends on current (`P = I²R`), not voltage. The exam likes to test that
+distinction.
 
 ---
 
 ## 9. Wire gauge (AWG)
 
-Wire thickness is measured in **AWG (American Wire Gauge)**. The one rule that
-trips everyone up:
+Wire thickness is measured with the **AWG (American Wire Gauge)** system, and it
+has one counterintuitive rule that catches almost everyone:
 
-> **Bigger AWG number = THINNER wire. Smaller number = THICKER wire.**
+> **A bigger AWG number means a THINNER wire. A smaller number means a THICKER
+> wire.**
 
-So 22 AWG is skinny; 6 AWG is fat. Thicker wire (smaller number) carries more
-current and has less resistance. A rough feel for the ladder: every 3 gauge
-numbers roughly doubles or halves the cross-sectional area.
+So 22 AWG is a hair-thin conductor, while 6 AWG is a heavy one your finger would
+notice. The scale runs backward because it originally counted how many times the
+wire was drawn through progressively smaller dies to thin it out; more draws
+(bigger number) means thinner wire.
 
-Numbers worth knowing from the bank:
+Thickness matters because it sets two things at once. A thicker conductor (smaller
+number) has **more cross-sectional area**, which means **less resistance** and a
+**higher ampacity** (it can carry more current without overheating). A thinner
+conductor resists more and carries less. As a rough feel for the ladder, every 3
+gauge numbers roughly doubles or halves the area, and every 6 numbers roughly
+doubles or halves the diameter.
 
-- Most common **communication** cable sizes: **18 to 24 AWG**.
-- Minimum **Class 1** circuit conductor: **18 AWG**.
-- Minimum **non-power-limited fire alarm** conductor: **18 AWG**.
-- Minimum **communications grounding** conductor: **14 AWG**.
-- Minimum **antenna** grounding conductor (copper): **10 AWG**.
-- **CATV bonding jumper** to the power ground: **6 AWG**.
+The numbers the bank actually asks for, with the reasoning where it helps:
+
+- Most common **communication** cable sizes: **18 to 24 AWG.** Signal cables carry
+  tiny currents, so they can be thin.
+- Minimum **Class 1** circuit conductor: **18 AWG.**
+- Minimum **non-power-limited fire alarm (NPLFA)** conductor: **18 AWG.**
+- Minimum **communications grounding** conductor: **14 AWG.** Grounds may need to
+  carry fault current, so they are beefier than signal wire.
+- Minimum **antenna** grounding conductor (copper): **10 AWG.** Antennas must
+  handle possible lightning energy, so the ground is thicker still.
+- **CATV bonding jumper** to the power ground: **6 AWG.**
 - **DC grounding electrode** conductor: not smaller than **8 AWG** copper.
+
+Notice the pattern: the more fault or lightning energy a conductor might have to
+carry, the thicker (smaller AWG number) the code requires.
 
 ---
 
 ## 10. Conductor insulation letter codes
 
-Wire types like THHN or XHHW look like alphabet soup, but each letter means
-something. Decode them:
+Wire types like THHN and XHHW look like random letters, but each letter is an
+abbreviation describing the insulation, and once you can decode them you can
+answer these questions by reading rather than memorizing. Here is the key:
 
 | Letter | Meaning |
 |--------|---------|
 | **T** | Thermoplastic insulation |
-| **H** | Heat resistant (to 75°C) |
-| **HH** | High heat resistant (to 90°C) |
+| **H** | Heat resistant (rated to 75°C) |
+| **HH** | High heat resistant (rated to 90°C) |
 | **W** | **W**et locations rated |
-| **N** | **N**ylon jacket (tough outer coat) |
-| **X** | Cross-linked polyethylene |
+| **N** | **N**ylon jacket (a tough outer coat, adds abrasion and chemical resistance) |
+| **X** | Cross-linked polyethylene insulation |
 | **U** | **U**nderground |
 | **SE / USE** | Service Entrance / Underground Service Entrance |
 | **UF** | Underground Feeder |
 
-Now they read like words:
+Now the alphabet soup reads like descriptions:
 
-- **THHN** = Thermoplastic, High-Heat, Nylon. Great in dry/damp conduit. **No W, so not for wet.**
-- **THW / THHW** = Thermoplastic Heat, Wet-rated.
-- **XHHW** = Cross-linked, High-Heat, Wet-rated. A go-to for wet locations.
-- **USE** = Underground Service Entrance: rated for **direct burial**.
-- **UF** = Underground Feeder: also for direct burial (the "tough gray cable").
-- **TW** = Thermoplastic, Wet.
+- **THHN** = **T**hermoplastic, **H**igh-**H**eat, **N**ylon jacket. Excellent in
+  dry or damp conduit and very common. Critically, it has **no W**, so it is
+  **not** approved for wet locations on its own.
+- **THW / THHW** = **T**hermoplastic, **H**eat (or high heat), **W**et rated.
+- **XHHW** = **X** cross-linked, **H**igh-**H**eat, **W**et rated. A workhorse for
+  wet locations.
+- **USE** = **U**nderground **S**ervice **E**ntrance, rated for **direct burial**
+  straight in the earth.
+- **UF** = **U**nderground **F**eeder, the tough gray cable also used for direct
+  burial.
+- **TW** = **T**hermoplastic, **W**et.
 
-**The exam pattern:** "which is *not* allowed in a wet location?" The answer is
-usually **THHN**, because it lacks the **W**. "Which is used for direct burial?"
-**USE** (or **UF**). Look for the letter that matches the condition.
+**How the exam uses this:** most insulation questions are really "does this
+letter match this condition?"
 
-**Fun fact from the bank:** UF is tough against water and soil acid, but gophers
-and ground squirrels love to chew it, which is why metal conduit is sometimes
-worth the extra cost underground.
+- "Which conductor is *not* permitted in a wet location?" The answer is usually
+  **THHN**, precisely because it lacks the **W**. Every other option in those
+  questions carries a W.
+- "Which cable is approved for direct burial?" **USE** (and UF), because the U
+  tells you it is built for underground use.
+
+So you rarely have to recall a list. You decode the letters and match them to what
+the question describes. That single habit answers a whole cluster of questions.
+
+**A memorable bank detail:** UF is a tough plastic that shrugs off water and soil
+acid, but gophers and ground squirrels happily chew through it, which is why the
+small extra cost of running it inside metal conduit underground is often money
+well spent. Little stories like this are how exam writers make a dry fact
+memorable, and they sometimes become the question.
 
 ---
 
 ## 11. The low-voltage cable naming system
 
-This is the single biggest topic on the exam, and it is completely learnable
-because it is a system, not a list to memorize blindly.
+This is the single largest topic on the exam, and the good news is that it is a
+*system*, not a pile of random codes to brute-force memorize. Learn the logic
+once and you can decode cable names you have never seen. There are three moving
+parts: the family, the suffix, and the substitution rule.
 
-### Step 1: the family tells you the application (and NEC Article)
+### Part 1: the family tells you the application (and its NEC Article)
+
+The base letters identify what the cable is *for*, which also tells you which
+Article of the NEC governs it:
 
 | Prefix | Family | NEC Article |
 |--------|--------|-------------|
@@ -300,219 +459,330 @@ because it is a system, not a list to memorize blindly.
 | **NPLF** | Non-Power-Limited Fire Alarm | 760 |
 | **OFN / OFC** | Optical Fiber, Nonconductive / Conductive | 770 |
 
-### Step 2: the suffix tells you *where it can go*
+For the optical types, the third letter matters: **OFN** is **N**onconductive
+(all glass and plastic, no metal, so it cannot carry stray current) while **OFC**
+is **C**onductive (it contains a metallic element such as a strength member or
+armor). Nonconductive types are often preferred precisely because they add no
+electrical path.
 
-Add a letter to the family name to rate it for tougher environments:
+### Part 2: the suffix tells you where it is allowed to go
 
-| Suffix | Meaning | Where |
-|--------|---------|-------|
-| **P** | **Plenum** | air-handling spaces (the strictest) |
-| **R** | **Riser** | vertical runs between floors / in shafts |
+Tack a letter onto the end of the family name to rate it for a tougher
+environment. This suffix ladder is identical across all the families:
+
+| Suffix | Meaning | Where it may be installed |
+|--------|---------|---------------------------|
+| **P** | **P**lenum | air-handling plenum spaces (the strictest rating) |
+| **R** | **R**iser | vertical runs between floors and in shafts |
 | *(none)* | General purpose | general indoor use |
-| **X** | Limited use | dwellings, small/short runs |
+| **X** | Limited use | dwellings and short, small runs (the least demanding) |
 
-So **CMP** = Communications, Plenum. **CMR** = Communications, Riser.
-**CM** = general. **CMX** = limited use. Same ladder applies to the other
-families: **CL3P, CL3R, CL3**; **FPLP, FPLR, FPL**; **CATVP, CATVR, CATV, CATVX**;
-**OFNP, OFNR, OFN**.
+So **CMP** is Communications, Plenum. **CMR** is Communications, Riser. Plain
+**CM** is general purpose. **CMX** is limited use. The same pattern gives you
+**CL3P / CL3R / CL3**, **FPLP / FPLR / FPL**, **CATVP / CATVR / CATV / CATVX**,
+and **OFNP / OFNR / OFN**. Once you see that the last letter is always the
+environment rating, half of these questions decode themselves.
 
-### Step 3: the substitution pyramid
+### Part 3: the substitution pyramid
 
-You may always use a **higher-rated** cable in place of a lower one, never the
-reverse. Picture a pyramid, best at the top:
+The rule that ties it together: you may always install a **higher-rated** cable
+where a lower one is required, but **never** a lower-rated cable where a higher
+one is required. Picture a pyramid with the toughest rating at the top:
 
 ```
-            Plenum  (P)          <- can go anywhere below it
+            Plenum  (P)          can be used anywhere below it
               |
            Riser   (R)
               |
         General purpose
               |
-         Limited (X)             <- most restricted
+         Limited (X)             the most restricted
 ```
 
-**Rule:** substitute UP the pyramid, never down. Plenum-rated cable can replace
-riser or general cable. A general cable can NOT be used where plenum is
-required. This is exactly what the "CL2P is being replaced, what can substitute?"
-questions test: pick something equal or higher (for CL2P you could use CL3P or a
-plenum-rated communications type).
+**Substitute UP the pyramid, never down.** Plenum-rated cable can stand in for
+riser or general cable, because anything that survives the harsh moving-air
+plenum environment is more than good enough elsewhere. A general cable can never
+be used where plenum is required, because it lacks the low-smoke, flame-resistant
+construction that the plenum demands. This is exactly what the "CL2P is being
+replaced in a plenum, what may substitute?" questions test: you must choose
+something rated **equal to or higher than** what you are replacing (for a plenum
+job, another plenum-rated type such as CL3P).
 
-**Memory hook:** **P**lenum > **R**iser > (general) > **X** = "**P**retty
-**R**ough **G**oing e**X**treme," or just remember plenum is the top of the food
-chain because it is the hardest environment (moving air spreads fire and smoke).
+**Why the order is P over R over general over X:** it mirrors how dangerous each
+environment is for fire. Plenums move air through the building, so a burning cable
+there could spread flame and toxic smoke fast, which demands the best jacket.
+Risers run vertically and let fire climb between floors, which is serious but less
+than a plenum. General indoor space is milder, and limited-use dwelling runs are
+the least demanding. The rating ladder is really a fire-safety ladder.
+
+**Memory hook:** remember that **P**lenum sits at the top because it is the
+hardest place to survive, then **R**iser, then general, then **X** limited. If you
+can rank the environments by fire risk, you can rank the cables.
 
 ---
 
 ## 12. Plenum, riser, and shaft
 
-Why the P/R ladder exists at all: fire and smoke.
+The P and R ratings only make sense once you know what these building spaces are
+and why fire code treats them differently. It all comes down to how fire and
+smoke would travel.
 
-- **Plenum:** a space used to move heating/cooling air, most often the gap above
-  a drop ceiling used as an air-return path. Because moving air can carry flame
-  and toxic smoke through a building fast, plenum cable has a special low-smoke,
-  flame-resistant jacket. Highest requirement. Cable rated for **both plenum and
-  ducts/general** is the top tier (for example, **CMP**).
-- **Riser:** a **vertical** run that passes from floor to floor. Fire climbs, so
-  riser cable resists carrying flame **up** between floors.
-- **Shaft:** a vertical opening (like an elevator or utility shaft). For cabling
-  purposes it is treated like a riser, so **riser-rated** cable (for example,
-  **CMR**) is what goes in a vertical shaft.
+- **Plenum:** a space used to move heating and cooling air. The most common case
+  is the gap above a suspended (drop) ceiling that is used as a return-air path
+  back to the HVAC system. Because that space actively moves air throughout the
+  building, a cable burning there could feed flame and, worse, pump toxic smoke
+  into every room the air serves. That is why plenum-rated cable uses a special
+  low-smoke, flame-resistant jacket (often a fluoropolymer) and sits at the top
+  of the rating ladder. A cable rated for both plenums and general spaces, such as
+  **CMP**, is the most broadly usable communications type.
+- **Riser:** a **vertical** run that passes from one floor to another. Heat and
+  flame rise, so a fire can climb a vertical pathway from floor to floor. Riser
+  cable is built to resist carrying fire *upward* between floors, a step below
+  plenum but well above general.
+- **Shaft:** a vertical opening in the building, such as an elevator or utility
+  shaft. For cabling purposes a shaft is treated the same as a riser, since it is
+  a vertical fire path, so **riser-rated cable such as CMR** is what belongs in a
+  vertical shaft. When a question describes a vertical run in a shaft, it is
+  pointing you at the **R** (riser) rating.
 
-If a cable must pass a duct or plenum and is not plenum-rated, it must be
-installed inside proper **metal conduit** instead.
+One practical rule follows from all this: if a cable must pass through a duct or
+plenum and is not itself plenum-rated, it has to be run inside proper **metal
+conduit** to contain any fire. The conduit does the job the jacket would have.
 
 ---
 
 ## 13. Grounding and bonding
 
-People mix these up. The exam wants you to keep them straight:
+These two words get used interchangeably in casual speech, but the code treats
+them as distinct, and the exam rewards keeping them separate. The cleanest way to
+remember the difference is by *what connects to what*.
 
-- **Grounding** = connecting to the **earth**. It gives lightning and stray
-  energy a path to ground and sets a common voltage reference.
-- **Bonding** = connecting metal parts **to each other** so they sit at the same
-  electrical potential and give fault current a reliable path back to the source.
-  "Two conductive metals joined to complete a safety circuit" is **bonding**.
+- **Grounding** means connecting to the **earth** itself. It establishes a common
+  zero-voltage reference and gives lightning and stray high-voltage energy a path
+  into the ground where it can dissipate harmlessly. Think "connection to dirt."
+- **Bonding** means connecting metal parts **to each other** so they all sit at
+  the same electrical potential. If every metal enclosure is bonded together and
+  a hot conductor faults to one of them, the bonding path carries that fault
+  current back to the source fast enough to trip the breaker, instead of leaving
+  the metal energized and waiting to shock someone. The bank's phrasing, "two
+  conductive metals joined to complete a safety circuit," describes **bonding**.
 
-Color code:
+Why it matters for safety: grounding handles the rare, huge events (lightning,
+utility surges) by giving them somewhere to go, while bonding handles the common,
+dangerous event (an internal fault) by creating a low-resistance return path that
+guarantees the overcurrent device operates. You need both, and they do different
+jobs.
+
+**Color code (worth memorizing exactly):**
 
 - **Equipment grounding conductor:** **green**, green with a yellow stripe, or
-  bare copper.
-- Grounded (neutral) conductor: white or gray. (Not the same as the green
-  equipment ground.)
+  bare copper. This is the safety ground that bonds equipment enclosures.
+- **Grounded (neutral) conductor:** white or gray. This is a normal
+  current-carrying conductor, not the same thing as the green equipment ground,
+  even though both words contain "ground." Do not mix them up.
 
-Sizing highlights (see section 9 for the full list): communications ground min
-**14 AWG**, antenna ground min **10 AWG** copper, CATV bonding jumper min
-**6 AWG**, DC grounding electrode conductor min **8 AWG** copper.
+**Sizing highlights** (full list in section 9): communications ground minimum
+**14 AWG**, antenna ground minimum **10 AWG** copper, CATV bonding jumper minimum
+**6 AWG**, DC grounding electrode conductor minimum **8 AWG** copper. The heavier
+the possible fault or lightning current, the thicker the conductor.
 
-Bonding methods that are acceptable: pressure connectors, clamps, and lugs.
-**Sheet-metal screws are NOT an acceptable bonding method.** For an antenna, a
-**radial** ground (wires spreading out like spokes) is the preferred type.
+**Methods and specifics the bank tests:** acceptable bonding is done with
+pressure connectors, listed clamps, and lugs. **Sheet-metal screws are not an
+acceptable bonding method**, because they cannot be relied on to make and keep a
+solid low-resistance connection. For an antenna, the preferred ground is a
+**radial** ground, wires spread out from the base like spokes on a wheel, which
+gives lightning many low-impedance paths into the earth.
 
 ---
 
 ## 14. The codes
 
-Two rule books cover almost every code question:
+Nearly every code question traces back to one of two rule books, so knowing which
+is which, and how their numbering works, lets you place any citation.
 
-- **NFPA 70 = the National Electrical Code (NEC).** Wiring methods, cable types,
-  conductors, grounding, separations. This is the big one.
-- **NFPA 72 = the National Fire Alarm and Signaling Code.** Detectors,
-  notification appliances, backup power, testing intervals.
+- **NFPA 70 is the National Electrical Code (NEC).** It governs wiring methods,
+  cable types, conductor sizing, grounding and bonding, and separation distances.
+  This is the big one for the physical installation questions.
+- **NFPA 72 is the National Fire Alarm and Signaling Code.** It governs fire
+  detection, notification appliances, backup power, and testing intervals. When a
+  question is about smoke detectors, strobes, or battery run times, it is NFPA 72.
 
-**How to read a code citation:** `800.53` means **Article 800**, Section **53**.
-Parentheses add subsections: `110.26(A)(2)`. Handy articles to recognize:
+**How to read a citation.** The format is Article, then Section, then optional
+subsections in parentheses. So `800.53` means Article **800** (communications),
+Section **53**. `110.26(A)(2)` means Article 110, Section 26, subsection A, item
+2. Recognizing the leading number often tells you the topic instantly:
 
 | Article | Covers |
 |---------|--------|
 | 100 | Definitions |
-| 110.26 | Working space around equipment |
+| 110.26 | Working space around electrical equipment |
 | 250 | Grounding and bonding |
 | 300 | General wiring methods (holes in studs, firestopping) |
-| 310 | Conductors and insulation types |
-| 725 | Class 1, 2, 3 circuits (CL2/CL3) |
-| 760 | Fire alarm circuits (FPL/NPLF) |
-| 770 | Optical fiber (OFN/OFC) |
-| 800 | Communications circuits (CM) |
+| 310 | Conductors and their insulation types |
+| 725 | Class 1, 2, 3 circuits (the CL2/CL3 cables) |
+| 760 | Fire alarm circuits (FPL/NPLF cables) |
+| 770 | Optical fiber (OFN/OFC cables) |
+| 800 | Communications circuits (CM cables) |
 | 810 | Antennas |
-| 820 | CATV / coax |
+| 820 | CATV and coaxial systems |
 
-On the real exam, references get tagged **"Allowed in Test"** or **"Not allowed
-in Test."** That just tells you which code edition/book you may open during the
-exam; it is not part of the answer.
+Notice how the cable families from section 11 line up with these Article numbers.
+That is not a coincidence; the family names were chosen to match their Articles,
+so learning one reinforces the other.
 
-If a material substitution is ever needed, the person who approves it is the
-**Authority Having Jurisdiction (AHJ)**.
+On the real exam, each reference is tagged **"Allowed in Test"** or **"Not
+allowed in Test."** That tag has nothing to do with the answer. It only tells you
+which code edition or book you are permitted to open during the exam. Ignore it
+when reasoning about the actual question.
+
+One governance fact the bank includes: when a substitution of materials is needed,
+the person with authority to approve it is the **Authority Having Jurisdiction
+(AHJ)**, typically the local inspector, not the contractor, manufacturer, or
+owner.
 
 ---
 
 ## 15. Fire alarm essentials
 
-NFPA 72 numbers show up constantly. The ones the bank repeats:
+NFPA 72 supplies a steady stream of specific numbers, and they are easier to hold
+onto when you understand the intent behind each one: keep the system alive during
+a power failure, make sure people notice the alarm, and place detectors where
+they will actually sense a fire.
 
-**Backup (secondary) power:**
+**Backup (secondary) power.** The system must keep running when utility power
+fails, so the code sets minimum battery capacities:
 
-- Must carry the system **24 hours** in the quiet (quiescent, non-alarm) state,
-  then still sound the alarm for **5 minutes** at the end. (Written "24, 5.")
-- Emergency voice/alarm service: 24 hours quiet, then **15 minutes** at full load.
-- Backup power must take over automatically within **10 seconds** of a primary
-  power failure.
+- Carry the system for **24 hours** in the quiet (quiescent, non-alarm) state,
+  and then still sound the alarm for **5 minutes** at the end of that period. The
+  bank writes this as "24, 5." The logic: a power outage might not be noticed for
+  a day, and the system must still work when the fire finally happens.
+- For emergency voice/alarm communication service, the alarm portion extends to
+  **15 minutes** at full load, because voice evacuation may need to run longer.
+- Backup power must take over **automatically within 10 seconds** of a primary
+  failure, so protection is never meaningfully interrupted.
 
-**Trouble and fault signals:**
+**Trouble and fault signals.** The panel must tell someone when it is broken, not
+just when there is a fire:
 
 - An intermittent trouble signal sounds at least once every **10 seconds**, each
-  at least **1/2 second** long.
-- A fault must be re-annunciated every **24 hours**.
+  sounding lasting at least **1/2 second**, so it is noticeable but not confused
+  with an alarm.
+- A fault condition must be re-annunciated every **24 hours** so it is not
+  forgotten.
 
-**Notification (getting people's attention):**
+**Notification (making sure people react).**
 
-- A **visible** (strobe) device is required when ambient sound exceeds
-  **105 dBA**.
-- Audible alarms in a sleeping area: at least **15 dB above ambient**, or
-  **75 dB at the pillow**.
-- Strobe mounting height: minimum **80 inches**, maximum **96 inches** off the
-  floor. Audible appliances at least **7.5 feet** up.
+- A **visible** device (a strobe) is required when the ambient sound level
+  exceeds **105 dBA**, because in very loud spaces an audible-only alarm could be
+  missed.
+- Audible alarms in a sleeping area must be at least **15 dB above the ambient**
+  sound, or reach **75 dB at the pillow**, since sleeping people need a strong
+  signal to wake.
+- Strobes mount between **80 inches minimum and 96 inches maximum** off the floor,
+  high enough to be seen across a room but within a sensible band. Audible
+  appliances sit at least **7.5 feet** up.
 
-**Detector placement:**
+**Detector placement.** Detectors only work where smoke and heat actually reach
+them:
 
-- Heat detector on a ceiling: keep it at least **4 inches** off the wall.
-- Smoke detector on a sidewall: the top within **12 inches** of the ceiling.
-- Keep detectors about **3 feet** from a bathroom door and from HVAC supply
-  registers.
-- One smoke detector covers a maximum of **900 square feet**.
-- A smoke detector may sit in airflow up to **300 CFM** unless listed for more.
-- Manual pull stations: max travel distance **200 feet** to reach one.
+- A heat detector on a ceiling stays at least **4 inches** off the wall, avoiding
+  the "dead air" corner where the ceiling meets the wall.
+- A smoke detector mounted on a sidewall has its top within **12 inches** of the
+  ceiling, in the layer where smoke collects.
+- Keep detectors roughly **3 feet** from a bathroom door (steam causes false
+  alarms) and from HVAC supply registers (moving air can blow smoke away).
+- One smoke detector covers a maximum of **900 square feet** of smooth ceiling.
+- A smoke detector may sit in airflow up to **300 CFM** unless it is specifically
+  listed for more, because too much airflow prevents smoke from settling on the
+  sensor.
+- Manual pull stations are placed so the travel distance to reach one never
+  exceeds **200 feet**.
 
-**Testing:** batteries are tested per the manufacturer's recommendation; a smoke
-detector's sensitivity is first checked within **1 year**, and a tamper (control
-valve) switch is verified within the first **2 turns** of the valve wheel.
+**Testing intervals.** Batteries are tested per the manufacturer's
+recommendation. A smoke detector's sensitivity is first verified within **1 year**
+of installation. A tamper (control-valve) switch must signal within the first
+**2 turns** of the valve wheel, so anyone shutting a sprinkler valve is detected
+almost immediately.
 
 ---
 
 ## 16. Separation and clearance numbers
 
-Low-voltage and communication cabling has to keep its distance from power so
-signals stay clean and safe. The recurring figures:
+Low-voltage and communication cabling has to keep its distance from power wiring
+and from workers' access space, for two reasons: to keep electrical noise from
+power lines off the sensitive signal cables, and to keep everyone safe. These
+recurring minimums show up throughout the bank.
 
-| Situation | Minimum |
-|-----------|---------|
-| Working space width in front of a panel (≤150 V to ground) | **30 in** (or the equipment width, whichever is greater) |
-| Bored hole from the edge of a wood stud | **1-1/4 in** |
-| Communications/coax from open light or power conductors (indoors) | **2 in** |
-| Communication conductors from Class 1 circuits | **2 in** |
-| Any cabling from **lightning** conductors | **6 ft (1.8 m)** |
-| Rigid Metal Conduit support spacing | every **10 ft** |
-| Max voltage a coax may deliver (transformer-supplied) | **60 volts** |
+| Situation | Minimum | Why |
+|-----------|---------|-----|
+| Working space width in front of a panel (≤150 V to ground) | **30 in**, or the equipment width if wider | room to work safely and step back from an arc |
+| Bored hole from the edge of a wood stud | **1-1/4 in** | keeps nails and screws from piercing the cable |
+| Communications/coax from open light or power conductors (indoors) | **2 in** | limits electrical noise coupling onto signals |
+| Communication conductors from Class 1 circuits | **2 in** | same noise-isolation reason |
+| Any cabling from **lightning** conductors | **6 ft (1.8 m)** | lightning energy can jump a short gap |
+| Rigid Metal Conduit support spacing | every **10 ft** | keeps the run rigidly supported |
+| Max voltage a coax may deliver (transformer-supplied) | **60 volts** | keeps a "power-limited" coax genuinely low-voltage |
 
-Where cables pass through a **fire-resistance-rated** wall, floor, or ceiling,
-the opening must be **firestopped** with an approved method to keep the rating
-intact.
+The working-space rule deserves a note: the **30 inch** width is a minimum, and
+the requirement is actually 30 inches *or the width of the equipment, whichever is
+greater*. So a 48 inch wide panel needs 48 inches of working width, not 30. The
+depth in front is generally 36 inches and the headroom 6.5 feet, all so a worker
+can operate and retreat safely.
+
+Where cables pass through a **fire-resistance-rated** wall, floor, or ceiling, the
+opening around them must be **firestopped** with an approved material. The whole
+point of a rated barrier is to stop fire from spreading between areas, and an
+unsealed cable penetration would be a hole that defeats it, so the code requires
+you to restore the rating.
 
 ---
 
 ## 17. Audio, video, and telecom grab bag
 
-The exam mixes in practical AV and telecom trivia. Quick hits:
+The exam mixes in practical audio/video and telecom knowledge. These are less
+about formulas and more about knowing what a device or term does. Here is the
+useful context behind each, not just the answer.
 
-- **Balun:** converts between a **bal**anced line (twin-lead) and an
-  **un**balanced line (coax). This bank calls it a "balanced transformer."
-- **Equalization (EQ):** intentionally altering frequency response / tone.
-- **Crossover:** splits audio into frequency bands for the right speaker, done
-  by a **frequency-dividing network**.
-- **ADC:** Analog-to-Digital Converter (analog going to digital).
-- **Coax and connectors:** **RG-59** is a video coax good to about **1000 ft**;
-  **RG-6** uses an **F connector**. **BNC** connectors are common on CCTV
-  cameras; **ST** is a fiber connector.
-- **TV channel bandwidth:** **6 MHz**.
-- **Cabling topologies:** star (hub-and-spoke), **bus** (common for cable TV),
-  ring, and point-to-point.
-- **Copper data cable:** **UTP (Unshielded Twisted Pair)** is the most common for
-  desktop data; STP is shielded.
-- **Fiber:** **single-mode** goes farther (limited mainly by attenuation);
-  **multimode** suffers modal dispersion. **Fusion splicing** joins two clean
-  fibers end to end with an electric arc.
-- **Antenna wire:** most common gauge is **14 AWG**; a **radial** ground suits a
-  vertical antenna. A downside of copper-clad steel core antenna wire is that it
-  **kinks and knots easily**.
+- **Balun:** the name is a contraction of **bal**anced-**un**balanced. It converts
+  a signal between a *balanced* line (like two-conductor twin-lead antenna wire,
+  where the signal rides symmetrically on both conductors) and an *unbalanced*
+  line (like coax, where the signal rides on the center conductor referenced to
+  the shield). This bank refers to it as a "balanced transformer," since a balun
+  is often built as a small transformer.
+- **Equalization (EQ):** any intentional alteration of a system's frequency
+  response, including tone controls. If you boost the bass or cut the treble, you
+  are equalizing.
+- **Crossover:** a circuit that splits an audio signal into frequency bands so each
+  band goes to the right speaker (woofer, tweeter). It does this with a
+  **frequency-dividing network**, which is the phrase the exam wants.
+- **ADC (Analog-to-Digital Converter):** turns a continuous analog signal into
+  digital samples. "Analog that converts to digital" is an **ADC**. The reverse is
+  a DAC.
+- **Coax and connectors:** **RG-59** is a common video coax good to roughly
+  **1000 ft**; **RG-6** (slightly larger, lower loss) uses an **F connector**, the
+  screw-on type on the back of a TV. **BNC** connectors (twist-lock) are common on
+  CCTV cameras and test gear, and **ST** is a bayonet-style fiber-optic connector.
+- **TV channel bandwidth:** a standard television channel occupies **6 MHz** of
+  spectrum, which is why cable systems plan channels in 6 MHz slots.
+- **Cabling topologies:** how devices are interconnected. **Star** is
+  hub-and-spoke (each device home-runs to a central point, the norm for structured
+  cabling). **Bus** is a single shared backbone (historically common for cable
+  TV). **Ring** loops end to end. **Point-to-point** is a direct single link
+  between two devices.
+- **Copper data cable:** **UTP (Unshielded Twisted Pair)** is by far the most
+  common for desktop data; the twisting cancels noise without needing a shield.
+  **STP (Shielded Twisted Pair)** adds a shield for noisier environments.
+- **Fiber optics:** **single-mode** fiber has a tiny core that carries one light
+  path, so it avoids modal dispersion and can run very far, limited mainly by
+  **attenuation** (signal loss over distance). **Multimode** fiber has a larger
+  core, carries many light paths, and suffers modal dispersion that limits its
+  distance and bandwidth. **Fusion splicing** permanently joins two clean fiber
+  ends by aligning them and melting them together with an electric arc, giving a
+  very low-loss joint.
+- **Antenna wire:** the most common gauge is **14 AWG**, and a **radial** ground
+  suits a vertical antenna. A disadvantage of copper-clad steel core antenna wire
+  is that it **kinks and knots easily**, because the steel core is stiff and holds
+  a bend.
 
 ---
 
@@ -524,21 +794,22 @@ The exam mixes in practical AV and telecom trivia. Quick hits:
 Ohm's Law:     V = I × R      I = V / R      R = V / I
 Power:         P = V × I      P = I² × R     P = V² / R
 Series R:      R_total = R1 + R2 + R3 ...
-Parallel R:    1/R_total = 1/R1 + 1/R2 ...  (two only: R1·R2 / (R1+R2))
+Parallel R:    1/R_total = 1/R1 + 1/R2 ...   (two only: R1·R2 / (R1+R2))
 Scope voltage: divisions × (volts per division)
 Scope time:    divisions × (time per division)
+Frequency:     f = 1 / period
 ```
 
 ### Units glossary
 
 | Unit | Symbol | Measures | Meter |
 |------|--------|----------|-------|
-| Volt | V | electrical pressure | voltmeter |
-| Ampere | A | current (flow rate) | ammeter |
+| Volt | V | electrical pressure (potential difference) | voltmeter (parallel) |
+| Ampere | A | current (rate of flow) | ammeter (series) |
 | Ohm | Ω | resistance / impedance | ohmmeter |
-| Watt | W | power (work done) | (calculated) |
-| Hertz | Hz | frequency (cycles/sec) | frequency counter |
-| Decibel | dB / dBA | sound level | sound meter |
+| Watt | W | power (work per second) | calculated from V and I |
+| Hertz | Hz | frequency (cycles per second) | frequency counter |
+| Decibel | dB / dBA | sound level | sound level meter |
 | Milliamp | mA | 1/1000 of an amp | ammeter |
 
 ### Numbers most likely to be tested
@@ -550,27 +821,37 @@ Scope time:    divisions × (time per division)
 | Direct burial cable | USE (or UF) |
 | Substitution direction | up the pyramid (Plenum > Riser > general > X) |
 | Vertical shaft cable | Riser-rated (e.g. CMR) |
-| Plenum cable (comms) | CMP |
+| Plenum communications cable | CMP |
 | Equipment ground color | green / green-yellow / bare |
-| Comms grounding conductor | 14 AWG min |
+| Communications grounding conductor | 14 AWG min |
 | CATV bonding jumper | 6 AWG min |
+| DC grounding electrode conductor | 8 AWG min copper |
 | Separation from lightning conductors | 6 ft (1.8 m) |
+| Coax/comms from power (indoors) | 2 in |
 | RMC support spacing | every 10 ft |
+| Working space width (≤150 V) | 30 in or equipment width |
 | Backup power (fire alarm) | 24 hours quiet, then 5 min alarm |
 | Backup power transfer time | within 10 seconds |
 | Strobe required above | 105 dBA ambient |
 | Strobe mounting height | 80 in min, 96 in max |
 | Smoke detector max coverage | 900 sq ft |
+| Smoke detector max airflow | 300 CFM |
+| Manual pull station max travel | 200 ft |
 | Frequency unit / impedance unit | Hertz / ohms |
 | Sine wave is also called | sinusoidal waveform |
 | TV channel bandwidth | 6 MHz |
+| Fiber end-to-end joining | fusion splicing |
 | NEC / fire code | NFPA 70 / NFPA 72 |
 
 ### The four mental models to carry into the exam
 
-1. **Water in a pipe** for volts/amps/ohms.
-2. **VIR triangle** to rearrange Ohm's Law on the fly.
-3. **Decode the letters** in cable names (T, H, W, N, and P/R/X).
-4. **Substitute up the pyramid**, never down.
+1. **Water in a pipe** for volts, amps, and ohms. Pressure, flow, friction.
+2. **VIR triangle** to rearrange Ohm's Law on the fly without memorizing three
+   formulas.
+3. **Decode the letters** in cable and insulation names (T, H, W, N, X, and the
+   P/R/X environment suffix) instead of memorizing lists.
+4. **Substitute up the pyramid, never down**, because the rating ladder is really
+   a fire-safety ladder.
 
-Good luck. Now go run the quiz.
+Master those four and most of this exam becomes reasoning rather than recall. Good
+luck, and go run the quiz.
