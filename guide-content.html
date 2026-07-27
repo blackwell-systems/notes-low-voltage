@@ -45,7 +45,9 @@ shaft</a></li>
 clearance numbers</a></li>
 <li><a href="#17-audio-video-and-telecom-grab-bag">Audio, video, and
 telecom grab bag</a></li>
-<li><a href="#18-cheat-sheet">Cheat sheet: formulas, numbers, and
+<li><a href="#18-switches-poles-and-throws">Switches: poles and
+throws</a></li>
+<li><a href="#19-cheat-sheet">Cheat sheet: formulas, numbers, and
 units</a></li>
 </ol>
 <hr />
@@ -762,6 +764,24 @@ solid low-resistance connection. For an antenna, the preferred ground is
 a <strong>radial</strong> ground, wires spread out from the base like
 spokes on a wheel, which gives lightning many low-impedance paths into
 the earth.</p>
+<p><strong>Ground fault current path.</strong> A related definition the
+exam states almost word for word: the <em>ground fault current path</em>
+is the electrically conductive path from the point of a ground fault,
+through normally non-current-carrying metal parts, equipment, or the
+earth, back to the electrical supply source. In plain terms it is the
+route fault current takes home so the overcurrent device can operate.
+Solid bonding is what keeps that path low in resistance and reliable,
+which is why bonding and this definition go hand in hand.</p>
+<p><strong>A CATV specific:</strong> if a coaxial cable carries a
+nominal voltage to ground (for example 63 volts), the correct action is
+to <strong>bond it to the building's service ground</strong>, tying the
+systems to a common potential so there is no dangerous voltage
+difference between them.</p>
+<p><strong>Primary protectors.</strong> Where communication or CATV
+lines enter a building, a <strong>primary protector</strong> (a surge
+and overvoltage device) is installed, and it must be located <strong>as
+close as practicable to the point of entrance</strong> so a surge is
+diverted to ground before it can travel into the premises wiring.</p>
 <hr />
 <h2 id="14-the-codes">14. The codes</h2>
 <p>Nearly every code question traces back to one of two rule books, so
@@ -920,6 +940,69 @@ verified within <strong>1 year</strong> of installation. A tamper
 (control-valve) switch must signal within the first <strong>2
 turns</strong> of the valve wheel, so anyone shutting a sprinkler valve
 is detected almost immediately.</p>
+<h3 id="devices-vs-notification-appliances">Devices vs notification
+appliances</h3>
+<p>NFPA 72 draws a careful line between two categories, and the exam
+tests it directly:</p>
+<ul>
+<li>An <strong>initiating device</strong> is an input that
+<em>senses</em> a fire condition and starts the alarm: smoke detectors,
+heat detectors, manual pull stations, and waterflow switches.</li>
+<li>A <strong>notification appliance</strong> is an output that
+<em>alerts</em> people: horns, strobes, speakers, and bells.</li>
+</ul>
+<p>So when a question asks "which of the following is <em>not</em> a
+device," a <strong>speaker</strong> is the answer, because a speaker is
+a notification <em>appliance</em>, not an initiating <em>device</em>. A
+sprinkler is not a fire-alarm device either; it belongs to the
+suppression system. Keeping the input/output distinction straight
+answers a surprising number of these.</p>
+<h3 id="common-alarm-sensors">Common alarm sensors</h3>
+<ul>
+<li>A <strong>reed switch</strong>, the classic door and window contact,
+is operated by a <strong>magnet</strong>. A magnet mounted on the moving
+door holds the switch closed; when the door opens and the magnet moves
+away, the contact opens and trips the circuit.</li>
+<li>A <strong>tamper switch</strong> (control-valve switch) reports if
+someone closes a sprinkler valve, signaling within the first <strong>2
+turns</strong> of the wheel.</li>
+<li>A <strong>waterflow</strong> switch senses water actually moving in
+the sprinkler piping. No more than <strong>5 waterflow
+actuators</strong> are permitted on one fire alarm power circuit, and
+activation must occur within <strong>90 seconds</strong> of flow.</li>
+</ul>
+<h3 id="ceiling-shape-changes-detector-placement">Ceiling shape changes
+detector placement</h3>
+<p>Detector spacing assumes smoke spreads smoothly across the ceiling,
+so the code cares about the ceiling's geometry:</p>
+<ul>
+<li>A ceiling is considered <strong>not smooth</strong> once beams or
+joists project more than <strong>4 inches</strong> below it, because
+those pockets trap smoke and disrupt even coverage.</li>
+<li>A ceiling counts as <strong>flat or level</strong> when its slope is
+<strong>5 degrees</strong> or less; steeper ceilings drive smoke toward
+the high side and change where detectors belong.</li>
+<li>A single spot-type heat detector can cover up to <strong>22,500
+square feet</strong> in the right layout, far more than a smoke
+detector's 900 square feet, because heat and smoke detection follow
+different spacing rules.</li>
+<li>A heat detector placed near a sprinkler is intentionally rated to
+trip at a <strong>lower</strong> temperature than the sprinkler (for
+example a <strong>135 degree</strong> detector beside a 155 degree
+sprinkler), so the alarm sounds <em>before</em> the sprinkler discharges
+water.</li>
+</ul>
+<h3 id="a-few-more-timing-and-spacing-numbers">A few more timing and
+spacing numbers</h3>
+<ul>
+<li>After a trouble condition, the secondary battery must still be able
+to sound an alarm for at least <strong>4 minutes</strong>.</li>
+<li>High-lumen strobes in a corridor are spaced no more than <strong>100
+feet</strong> apart.</li>
+<li>Fire alarm circuits must be identified at <strong>all terminal and
+junction locations</strong>, and cabling is marked at each fire alarm
+and each controller.</li>
+</ul>
 <hr />
 <h2 id="16-separation-and-clearance-numbers">16. Separation and
 clearance numbers</h2>
@@ -967,6 +1050,32 @@ bank.</p>
 <td>Rigid Metal Conduit support spacing</td>
 <td>every <strong>10 ft</strong></td>
 <td>keeps the run rigidly supported</td>
+</tr>
+<tr>
+<td>Vertical 18 AWG communication conductors, support spacing</td>
+<td>every <strong>100 ft</strong></td>
+<td>keeps long vertical runs from sagging</td>
+</tr>
+<tr>
+<td>Power-limited fire alarm in metal raceway through a wall, up to</td>
+<td><strong>7 ft</strong> above the floor</td>
+<td>protects the cable where it is reachable</td>
+</tr>
+<tr>
+<td>Two low buildings with comm cable between them, lightning protection
+needed when</td>
+<td><strong>150 ft</strong> apart</td>
+<td>short spans between short buildings are lower risk</td>
+</tr>
+<tr>
+<td>Fiber optic cable run alongside power conductors, max</td>
+<td><strong>1000 volts</strong></td>
+<td>nonconductive fiber is immune to the electric field</td>
+</tr>
+<tr>
+<td>Communications cable voltage rating, minimum</td>
+<td><strong>300 volts</strong></td>
+<td>ensures adequate insulation</td>
 </tr>
 <tr>
 <td>Max voltage a coax may deliver (transformer-supplied)</td>
@@ -1045,10 +1154,165 @@ arc, giving a very low-loss joint.</li>
 AWG</strong>, and a <strong>radial</strong> ground suits a vertical
 antenna. A disadvantage of copper-clad steel core antenna wire is that
 it <strong>kinks and knots easily</strong>, because the steel core is
-stiff and holds a bend.</li>
+stiff and holds a bend. A <strong>twin-lead</strong> antenna cable is
+two parallel conductors held a fixed distance apart by an insulating web
+between them.</li>
 </ul>
+<h3 id="audio-system-components">Audio system components</h3>
+<p>Most sound-system questions are simply "what does this part do." The
+cast:</p>
+<ul>
+<li><strong>Driver:</strong> the element that converts an electrical
+signal into <strong>audible sound</strong>. It is the working part of a
+speaker.</li>
+<li><strong>Gain:</strong> how you <strong>increase power or
+level</strong> in an audio system, by turning up the amplification.</li>
+<li><strong>Fader:</strong> a slider that raises or lowers a level.</li>
+<li><strong>Tuner:</strong> selects a station or frequency.</li>
+<li><strong>Mixer:</strong> combines several audio sources into
+one.</li>
+<li><strong>Equalizer:</strong> alters frequency response and tone (the
+EQ described above).</li>
+<li><strong>Crossover:</strong> splits audio into frequency bands with a
+frequency-dividing network so each band reaches the right speaker.</li>
+<li><strong>ADC:</strong> an Analog-to-Digital Converter, "analog that
+converts to digital."</li>
+</ul>
+<p>A frequent real-world fault: <strong>hums and buzzes</strong> in a
+sound system usually trace back to <strong>ground loop</strong>
+problems, where two pieces of gear sit at slightly different ground
+potentials and current flows between them.</p>
+<h3 id="video-and-hdtv">Video and HDTV</h3>
+<ul>
+<li>Resolution labels like <strong>1080P</strong> or
+<strong>720i</strong> state the number of <strong>scan lines</strong>
+plus whether the image is <strong>P</strong>rogressive (the whole frame
+drawn at once) or <strong>i</strong>nterlaced (alternating half-frames).
+A bigger number means more lines and a sharper picture.</li>
+<li>An analog <strong>CCTV</strong> camera's video output normally uses
+a <strong>BNC</strong> connector.</li>
+<li>To improve a weak television signal you can realign the antenna, use
+a larger antenna, or remove splitters. Adding a <strong>balun</strong>
+will <strong>not</strong> help, because a balun only matches balanced
+and unbalanced lines; it adds no signal.</li>
+</ul>
+<h3 id="connectors-at-a-glance">Connectors at a glance</h3>
+<table>
+<thead>
+<tr>
+<th>Connector</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>F</strong></td>
+<td>Coax and CATV, RG-6 and RG-59 (the screw-on connector behind a
+TV)</td>
+</tr>
+<tr>
+<td><strong>BNC</strong></td>
+<td>CCTV cameras, video, and test equipment (twist-lock)</td>
+</tr>
+<tr>
+<td><strong>ST</strong></td>
+<td>Fiber optic (bayonet style)</td>
+</tr>
+<tr>
+<td><strong>RCA</strong></td>
+<td>Consumer audio and video</td>
+</tr>
+<tr>
+<td><strong>N</strong></td>
+<td>Larger coax and RF or antenna feeds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fiber-advantages-and-disadvantages">Fiber advantages and
+disadvantages</h3>
+<p>Fiber's real advantages over copper are <strong>performance</strong>
+(very high bandwidth), <strong>electrical immunity</strong> (glass
+carries no current, so it picks up no interference and may run right
+beside power conductors up to <strong>1000 volts</strong>), and
+<strong>security</strong> (it is hard to tap without detection). What is
+<strong>not</strong> an advantage is <strong>cost</strong>: fiber and
+especially its termination and splicing are more expensive than copper.
+That "cost is the exception" framing is exactly how the exam asks
+it.</p>
 <hr />
-<h2 id="18-cheat-sheet">18. Cheat sheet</h2>
+<h2 id="18-switches-poles-and-throws">18. Switches: poles and
+throws</h2>
+<p>Control and alarm questions sometimes show a switch schematic and ask
+you to name it. Two words describe every mechanical switch, and once you
+know them you can name any switch on sight.</p>
+<ul>
+<li><strong>Poles</strong> are how many separate circuits the switch
+controls at the same time. One pole switches one circuit; two poles
+switch two independent circuits together from a single handle.</li>
+<li><strong>Throws</strong> are how many positions each pole can connect
+to. Single-throw is a simple on/off (the contact either touches or it
+does not); double-throw flips the circuit between two different outputs,
+the way a three-way light switch sends the circuit one way or the
+other.</li>
+</ul>
+<p>Combine the two and you get the standard names:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Abbrev.</th>
+<th>Poles</th>
+<th>Throws</th>
+<th>Think of it as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single pole, single throw</td>
+<td>SPST</td>
+<td>1</td>
+<td>1</td>
+<td>a basic on/off switch</td>
+</tr>
+<tr>
+<td>Single pole, double throw</td>
+<td>SPDT</td>
+<td>1</td>
+<td>2</td>
+<td>one input, choose between two outputs</td>
+</tr>
+<tr>
+<td>Double pole, single throw</td>
+<td>DPST</td>
+<td>2</td>
+<td>1</td>
+<td>two circuits switched on/off together</td>
+</tr>
+<tr>
+<td>Double pole, double throw</td>
+<td>DPDT</td>
+<td>2</td>
+<td>2</td>
+<td>two circuits, each flipped between two outputs</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading a schematic:</strong> count the input lines entering
+one side to get the number of <strong>poles</strong>, then count how
+many output contacts each movable arm can reach to get the number of
+<strong>throws</strong>. A drawing that shows two input poles, each arm
+able to swing between two output contacts, usually with a dashed line
+linking the two arms to show they move together, is a <strong>double
+pole, double throw (DPDT)</strong> switch. That is exactly what the
+switch diagram question depicts.</p>
+<p>The same vocabulary carries over to switches that are thrown by
+something other than a finger: a <strong>relay</strong> is a switch
+operated by an electromagnet, and a <strong>reed switch</strong> (from
+the fire alarm section) is a switch operated by a magnet. Poles and
+throws still describe how many circuits they control and how many
+positions each can take.</p>
+<hr />
+<h2 id="19-cheat-sheet">19. Cheat sheet</h2>
 <h3 id="formulas">Formulas</h3>
 <pre><code>Ohm&#39;s Law:     V = I × R      I = V / R      R = V / I
 Power:         P = V × I      P = I² × R     P = V² / R
@@ -1221,6 +1485,42 @@ tested</h3>
 <tr>
 <td>Fiber end-to-end joining</td>
 <td>fusion splicing</td>
+</tr>
+<tr>
+<td>Fiber's non-advantage vs copper</td>
+<td>cost</td>
+</tr>
+<tr>
+<td>Switch with 2 poles and 2 throws</td>
+<td>DPDT</td>
+</tr>
+<tr>
+<td>Reed switch is operated by</td>
+<td>a magnet</td>
+</tr>
+<tr>
+<td>A speaker is a</td>
+<td>notification appliance (not an initiating device)</td>
+</tr>
+<tr>
+<td>Max waterflow actuators per circuit</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Vertical 18 AWG comm conductor support</td>
+<td>every 100 ft</td>
+</tr>
+<tr>
+<td>Driver / Gain (audio)</td>
+<td>converts signal to sound / increases power</td>
+</tr>
+<tr>
+<td>1080P, 720i refer to</td>
+<td>scan lines + progressive or interlaced</td>
+</tr>
+<tr>
+<td>CCTV camera video connector</td>
+<td>BNC</td>
 </tr>
 <tr>
 <td>NEC / fire code</td>
