@@ -80,6 +80,9 @@
     resultsScreen: el("results-screen"),
     bankSummary: el("bank-summary"),
     startBtn: el("start-btn"),
+    searchInput: el("search-input"),
+    searchCount: el("search-count"),
+    searchResults: el("search-results"),
     optShuffle: el("opt-shuffle"),
     optOnlyMissed: el("opt-onlymissed"),
     optOnlyFlagged: el("opt-onlyflagged"),
@@ -483,6 +486,16 @@
     });
   }
 
+  function launchQueue(pool, idx) {
+    if (!pool || !pool.length) return;
+    state.queue = pool.slice();
+    state.idx = Math.min(Math.max(idx || 0, 0), pool.length - 1);
+    state.answered = {};
+    state.revealed = {};
+    showScreen("quiz");
+    render();
+  }
+
   function startSession() {
     let pool = state.all.slice();
     if (dom.optOnlyFlagged.checked) {
@@ -494,13 +507,71 @@
       if (missed.length) pool = missed;
     }
     if (dom.optShuffle.checked) shuffle(pool);
-    state.queue = pool;
-    state.idx = 0;
-    state.answered = {};
-    state.revealed = {};
-    showScreen("quiz");
-    render();
+    launchQueue(pool, 0);
   }
+
+  // ---- Search ----
+  let searchMatches = [];
+  let searchTimer;
+  dom.searchInput.addEventListener("input", () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(runSearch, 120);
+  });
+  dom.searchResults.addEventListener("click", (e) => {
+    const item = e.target.closest(".search-item[data-idx]");
+    if (!item) return;
+    launchQueue(searchMatches, parseInt(item.getAttribute("data-idx"), 10));
+  });
+
+  function runSearch() {
+    const terms = dom.searchInput.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    if (!terms.length) {
+      searchMatches = [];
+      dom.searchResults.innerHTML = "";
+      dom.searchCount.textContent = "";
+      return;
+    }
+    searchMatches = state.all.filter((q) => {
+      const hay = (q.question + " " + q.options.join(" ") + " " +
+        (q.explanation || "") + " " + (q.references || []).join(" ")).toLowerCase();
+      return terms.every((t) => hay.includes(t)); // all terms must match
+    });
+    renderSearch(terms);
+  }
+
+  function renderSearch(terms) {
+    const n = searchMatches.length;
+    dom.searchResults.innerHTML = "";
+    if (!n) { dom.searchCount.textContent = "No matches."; return; }
+    const cap = 60;
+    dom.searchCount.textContent = n > cap
+      ? `${n} matches (showing first ${cap}). Click one to open.`
+      : `${n} match${n === 1 ? "" : "es"}. Click one to open.`;
+    const rx = new RegExp("(" + terms.map(escapeRegex).join("|") + ")", "gi");
+    searchMatches.slice(0, cap).forEach((q, i) => {
+      const btn = document.createElement("button");
+      btn.className = "search-item";
+      btn.type = "button";
+      btn.setAttribute("data-idx", i);
+      btn.innerHTML =
+        `<span class="s-q">${highlight(q.question, rx)}</span>` +
+        `<span class="s-a">${escapeHtml(q.options[q.answerIndex] || "")}</span>`;
+      dom.searchResults.appendChild(btn);
+    });
+    if (n > 1) {
+      const all = document.createElement("button");
+      all.className = "search-studyall";
+      all.type = "button";
+      all.textContent = `Study all ${n} matches ›`;
+      all.addEventListener("click", () => launchQueue(searchMatches, 0));
+      dom.searchResults.appendChild(all);
+    }
+  }
+
+  function highlight(text, rx) {
+    return escapeHtml(text).replace(rx, "<mark>$1</mark>");
+  }
+  function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
 
   // ---- Navigation ----
   dom.nextBtn.addEventListener("click", () => {
