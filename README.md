@@ -5,6 +5,15 @@ Systems** exam. 160 questions transcribed from study-portal screenshots into a
 clean data file, served as a single-page web app. No build step, no backend —
 just static files, ideal for GitHub Pages.
 
+**▶ [Take the quiz](https://blackwell-systems.github.io/notes-low-voltage/)** ·
+**📖 [Read the study guide](STUDY-GUIDE.md)**
+
+New to the material? Start with the **[study guide](STUDY-GUIDE.md)**, a
+plain-English primer covering every foundational topic on the exam (Ohm's Law,
+wire gauges, the cable naming system, grounding, fire alarm rules, and more) with
+a topic-by-topic breakdown of what the test emphasizes. It is also readable
+in-app via the **📖 Guide** button.
+
 ## What's here
 
 | File | Purpose |
@@ -14,6 +23,9 @@ just static files, ideal for GitHub Pages.
 | `app.js` | Quiz + flashcard logic (vanilla JS) |
 | `questions.json` | The 160-question bank |
 | `media/` | The 6 diagrams (oscilloscope waveforms, a circuit, a DPDT switch) |
+| `STUDY-GUIDE.md` | Plain-English study guide with a topic breakdown |
+| `guide-content.html` | Guide rendered to HTML for the in-app side panel |
+| `build-guide.sh` | Regenerates `guide-content.html` from the markdown (pandoc) |
 
 The original 633 MB of source photos live in `assets/` and are **git-ignored** —
 they were only the input to transcription and aren't needed to run the site.
