@@ -16,6 +16,7 @@
     mode: "quiz",     // "quiz" | "flash"
     answered: {},     // sessionIndex -> chosenOptionIndex
     revealed: {},     // sessionIndex -> bool (flash mode / revealed)
+    highlightTerms: [], // search terms to highlight on the question screen
   };
 
   // ---- Profiles (each profile gets its own progress store) ----
@@ -486,12 +487,13 @@
     });
   }
 
-  function launchQueue(pool, idx) {
+  function launchQueue(pool, idx, terms) {
     if (!pool || !pool.length) return;
     state.queue = pool.slice();
     state.idx = Math.min(Math.max(idx || 0, 0), pool.length - 1);
     state.answered = {};
     state.revealed = {};
+    state.highlightTerms = terms ? terms.slice() : [];
     showScreen("quiz");
     render();
   }
@@ -512,6 +514,7 @@
 
   // ---- Search ----
   let searchMatches = [];
+  let searchTerms = [];
   let searchTimer;
   dom.searchInput.addEventListener("input", () => {
     clearTimeout(searchTimer);
@@ -520,11 +523,12 @@
   dom.searchResults.addEventListener("click", (e) => {
     const item = e.target.closest(".search-item[data-idx]");
     if (!item) return;
-    launchQueue(searchMatches, parseInt(item.getAttribute("data-idx"), 10));
+    launchQueue(searchMatches, parseInt(item.getAttribute("data-idx"), 10), searchTerms);
   });
 
   function runSearch() {
     const terms = dom.searchInput.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    searchTerms = terms;
     if (!terms.length) {
       searchMatches = [];
       dom.searchResults.innerHTML = "";
@@ -563,7 +567,7 @@
       all.className = "search-studyall";
       all.type = "button";
       all.textContent = `Study all ${n} matches ›`;
-      all.addEventListener("click", () => launchQueue(searchMatches, 0));
+      all.addEventListener("click", () => launchQueue(searchMatches, 0, searchTerms));
       dom.searchResults.appendChild(all);
     }
   }
@@ -572,6 +576,15 @@
     return escapeHtml(text).replace(rx, "<mark>$1</mark>");
   }
   function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
+  // Escape text, then highlight the active search terms (used on the quiz screen).
+  function hi(text) {
+    const esc = escapeHtml(text);
+    const terms = state.highlightTerms;
+    if (!terms || !terms.length) return esc;
+    const rx = new RegExp("(" + terms.map(escapeRegex).join("|") + ")", "gi");
+    return esc.replace(rx, "<mark>$1</mark>");
+  }
 
   // ---- Navigation ----
   dom.nextBtn.addEventListener("click", () => {
@@ -610,7 +623,7 @@
 
     dom.qCounter.textContent = `Question ${state.idx + 1} of ${n}`;
     dom.qId.textContent = q.id ? `ID ${q.id}` : "";
-    dom.qText.textContent = q.question;
+    dom.qText.innerHTML = hi(q.question);
     updateFlagBtn(q);
     dom.progressFill.style.width = `${((state.idx + 1) / n) * 100}%`;
 
@@ -632,7 +645,7 @@
     q.options.forEach((text, i) => {
       const btn = document.createElement("button");
       btn.className = "option";
-      btn.innerHTML = `<span class="letter">${LETTERS[i]}</span><span>${escapeHtml(text)}</span>`;
+      btn.innerHTML = `<span class="letter">${LETTERS[i]}</span><span>${hi(text)}</span>`;
       if (revealed) {
         btn.disabled = true;
         if (i === q.answerIndex) btn.classList.add(isFlash ? "reveal-correct" : "correct");
@@ -652,7 +665,7 @@
 
     // Explanation
     if (revealed && (q.explanation || (q.references && q.references.length))) {
-      dom.qExplanationText.textContent = q.explanation || "";
+      dom.qExplanationText.innerHTML = hi(q.explanation || "");
       dom.qExplanationText.style.display = q.explanation ? "" : "none";
       dom.qReferences.innerHTML = "";
       (q.references || []).forEach((ref) => {

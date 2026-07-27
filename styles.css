@@ -119,6 +119,12 @@ main {
   margin: 0 0 18px;
   line-height: 1.4;
 }
+.question-card mark {
+  background: rgba(59, 130, 246, 0.4);
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 2px;
+}
 .q-media { margin: 0 0 18px; }
 .q-media img {
   max-width: 100%;
