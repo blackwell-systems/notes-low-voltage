@@ -17,7 +17,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: 110.26(A)(2) (Allowed in Test)",
         "NFPA 70: National Electrical Code 2008: 110.26(A)(2) (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "11967",
@@ -32,7 +33,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2017 : 300.4 (A)(1)",
         "NFPA 70: National Electrical Code 2008 : 300.4 (A)(1)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "12580",
@@ -47,7 +49,8 @@
       "references": [
         "NEC 2017 (NFPA 70): 310.104, table(s) 310.104(A)",
         "NEC 2008 (NFPA 70): 310.13; table(s) 310.13(a)-310.13(e)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "12662",
@@ -62,7 +65,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2017: 820.100(A)(3) (Allowed in Test)",
         "NFPA 70: National Electrical Code 2008: 820.100.A.3 (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "12663",
@@ -79,7 +83,8 @@
         "NFPA 70: National Electrical Code 2008 : 800.44(A)...",
         "NFPA 70: National Electrical Code Tabs 2017 : 800.44(A)(4)",
         "NFPA 70: National Electrical Code 2008 : 800.44(A)(4)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "12832",
@@ -94,7 +99,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 810.21(H)",
         "NFPA 70: National Electrical Code 2008 : 810.21(H)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "12963",
@@ -109,7 +115,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2023 : 800.133(B) (Not allowed in Test)",
         "NFPA 70: National Electrical Code 2017 : 820.133(A)(2) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "13074",
@@ -124,7 +131,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 344.30(B)(1)",
         "NFPA 70: National Electrical Code 2008 : 344.30(B)(1)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "13079",
@@ -139,7 +147,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2023: 250.110(1) (Not allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 250.110(1) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "13097",
@@ -154,7 +163,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2023 : 770.179(B) (Not allowed in Test)",
         "NFPA 70: National Electrical Code 2017 : Table 770.179(B) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "13105",
@@ -170,7 +180,8 @@
         "NFPA 70: National Electrical Code Tabs 2017: 820.15",
         "NFPA 70: National Electrical Code 2017: 820.15",
         "NFPA 70: National Electrical Code 2008: 820.15"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "13198",
@@ -189,7 +200,8 @@
         "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : 276-279"
       ],
       "media": "media/13198.jpg",
-      "mediaDescription": "Circuit diagram popup dialog titled 'Diagram'. A 10 VOLTS battery source. Top branch left: 2 ohms resistor; bottom branch left: 3 ohms resistor. Middle: 10 ohms resistor (vertical). Right side: top 1 ohm resistor, bottom 3 ohms resistor, and a 6 ohms resistor (vertical on far right). The 1, 6, and 3 ohm resistors are in series (=10 ohms), which is in parallel with the 10 ohm resistor (=5 ohms), then in series with the 2 and 3 ohm resistors (2+5+3=10 ohms total)."
+      "mediaDescription": "Circuit diagram popup dialog titled 'Diagram'. A 10 VOLTS battery source. Top branch left: 2 ohms resistor; bottom branch left: 3 ohms resistor. Middle: 10 ohms resistor (vertical). Right side: top 1 ohm resistor, bottom 3 ohms resistor, and a 6 ohms resistor (vertical on far right). The 1, 6, and 3 ohm resistors are in series (=10 ohms), which is in parallel with the 10 ohm resistor (=5 ohms), then in series with the 2 and 3 ohm resistors (2+5+3=10 ohms total).",
+      "topic": "Electrical Theory"
     },
     {
       "id": "13282",
@@ -204,7 +216,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2017 : 800.154, table 800.154(a)",
         "NFPA 70: National Electrical Code 2008 : 820.154(A), 300.22"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "13340",
@@ -220,7 +233,8 @@
         "NFPA 70: National Electrical Code Tabs 2017 : 300.21 (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017 : 300.21 (Allowed in Test)",
         "NFPA 70: National Electrical Code 2008 : 300.21 (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "13623",
@@ -239,7 +253,8 @@
         "NFPA 70: National Electrical Code Tabs 2017: 310.10(F), 338.2 (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 310.10(F), 338.2 (Allowed in Test)",
         "NFPA 70: National Electrical Code 2008: 310.7, 338.2 (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "13892",
@@ -254,7 +269,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2023: 800.133(B) (Not allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 800.133(A)(2) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "13929",
@@ -270,7 +286,8 @@
         "NFPA 70: National Electrical Code Tabs 2017: 760.179(D), Table 760.154",
         "NFPA 70: National Electrical Code 2017: 760.179(D), Table 760.154",
         "NFPA 70: National Electrical Code 2008: 760.154(A)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "14189",
@@ -286,7 +303,8 @@
         "NFPA 70: National Electrical Code Tabs 2017: Table 800.154(d) (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017: Table 800.154(d) (Allowed in Test)",
         "NFPA 70: National Electrical Code 2008: 800.154(B)(1) (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "14197",
@@ -301,7 +319,8 @@
       "references": [
         "NEC 2017 (NFPA 70): table 310.104(A)",
         "NEC 2008 (NFPA 70): 310.13, table 310.13"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "14201",
@@ -315,7 +334,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 70: National Electrical Code 2017 : 800.133(A)(2)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "14240",
@@ -329,7 +349,8 @@
       "answerIndex": 0,
       "references": [
         "NFPA 72 2016: 26.6.5.1.1(1)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "14241",
@@ -345,7 +366,8 @@
         "NFPA 72: National Fire Alarm Code, 2007 Edition : 4.4.3.5.3",
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.14.3",
         "NFPA 72: National Fire Alarm and Signaling Code 2010 : 10.12.3"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "14244",
@@ -361,7 +383,8 @@
         "NFPA 70: National Electrical Code Tabs 2017 : 800.154, Table 800.154(d), fig. 800.154",
         "NFPA 70: National Electrical Code 2017 : 800.154, Table 800.154(d), fig. 800.154",
         "NFPA 70: National Electrical Code 2008 : 800.154(A)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "14249",
@@ -375,7 +398,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 29.8.4.3"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "51429",
@@ -391,7 +415,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2023: 800.53 (Not allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 800.53 (Allowed in Test)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "51459",
@@ -405,7 +430,8 @@
       "answerIndex": 1,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 29.8.3.4(6)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "51514",
@@ -420,7 +446,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2023 : 760.53(B)(2) (Not allowed in Test)",
         "NFPA 70: National Electrical Code 2017 : 760.53(B)(2) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "51964",
@@ -431,7 +458,8 @@
         "grounded properly",
         "Shorted"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "52027",
@@ -445,7 +473,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.4.1.1 (Allowed)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "52224",
@@ -460,7 +489,8 @@
       "references": [
         "NEC 2017 (NFPA 70): table 300.19(A)",
         "NEC 2008 (NFPA 70): 800.110, 300.19(A) to table 300.19(A)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "52587",
@@ -476,7 +506,8 @@
         "Ugly's Electrical References 2023 : 126 (Not allowed in Test)"
       ],
       "media": "media/52587.jpg",
-      "mediaDescription": "A 'Diagram' popup dialog showing an enlarged electrical switch schematic. The schematic depicts a switch with two input lines on the left (two poles). Each pole has a movable contact arm; the upper arm connects to a common node then can throw between an upper output line and a lower output line, and similarly the lower pole. A dashed vertical line links the two switch arms (ganged mechanical linkage), and there are multiple output lines (four) on the right. This represents a double pole, double throw (DPDT) switch. Text: 'Click to open image in new window' and a 'Close' button."
+      "mediaDescription": "A 'Diagram' popup dialog showing an enlarged electrical switch schematic. The schematic depicts a switch with two input lines on the left (two poles). Each pole has a movable contact arm; the upper arm connects to a common node then can throw between an upper output line and a lower output line, and similarly the lower pole. A dashed vertical line links the two switch arms (ganged mechanical linkage), and there are multiple output lines (four) on the right. This represents a double pole, double throw (DPDT) switch. Text: 'Click to open image in new window' and a 'Close' button.",
+      "topic": "Electrical Theory"
     },
     {
       "id": "52646",
@@ -491,7 +522,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2017: 760.30",
         "NFPA 70: National Electrical Code 2008: 760.30"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "52845",
@@ -506,7 +538,8 @@
       "references": [
         "Understanding and Servicing Alarm Systems 3rd Edition : 1.5.1 (Not allowed in Test)",
         "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : pg. 222 (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "52954",
@@ -520,7 +553,8 @@
       "answerIndex": 3,
       "references": [
         "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : pg. 269"
-      ]
+      ],
+      "topic": "Electrical Theory"
     },
     {
       "id": "53183",
@@ -535,7 +569,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2023: 760.53, 760.176(A) (Not allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 760.53, 760.176(A) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "53481",
@@ -549,7 +584,8 @@
       "answerIndex": 0,
       "references": [
         "NFPA 72 2016: 10.6.6.1"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "53482",
@@ -563,7 +599,8 @@
       "answerIndex": 2,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.6.7.2.1"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "53612",
@@ -577,7 +614,8 @@
       "answerIndex": 3,
       "explanation": "Sinusoidal Waveform The waveform for alternating-current circuits is symmetrical, with positive above and negative below the zero reference level. For most alternating-current circuits, the waveform is called a sine wave or a sinusoidal waveform.",
       "media": "media/53612.jpg",
-      "mediaDescription": "Enlarged Diagram popup ('Click to open image in new window'): oscilloscope grid graph of a sinusoidal (sine) waveform. Y-axis labeled 'VOLTS = .5/DIV' (vertical), X-axis labeled X, origin at 0. The curve shows multiple cycles; point A marked at a positive peak/crest and point B marked at a negative trough/valley. A dashed horizontal line marks the zero reference level with positive above and negative below."
+      "mediaDescription": "Enlarged Diagram popup ('Click to open image in new window'): oscilloscope grid graph of a sinusoidal (sine) waveform. Y-axis labeled 'VOLTS = .5/DIV' (vertical), X-axis labeled X, origin at 0. The curve shows multiple cycles; point A marked at a positive peak/crest and point B marked at a negative trough/valley. A dashed horizontal line marks the zero reference level with positive above and negative below.",
+      "topic": "Electrical Theory"
     },
     {
       "id": "54121",
@@ -588,7 +626,8 @@
         "USE",
         "THN"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "topic": "Cable & Wire"
     },
     {
       "id": "54122",
@@ -604,7 +643,8 @@
         "NFPA 70: National Electrical Code Tabs 2017: 725.49",
         "NFPA 70: National Electrical Code 2017: 725.49",
         "NFPA 70: National Electrical Code 2008: 725.49"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54123",
@@ -620,7 +660,8 @@
         "NFPA 70: National Electrical Code Tabs 2017: 250.119",
         "NFPA 70: National Electrical Code 2017: 250.119",
         "NFPA 70: National Electrical Code 2008: 250.119"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54124",
@@ -631,7 +672,8 @@
         "cost",
         "security"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "topic": "Cable & Wire"
     },
     {
       "id": "54125",
@@ -646,7 +688,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: 310.15(A)(3)(informational note)",
         "NFPA 70: National Electrical Code 2017: 310.15(A)(3)(informational note)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54126",
@@ -661,7 +704,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 300.21 (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017 : 300.21 (Allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54127",
@@ -676,7 +720,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 800.154, table(s) 800.154(a),(d)",
         "NFPA 70: National Electrical Code 2017 : 800.154, table(s) 800.154(a),(d)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54128",
@@ -691,7 +736,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: 640.3, 300.21",
         "NFPA 70: National Electrical Code 2017: 640.3, 300.21"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54129",
@@ -705,7 +751,8 @@
       "answerIndex": 2,
       "references": [
         "NFPA 70: National Electrical Code 2017 : 645.5(E)(2)(5) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "54130",
@@ -720,7 +767,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 770.24",
         "NFPA 70: National Electrical Code 2017 : 770.24"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54131",
@@ -735,7 +783,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: 800.90(B) (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 800.90(B) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54132",
@@ -749,7 +798,8 @@
       "answerIndex": 0,
       "references": [
         "NFPA 72 2016: 14.4.4.3.1"
-      ]
+      ],
+      "topic": "Codes & Definitions"
     },
     {
       "id": "54133",
@@ -763,7 +813,8 @@
       "answerIndex": 0,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition : p.77"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54134",
@@ -777,7 +828,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.6.7.2.1"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54135",
@@ -791,7 +843,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.5.5.5.5"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54136",
@@ -806,7 +859,8 @@
       "references": [
         "NFPA 72: National Fire Alarm Code, 2007 Edition : 5.11.2",
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.12.2"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54137",
@@ -817,7 +871,8 @@
         "turn knob 2 turns to the right",
         "short out the terminals"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "topic": "Fire Alarm"
     },
     {
       "id": "54138",
@@ -831,7 +886,8 @@
       "answerIndex": 2,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.4.5.1 (Allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54139",
@@ -846,7 +902,8 @@
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.16.1.2",
         "NFPA 72: National Fire Alarm and Signaling Code 2010 : 14.4.2.2 table 10.4.2.2."
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54140",
@@ -861,7 +918,8 @@
       "references": [
         "NFPA 72: National Fire Alarm Code, 2007 Edition : 18.4.5.1",
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.4.5.1"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54141",
@@ -875,7 +933,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 70: National Electrical Code 2017: 820.100(D)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54142",
@@ -889,7 +948,8 @@
       "answerIndex": 0,
       "references": [
         "NFPA 70: National Electrical Code 2017 : 820.93"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54143",
@@ -903,7 +963,8 @@
       "answerIndex": 3,
       "references": [
         "NEC 2017 (NFPA 70): 725.154, Table 725.154(A)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54144",
@@ -919,7 +980,8 @@
         "NFPA 70: National Electrical Code Tabs 2017: 725.154(A), Table 725",
         "NFPA 70: National Electrical Code 2017: 725.154(A), Table 725.15",
         "NFPA 70: National Electrical Code 2008: 725.154.G to table 725.1"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54145",
@@ -934,7 +996,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 770.179",
         "NFPA 70: National Electrical Code 2017 : 770.179"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54146",
@@ -948,7 +1011,8 @@
       "answerIndex": 1,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.7.3.2.1"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54147",
@@ -963,7 +1027,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2023: 760.43 (Not allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 760.43 (Allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54148",
@@ -978,7 +1043,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: 770.179(D) (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 770.179(D) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54149",
@@ -993,7 +1059,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: 250.70 (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 250.70 (Allowed in Test)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54150",
@@ -1007,7 +1074,8 @@
       "answerIndex": 0,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.7.3.2.3.1 (1) (Allowed)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54151",
@@ -1021,7 +1089,8 @@
       "answerIndex": 2,
       "references": [
         "NEC 2017 (NFPA 70): Article 100, Definitions"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54152",
@@ -1035,7 +1104,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 14.4.4.3.3"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54155",
@@ -1050,7 +1120,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 770.179(A)",
         "NFPA 70: National Electrical Code 2017 : 770.179(A)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54157",
@@ -1064,7 +1135,8 @@
       "answerIndex": 2,
       "references": [
         "Understanding and Servicing Alarm Systems 3rd Edition: pg. 208"
-      ]
+      ],
+      "topic": "Electrical Theory"
     },
     {
       "id": "54158",
@@ -1075,7 +1147,8 @@
         "24 to 30 inches wide",
         "mounted in back of a room for convenience"
       ],
-      "answerIndex": 3
+      "answerIndex": 3,
+      "topic": "Codes & Definitions"
     },
     {
       "id": "54159",
@@ -1090,7 +1163,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 760.41(B) (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017 : 760.41(B) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54160",
@@ -1104,7 +1178,8 @@
       "answerIndex": 2,
       "references": [
         "Telecommunications Wiring : pg. 28"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54161",
@@ -1118,7 +1193,8 @@
       "answerIndex": 3,
       "references": [
         "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : pg. 275"
-      ]
+      ],
+      "topic": "Electrical Theory"
     },
     {
       "id": "54162",
@@ -1132,7 +1208,8 @@
       "answerIndex": 0,
       "references": [
         "NFPA 70: National Electrical Code 2017 : 110.26(A)(2)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "54163",
@@ -1147,7 +1224,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: Article 100, Definitions",
         "NFPA 70: National Electrical Code 2017: Article 100, Definitions"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54197",
@@ -1161,7 +1239,8 @@
       "answerIndex": 0,
       "references": [
         "Antenna Toolkit: pg. 244"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54198",
@@ -1175,7 +1254,8 @@
       "answerIndex": 1,
       "references": [
         "Live Sound Reinforcement : p.28"
-      ]
+      ],
+      "topic": "Electrical Theory"
     },
     {
       "id": "54199",
@@ -1189,7 +1269,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : A.29.8.4"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54201",
@@ -1205,7 +1286,8 @@
         "NFPA 70: National Electrical Code Tabs 2017 : Article 100, Definitions",
         "NFPA 70: National Electrical Code 2017 : Article 100 definitions",
         "NFPA 70: National Electrical Code 2008 : Article 100 definitions"
-      ]
+      ],
+      "topic": "Electrical Theory"
     },
     {
       "id": "54206",
@@ -1216,7 +1298,8 @@
         "load",
         "breaker"
       ],
-      "answerIndex": 0
+      "answerIndex": 0,
+      "topic": "Audio/Video/Telecom"
     },
     {
       "id": "54208",
@@ -1227,7 +1310,8 @@
         "milliamps",
         "kilowatts"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "topic": "Electrical Theory"
     },
     {
       "id": "54209",
@@ -1241,7 +1325,8 @@
       "answerIndex": 0,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition: page 12 (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Audio/Video/Telecom"
     },
     {
       "id": "54210",
@@ -1256,7 +1341,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 770.24 informational note. (see help note)",
         "NFPA 70: National Electrical Code 2017 : 770.24 informational note. (see additional note)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54211",
@@ -1270,7 +1356,8 @@
       "answerIndex": 0,
       "references": [
         "Live Sound Reinforcement: Page 213, 279"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54212",
@@ -1286,7 +1373,8 @@
         "NFPA 70: National Electrical Code Tabs 2017 : 800.179",
         "NFPA 70: National Electrical Code 2017 : 800.179",
         "NFPA 70: National Electrical Code 2008 : 800.179"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54213",
@@ -1300,7 +1388,8 @@
       "answerIndex": 0,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition: p.139-140 (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54214",
@@ -1315,7 +1404,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 800.100(A)(3)",
         "NFPA 70: National Electrical Code 2017 : 800.100(A)(3)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54215",
@@ -1330,7 +1420,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: Table 800.179(A)",
         "NFPA 70: National Electrical Code 2017: Table 800.179(A)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54216",
@@ -1345,7 +1436,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 800.1...",
         "NFPA 70: National Electrical Code 2017 : 800.179(B)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54217",
@@ -1360,7 +1452,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 725.139(D)(1)",
         "NFPA 70: National Electrical Code 2017 : 725.139(D)(1)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54218",
@@ -1375,7 +1468,8 @@
       "explanation": "d) Equalizers. The term equalization was originally applied to the process of electronically compensating for deficiencies in the ability of a component or system to accurately reproduce sounds or audio signals. Generally, the term (EQ for short) is now applied to any intentional alteration of frequency response including tone control-whether for practical or creative reasons.",
       "references": [
         "Live Sound Reinforcement : p.9"
-      ]
+      ],
+      "topic": "Audio/Video/Telecom"
     },
     {
       "id": "54219",
@@ -1389,7 +1483,8 @@
       "answerIndex": 0,
       "references": [
         "Live Sound Reinforcement : p.12"
-      ]
+      ],
+      "topic": "Audio/Video/Telecom"
     },
     {
       "id": "54220",
@@ -1403,7 +1498,8 @@
       "answerIndex": 0,
       "references": [
         "Telecommunications Wiring : p.4.2 (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54221",
@@ -1417,7 +1513,8 @@
       "answerIndex": 2,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition: p.202"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54222",
@@ -1433,7 +1530,8 @@
       "references": [
         "Telecommunications Wiring: 2nd ed Page 165",
         "Telecommunications Wiring: 2nd ed Page (number cut off, matches Page 165)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54223",
@@ -1444,7 +1542,8 @@
         "bad switch",
         "?"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "topic": "Electrical Theory"
     },
     {
       "id": "54225",
@@ -1459,7 +1558,8 @@
       "references": [
         "NEC 2017 (NFPA 70): 800.90 Note 2(2)",
         "NEC 2008 (NFPA 70): 800.90"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "54312",
@@ -1473,7 +1573,8 @@
       "answerIndex": 2,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016: 23.8.5.5.2"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54343",
@@ -1487,7 +1588,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 70: National Electrical Code 2017 : 820.154, Table 820.154(a)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54365",
@@ -1501,7 +1603,8 @@
       "answerIndex": 2,
       "references": [
         "NEC 2017 (NFPA 70): 820.179(B)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "54419",
@@ -1515,7 +1618,8 @@
       "answerIndex": 1,
       "references": [
         "NFPA 70: National Electrical Code 2017 : 760.136(D)(1)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54564",
@@ -1529,7 +1633,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 70: National Electrical Code 2017 : 820.100(D)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54566",
@@ -1543,7 +1648,8 @@
       "answerIndex": 1,
       "references": [
         "NFPA 70: National Electrical Code 2017: 760.130(B)(2) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54579",
@@ -1558,7 +1664,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: 800.53",
         "NFPA 70: National Electrical Code 2017: 800.53"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "54580",
@@ -1572,7 +1679,8 @@
       "answerIndex": 0,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 3.3.36.1"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54581",
@@ -1586,7 +1694,8 @@
       "answerIndex": 1,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition : p.78"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54582",
@@ -1600,7 +1709,8 @@
       "answerIndex": 1,
       "explanation": "Looking at the diagram, note that it says .5 Volts/DIV. This is \"volts per division\". Each square, or division, is .5, therefore, count the divisions between Y and A, and multiply by .5",
       "media": "media/54582.jpg",
-      "mediaDescription": "Diagram popup titled 'Diagram'. Oscilloscope-style waveform display on a grid. Y-axis labeled 'VOLTS = .5/DIV', X-axis labeled 'TIME = 10ms/DIV'. Shows a sine wave. Point 'Y' is marked on the y-axis (horizontal dashed reference line at the sine wave's mid/zero level). Point 'A' is marked at a wave peak (upper), point 'B' is marked at a wave trough (lower). The dashed reference from Y goes to peak A. Caption below: 'Click to open image in new window'. Belongs to Question ID 54582 / Question 87. Per the associated help, count divisions between Y and A and multiply by .5; A is 2 divisions above Y = 1 volt."
+      "mediaDescription": "Diagram popup titled 'Diagram'. Oscilloscope-style waveform display on a grid. Y-axis labeled 'VOLTS = .5/DIV', X-axis labeled 'TIME = 10ms/DIV'. Shows a sine wave. Point 'Y' is marked on the y-axis (horizontal dashed reference line at the sine wave's mid/zero level). Point 'A' is marked at a wave peak (upper), point 'B' is marked at a wave trough (lower). The dashed reference from Y goes to peak A. Caption below: 'Click to open image in new window'. Belongs to Question ID 54582 / Question 87. Per the associated help, count divisions between Y and A and multiply by .5; A is 2 divisions above Y = 1 volt.",
+      "topic": "Electrical Theory"
     },
     {
       "id": "54583",
@@ -1616,7 +1726,8 @@
         "Telecommunications Distribution Methods Manual: Telecommunication Distribution Methods Manual 12th ed Vol 1 Page 1-17, 18"
       ],
       "media": "media/54583.jpg",
-      "mediaDescription": "Oscilloscope/waveform diagram (labeled 'Diagram (click to enlarge)'). A sine wave is plotted on a grid. Vertical axis labeled 'VOLTS' with '5V/DIV'. Horizontal axis labeled 'X' with 'TIME = 10ms/DIV'. Points marked on the waveform: A (first positive peak), Y (a horizontal reference/dashed line at mid-level), B (a trough/lower point), C (a later point on the dashed reference line to the right). The waveform spans from point A to point C across 5 horizontal divisions, giving 5 x 10ms = 50 ms."
+      "mediaDescription": "Oscilloscope/waveform diagram (labeled 'Diagram (click to enlarge)'). A sine wave is plotted on a grid. Vertical axis labeled 'VOLTS' with '5V/DIV'. Horizontal axis labeled 'X' with 'TIME = 10ms/DIV'. Points marked on the waveform: A (first positive peak), Y (a horizontal reference/dashed line at mid-level), B (a trough/lower point), C (a later point on the dashed reference line to the right). The waveform spans from point A to point C across 5 horizontal divisions, giving 5 x 10ms = 50 ms.",
+      "topic": "Electrical Theory"
     },
     {
       "id": "54584",
@@ -1633,7 +1744,8 @@
         "Telecommunications Distribution Methods Manual : 1-17"
       ],
       "media": "media/54584.jpg",
-      "mediaDescription": "Oscilloscope-style diagram (click to enlarge) on a grid. Y-axis labeled VOLTS = 5/DIV, X-axis labeled TIME = 10ms/DIV. A sine-like waveform crosses the grid with point A marked at a peak (upper region) and point B marked at a trough (lower region). The time between the two waves/points spans 4 divisions = 40 ms."
+      "mediaDescription": "Oscilloscope-style diagram (click to enlarge) on a grid. Y-axis labeled VOLTS = 5/DIV, X-axis labeled TIME = 10ms/DIV. A sine-like waveform crosses the grid with point A marked at a peak (upper region) and point B marked at a trough (lower region). The time between the two waves/points spans 4 divisions = 40 ms.",
+      "topic": "Electrical Theory"
     },
     {
       "id": "54585",
@@ -1648,7 +1760,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017: 800.113(C)(7) (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017: 800.113(C)(7) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54586",
@@ -1662,7 +1775,8 @@
       "answerIndex": 2,
       "references": [
         "Antenna Toolkit : p.244"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54587",
@@ -1676,7 +1790,8 @@
       "answerIndex": 0,
       "references": [
         "Practical Home Theater - A Guide to Video and Audio Systems : Page 20,21"
-      ]
+      ],
+      "topic": "Audio/Video/Telecom"
     },
     {
       "id": "54588",
@@ -1691,7 +1806,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 725.179(E)",
         "NFPA 70: National Electrical Code 2017 : 725.179(E)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54589",
@@ -1705,7 +1821,8 @@
       "answerIndex": 1,
       "references": [
         "NFPA 72 2016: A.10.17.5 (partially cut off)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54590",
@@ -1719,7 +1836,8 @@
       "answerIndex": 2,
       "references": [
         "Live Sound Reinforcement : p.12"
-      ]
+      ],
+      "topic": "Audio/Video/Telecom"
     },
     {
       "id": "54592",
@@ -1734,7 +1852,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 310.10(B) (Allowed in Test)",
         "NFPA 70: National Electrical Code 2017 : 310.10(B) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54593",
@@ -1750,7 +1869,8 @@
         "NFPA 70: National Electrical Code Tabs 2017 : Article 100, Raceway",
         "NFPA 70: National Electrical Code 2017 : Article 100, Raceway",
         "NFPA 70: National Electrical Code 2008 : Article 100, Raceway"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54610",
@@ -1764,7 +1884,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.14.10.7"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54611",
@@ -1778,7 +1899,8 @@
       "answerIndex": 0,
       "references": [
         "Antenna Toolkit : p.56"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54612",
@@ -1792,7 +1914,8 @@
       "answerIndex": 1,
       "references": [
         "Antenna Toolkit : p.51"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54613",
@@ -1806,7 +1929,8 @@
       "answerIndex": 0,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition: p.19-20"
-      ]
+      ],
+      "topic": "Codes & Definitions"
     },
     {
       "id": "54614",
@@ -1820,7 +1944,8 @@
       "answerIndex": 1,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition : p.77-78"
-      ]
+      ],
+      "topic": "Audio/Video/Telecom"
     },
     {
       "id": "54615",
@@ -1834,7 +1959,8 @@
       "answerIndex": 3,
       "references": [
         "Live Sound Reinforcement : p.141"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54620",
@@ -1848,7 +1974,8 @@
       "answerIndex": 3,
       "references": [
         "Practical Home Theater - A Guide to Video and Audio Systems : p.240-241"
-      ]
+      ],
+      "topic": "Audio/Video/Telecom"
     },
     {
       "id": "54622",
@@ -1863,7 +1990,8 @@
       "references": [
         "NEC 2017 (NFPA 70): 300.7(A)",
         "NEC 2008 (NFPA 70): 300.7(A)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "54623",
@@ -1878,7 +2006,8 @@
       "references": [
         "NFPA 70: National Electrical Code Tabs 2017 : 770.133",
         "NFPA 70: National Electrical Code 2017 : 770.133"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54624",
@@ -1892,7 +2021,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 23.11.7"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54625",
@@ -1906,7 +2036,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 29.11.1 (Allowed)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54626",
@@ -1917,7 +2048,8 @@
         "3.00 watts",
         "00.3 watts"
       ],
-      "answerIndex": 2
+      "answerIndex": 2,
+      "topic": "Electrical Theory"
     },
     {
       "id": "54628",
@@ -1933,7 +2065,8 @@
         "NFPA 70: National Electrical Code Tabs 2017: 820.154, Table 820.154",
         "NFPA 70: National Electrical Code 2017: 820.154, Table 820.154(a)",
         "NFPA 70: National Electrical Code 2008: 820.154(B)(1)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54634",
@@ -1949,7 +2082,8 @@
         "NFPA 70: National Electrical Code Tabs 2017 : 725.179(C)",
         "NFPA 70: National Electrical Code 2017 : 725.179(C)",
         "NFPA 70: National Electrical Code 2008 : 725.179(C)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54638",
@@ -1963,7 +2097,8 @@
       "answerIndex": 3,
       "references": [
         "Live Sound Reinforcement : p.137"
-      ]
+      ],
+      "topic": "Codes & Definitions"
     },
     {
       "id": "54751",
@@ -1977,7 +2112,8 @@
       "answerIndex": 2,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016: 17.7.1.8"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54752",
@@ -1993,7 +2129,8 @@
         "NFPA 72: National Fire Alarm Code, 2007 Edition: 10.4.4",
         "NFPA 72: National Fire Alarm and Signaling Code, 2016: 14.4.4, Table 14.4.3.2",
         "NFPA 72: National Fire Alarm and Signaling Code 2010: 14.4.5(6)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54754",
@@ -2007,7 +2144,8 @@
       "answerIndex": 0,
       "references": [
         "Antenna Toolkit: p.51"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54907",
@@ -2022,7 +2160,8 @@
       "references": [
         "NFPA 70: National Electrical Code 2017 : 250.166(B)",
         "NFPA 70: National Electrical Code 2008 : 250.166(B)"
-      ]
+      ],
+      "topic": "Grounding & Bonding"
     },
     {
       "id": "54952",
@@ -2038,7 +2177,8 @@
         "NFPA 72: National Fire Alarm Code, 2007 Edition : 4.4.1.5.3.1 (Not allowed in Test)",
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 10.6.7.2.1.2 (Allowed)",
         "NFPA 72: National Fire Alarm and Signaling Code 2010 : 10.5.6.3.1 (Not allowed)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54958",
@@ -2052,7 +2192,8 @@
       "answerIndex": 1,
       "references": [
         "Understanding and Servicing Alarm Systems 3rd Edition : p.236"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54960",
@@ -2066,7 +2207,8 @@
       "answerIndex": 2,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 21.4"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54961",
@@ -2082,7 +2224,8 @@
         "NFPA 70: National Electrical Code Tabs 2017: 770.154",
         "NFPA 70: National Electrical Code 2017: 770.154",
         "NFPA 70: National Electrical Code 2008: 770.154(E)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54962",
@@ -2097,7 +2240,8 @@
       "references": [
         "NEC 2017 (NFPA 70): 80.2 Annex H",
         "NEC 2008 (NFPA 70): 80.2 Annex H"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54963",
@@ -2113,7 +2257,8 @@
         "NFPA 70: National Electrical Code Tabs 2017 : 725.179(C)",
         "NFPA 70: National Electrical Code 2017 : 725.179(C)",
         "NFPA 70: National Electrical Code 2008 : 725.179(C)"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "54964",
@@ -2127,7 +2272,8 @@
       "answerIndex": 3,
       "references": [
         "Live Sound Reinforcement : p.5 (Not allowed in Test)"
-      ]
+      ],
+      "topic": "Audio/Video/Telecom"
     },
     {
       "id": "54965",
@@ -2141,7 +2287,8 @@
       "answerIndex": 1,
       "references": [
         "NFPA 72 2016: 3.3.66, 3.3.66..., 3.3.172"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "54966",
@@ -2155,7 +2302,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 29.6.4(3)(d)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "55299",
@@ -2169,7 +2317,8 @@
       "answerIndex": 0,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition: page 19"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "55426",
@@ -2185,7 +2334,8 @@
         "NFPA 72: National Fire Alarm Code, 2007 Edition : 7.4.7",
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.4.8",
         "NFPA 72: National Fire Alarm and Signaling Code 2010 : 18.4.8"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "116909",
@@ -2199,7 +2349,8 @@
       "answerIndex": 1,
       "references": [
         "Telecommunications Wiring : Page 15"
-      ]
+      ],
+      "topic": "Electrical Theory"
     },
     {
       "id": "116910",
@@ -2211,7 +2362,8 @@
         "Volts"
       ],
       "answerIndex": 2,
-      "explanation": "Impedance is a parameter that applies to alternating current (ac) signals. Like resistance, impedance is expressed in ohms, but it has both a magnitude and a phase component."
+      "explanation": "Impedance is a parameter that applies to alternating current (ac) signals. Like resistance, impedance is expressed in ohms, but it has both a magnitude and a phase component.",
+      "topic": "Electrical Theory"
     },
     {
       "id": "116928",
@@ -2227,7 +2379,8 @@
         "NFPA 70: National Electrical Code Tabs 2017 : table 770.179",
         "NFPA 70: National Electrical Code 2017 : table 770.179",
         "NFPA 70: National Electrical Code 2008 : table 770.179"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "116929",
@@ -2243,7 +2396,8 @@
         "NFPA 72: National Fire Alarm Code, 2007 Edition : 7.5.4.1",
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 18.5.5.1",
         "NFPA 72: National Fire Alarm and Signaling Code 2010 : 18.5.4.1"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "117714",
@@ -2259,7 +2413,8 @@
         "NFPA 72: National Fire Alarm Code, 2007 Edition : 5.13.8 (Not allowed in Test)",
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 17.14.8.5 (Allowed in Test)",
         "NFPA 72: National Fire Alarm and Signaling Code 2010 : 17.14.8 (Not allowed)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "118018",
@@ -2273,7 +2428,8 @@
       "answerIndex": 3,
       "references": [
         "NFPA 70: National Electrical Code 2017 : 820.44(E)(1) (Allowed in Test)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "120059",
@@ -2287,7 +2443,8 @@
       "answerIndex": 2,
       "references": [
         "NFPA 72: National Fire Alarm and Signaling Code, 2016 : 3.3.38.3 (Allowed in Test)"
-      ]
+      ],
+      "topic": "Fire Alarm"
     },
     {
       "id": "120253",
@@ -2301,7 +2458,8 @@
       "answerIndex": 0,
       "references": [
         "NFPA 70: National Electrical Code 2017: 820.133(A)(2)"
-      ]
+      ],
+      "topic": "Separation & Support"
     },
     {
       "id": "120288",
@@ -2315,7 +2473,8 @@
       "answerIndex": 1,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition : 20"
-      ]
+      ],
+      "topic": "Cable & Wire"
     },
     {
       "id": "120289",
@@ -2329,7 +2488,8 @@
       "answerIndex": 1,
       "references": [
         "Data, Voice, and Video Cabling 3rd Edition : 283"
-      ]
+      ],
+      "topic": "Cable & Wire"
     }
   ]
 }

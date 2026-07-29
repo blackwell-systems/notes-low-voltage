@@ -3,6 +3,16 @@
   "use strict";
 
   const LETTERS = ["A", "B", "C", "D", "E", "F"];
+  // Question topic -> study-guide heading id (links quiz <-> guide both ways).
+  const TOPIC_ANCHOR = {
+    "Fire Alarm": "15-fire-alarm-essentials",
+    "Cable & Wire": "11-the-low-voltage-cable-naming-system",
+    "Grounding & Bonding": "13-grounding-and-bonding",
+    "Separation & Support": "16-separation-and-clearance-numbers",
+    "Electrical Theory": "1-electricity-in-sixty-seconds",
+    "Audio/Video/Telecom": "17-audio-video-and-telecom-grab-bag",
+    "Codes & Definitions": "14-the-codes",
+  };
   const PROFILES_KEY = "cr67_profiles";
   const ACTIVE_KEY = "cr67_active_profile";
   const LEGACY_KEY = "cr67_progress_v1";
@@ -102,6 +112,7 @@
     qCounter: el("q-counter"),
     qId: el("q-id"),
     qText: el("q-text"),
+    qTopic: el("q-topic"),
     qMedia: el("q-media"),
     qMediaImg: el("q-media-img"),
     qOptions: el("q-options"),
@@ -166,6 +177,11 @@
   const isGuideOpen = () => dom.guidePanel.classList.contains("open");
 
   dom.guideBtn.addEventListener("click", () => (isGuideOpen() ? closeGuide() : openGuide()));
+  dom.qTopic.addEventListener("click", () => {
+    const q = state.queue[state.idx];
+    const anchor = q && q.topic && TOPIC_ANCHOR[q.topic];
+    if (anchor) openGuide(anchor);
+  });
   dom.guideClose.addEventListener("click", closeGuide);
   dom.guideBackdrop.addEventListener("click", closeGuide);
   document.addEventListener("keydown", (e) => {
@@ -179,7 +195,7 @@
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth", block: "start" }); }
   });
 
-  function openGuide() {
+  function openGuide(anchor) {
     dom.guidePanel.classList.add("open");
     dom.guideBackdrop.classList.add("show");
     dom.guidePanel.setAttribute("aria-hidden", "false");
@@ -189,7 +205,11 @@
       guideLoaded = true; // don't retry-storm on failure; reset below if it fails
       fetch("guide-content.html")
         .then((r) => { if (!r.ok) throw new Error(r.status); return r.text(); })
-        .then((html) => { dom.guideContent.innerHTML = html; })
+        .then((html) => {
+          dom.guideContent.innerHTML = html;
+          injectPracticeButtons();
+          if (anchor) scrollGuideTo(anchor);
+        })
         .catch((err) => {
           guideLoaded = false;
           dom.guideContent.innerHTML =
@@ -197,8 +217,30 @@
             'You can read it on GitHub instead.</p>';
           console.error(err);
         });
+    } else if (anchor) {
+      scrollGuideTo(anchor);
     }
-    dom.guideContent.focus();
+    if (!anchor) dom.guideContent.focus();
+  }
+  function scrollGuideTo(anchor) {
+    const t = dom.guideContent.querySelector("#" + CSS.escape(anchor));
+    if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+    else dom.guideContent.scrollTop = 0;
+  }
+  // Add a "Practice these N questions" button after each topic's guide section.
+  function injectPracticeButtons() {
+    Object.keys(TOPIC_ANCHOR).forEach((topic) => {
+      const h = dom.guideContent.querySelector("#" + CSS.escape(TOPIC_ANCHOR[topic]));
+      if (!h) return;
+      const qs = state.all.filter((q) => q.topic === topic);
+      if (!qs.length) return;
+      const btn = document.createElement("button");
+      btn.className = "guide-practice";
+      btn.type = "button";
+      btn.textContent = `Practice these ${qs.length} ${topic} questions ›`;
+      btn.addEventListener("click", () => { closeGuide(); launchQueue(qs, 0); });
+      h.insertAdjacentElement("afterend", btn);
+    });
   }
   function closeGuide() {
     dom.guidePanel.classList.remove("open");
@@ -654,6 +696,12 @@
     dom.qCounter.textContent = `Question ${state.idx + 1} of ${n}`;
     dom.qId.textContent = q.id ? `ID ${q.id}` : "";
     dom.qText.innerHTML = hi(q.question);
+    if (q.topic && TOPIC_ANCHOR[q.topic]) {
+      dom.qTopic.textContent = q.topic;
+      dom.qTopic.classList.remove("hidden");
+    } else {
+      dom.qTopic.classList.add("hidden");
+    }
     updateFlagBtn(q);
     dom.progressFill.style.width = `${((state.idx + 1) / n) * 100}%`;
 

@@ -250,7 +250,36 @@ main {
 }
 
 /* ---- Question meta / flag button ---- */
+.q-meta-left { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .q-meta-right { display: flex; align-items: center; gap: 12px; }
+.q-topic {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.q-topic::before { content: "📖 "; }
+.q-topic:hover { border-color: var(--accent); background: var(--surface-2); }
+
+/* "Practice these" buttons injected into the guide panel */
+.guide-practice {
+  display: inline-block;
+  margin: 2px 0 20px;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.guide-practice:hover { background: var(--accent-hover); }
 .flag-btn {
   background: transparent;
   border: 1px solid var(--border);
