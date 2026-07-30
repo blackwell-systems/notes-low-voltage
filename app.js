@@ -629,9 +629,10 @@
       btn.className = "search-item";
       btn.type = "button";
       btn.setAttribute("data-idx", i);
+      const topicChip = q.topic ? `<span class="s-topic">${escapeHtml(q.topic)}</span>` : "";
       btn.innerHTML =
         `<span class="s-q">${highlight(q.question, rx)}</span>` +
-        `<span class="s-a">${escapeHtml(q.options[q.answerIndex] || "")}</span>`;
+        `<span class="s-meta"><span class="s-a">${escapeHtml(q.options[q.answerIndex] || "")}</span>${topicChip}</span>`;
       dom.searchResults.appendChild(btn);
     });
     if (n > 1) {

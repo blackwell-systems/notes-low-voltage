@@ -404,8 +404,18 @@ main {
 }
 .search-item:hover { border-color: var(--accent); }
 .search-item .s-q { color: var(--text); font-size: 0.9rem; line-height: 1.35; }
+.search-item .s-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .search-item .s-a { color: var(--correct); font-size: 0.8rem; font-weight: 600; }
 .search-item .s-a::before { content: "✓ "; }
+.search-item .s-topic {
+  font-size: 0.68rem;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 8px;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
 .search-results mark { background: rgba(59, 130, 246, 0.4); color: #fff; border-radius: 3px; padding: 0 2px; }
 .search-studyall {
   background: transparent;
