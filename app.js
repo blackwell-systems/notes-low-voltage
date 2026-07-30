@@ -2,6 +2,13 @@
 (() => {
   "use strict";
 
+  // Register the service worker so the app installs and works offline.
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").catch(() => {});
+    });
+  }
+
   const LETTERS = ["A", "B", "C", "D", "E", "F"];
   // Question topic -> study-guide heading id (links quiz <-> guide both ways).
   const TOPIC_ANCHOR = {
