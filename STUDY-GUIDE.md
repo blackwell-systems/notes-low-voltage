@@ -471,6 +471,21 @@ small extra cost of running it inside metal conduit underground is often money
 well spent. Little stories like this are how exam writers make a dry fact
 memorable, and they sometimes become the question.
 
+### Location types: dry, damp, and wet
+
+The **W** in a wire code only matters once you know how the code classifies
+locations, and these three terms drive a whole set of questions:
+
+- A **dry location** is normally free of moisture (most indoor conditioned space).
+- A **damp location** sees some moisture but not saturation, such as a covered
+  porch, a basement, or under a canopy.
+- A **wet location** is subject to saturation with water: direct rain, buried in
+  the earth, or in contact with the ground. This is the strict one, and it is the
+  condition a **W**-rated conductor (THW, THHW, XHHW, UF, USE) is built for.
+
+So "which conductor may be used in a wet location" is really "which one has the
+**W**," and "direct burial" always counts as wet.
+
 ---
 
 ## 11. The low-voltage cable naming system
@@ -741,6 +756,23 @@ the person with authority to approve it is the **Authority Having Jurisdiction
 (AHJ)**, typically the local inspector, not the contractor, manufacturer, or
 owner.
 
+### Code qualifier words
+
+The NEC repeats a handful of adjectives that carry precise legal meaning, and the
+questions echo them. Know what each really requires:
+
+- **Listed:** the product has been evaluated by a recognized testing laboratory
+  (such as UL) and appears on its published list as meeting the standard.
+- **Labeled:** the product carries the mark or label of that laboratory, the
+  physical proof that it is listed.
+- **Identified (for the use):** recognized as suitable for the specific purpose,
+  as in a conductor "identified for direct-burial use."
+- **Approved:** acceptable to the Authority Having Jurisdiction. Approval is a
+  judgment by the AHJ, not a lab test.
+- **Nominal voltage:** the standard rated value used to name a system (120 V,
+  208Y/120 V), not the exact voltage measured at any instant. When a question says
+  a CATV cable has a "nominal voltage of 63 volts," it means its rated figure.
+
 ---
 
 ## 15. Fire alarm essentials
@@ -896,6 +928,10 @@ A handful of terms the fire alarm questions use without stopping to explain:
 - **Sensitivity (calibration) test:** a check that a smoke detector still responds
   within its listed and marked smoke-obscuration range. Detectors drift with age,
   so the test confirms they are neither too dull nor too twitchy.
+- **Candela and lumen:** measures of a strobe's light output. **Candela (cd)** is
+  the intensity of the flash in a given direction, and it is what strobe ratings
+  are specified in; a **lumen** is total light output. A "high-lumen" (high-candela)
+  strobe is brighter, so it can cover a larger area or a longer corridor.
 
 ---
 
@@ -945,7 +981,9 @@ Terms the installation questions assume you already know:
 - **Overcurrent device:** a breaker or fuse that opens the circuit when current
   climbs past a safe value, protecting the conductors from overheating.
 - **Service drop:** the overhead conductors running from the utility to a
-  building. (The underground equivalent is the service lateral.)
+  building.
+- **Service lateral:** the same idea underground, the buried conductors from the
+  utility to the building.
 - **Service entrance:** the point and conductors where the utility supply enters
   the building. **USE** cable is literally Underground Service Entrance cable.
 - **Point of entrance:** the spot where a communication or CATV cable first
@@ -1066,6 +1104,28 @@ Three signal terms the audio, video, and telecom questions lean on:
 - **Attenuation:** the gradual loss of signal strength as it travels along a
   cable. It is why every cable type has a maximum recommended run length, and why
   single-mode fiber, with very low attenuation, reaches the farthest.
+
+### A few more signal terms
+
+The smaller words that show up inside the AV and telecom questions:
+
+- **Dielectric:** the insulating layer between a coax cable's center conductor and
+  its shield. It holds the conductor centered and sets the cable's electrical
+  behavior; "dielectric" is just the technical word for that insulator.
+- **RF (radio frequency):** the higher-frequency signals used for radio, TV, and
+  antenna work, the kind coax is built to carry.
+- **Shield and jacket:** the **shield** is the conductive braid or foil around a
+  cable that blocks interference; the **jacket** is the outer plastic covering that
+  protects everything inside.
+- **Splitter:** a device that divides one signal among several outputs (one feed
+  to several TVs, say). Every split weakens the signal, which is why removing
+  unneeded splitters can improve a weak picture.
+- **Modal dispersion:** in multimode fiber, light travels several paths ("modes")
+  of slightly different length, so a pulse spreads out and smears over distance.
+  That spreading limits multimode's range and bandwidth; single-mode fiber avoids
+  it by carrying just one mode.
+- **Topology:** simply the shape of how devices are wired together (star, bus,
+  ring, point-to-point), covered above.
 
 ---
 
