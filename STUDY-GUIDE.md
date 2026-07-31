@@ -723,14 +723,30 @@ just when there is a fire:
 - A fault condition must be re-annunciated every **24 hours** so it is not
   forgotten.
 
-**Notification (making sure people react).**
+**Notification (making sure people react).** First, the vocabulary these rules
+use, since the exam quietly assumes you know it:
 
-- A **visible** device (a strobe) is required when the ambient sound level
+- A **notification appliance** is any output that alerts occupants. An **audible
+  appliance** is the sound-making kind (horn, speaker, bell); a **visible
+  appliance** is the light-based kind (a strobe). Both are appliances, not
+  "devices" (see the next subsection).
+- **Ambient sound level** is the normal background noise in a space with no alarm
+  sounding, measured in decibels. It sets the bar the alarm must beat, because an
+  alarm has to be clearly louder than whatever noise is already there.
+- **dB** (decibel) is the unit of sound level; **dBA** is the same thing measured
+  with an "A-weighting" filter that follows how human ears actually hear.
+- **Pillow level** means the sound measured right at the pillow of a bed, the
+  worst-case spot for waking a sleeping person, which is why sleeping-area rules
+  are stated there.
+
+With those defined, the rules:
+
+- A **visible** appliance (a strobe) is required when the ambient sound level
   exceeds **105 dBA**, because in very loud spaces an audible-only alarm could be
   missed.
 - Audible alarms in a sleeping area must be at least **15 dB above the ambient**
-  sound, or reach **75 dB at the pillow**, since sleeping people need a strong
-  signal to wake.
+  sound, or reach **75 dB at the pillow**, whichever is louder, since sleeping
+  people need a strong signal to wake.
 - Strobes mount between **80 inches minimum and 96 inches maximum** off the floor,
   high enough to be seen across a room but within a sensible band. Audible
   appliances sit at least **7.5 feet** up.
