@@ -207,6 +207,8 @@ How components are connected decides how their resistances combine, and this is
 one of the most tested calculation skills on the exam. There are two basic
 arrangements, and it pays to recognize each on sight.
 
+![Series vs parallel circuits: a series circuit is one loop with resistors in a line (resistances add), while a parallel circuit has resistors on separate branches between two rails (reciprocals add).](img/series-parallel.svg)
+
 ### Series: one single path
 
 In a series circuit the components sit in a line, one after another, like beads
@@ -541,15 +543,7 @@ The rule that ties it together: you may always install a **higher-rated** cable
 where a lower one is required, but **never** a lower-rated cable where a higher
 one is required. Picture a pyramid with the toughest rating at the top:
 
-```
-            Plenum  (P)          can be used anywhere below it
-              |
-           Riser   (R)
-              |
-        General purpose
-              |
-         Limited (X)             the most restricted
-```
+![Cable substitution pyramid: from the top, Plenum, Riser, General purpose, Limited use. You may substitute upward (a higher-rated cable for a lower one) but never downward.](img/substitution-pyramid.svg)
 
 **Substitute UP the pyramid, never down.** Plenum-rated cable can stand in for
 riser or general cable, because anything that survives the harsh moving-air

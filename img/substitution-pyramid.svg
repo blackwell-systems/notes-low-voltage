@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="100%" font-family="-apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-label="Cable substitution pyramid. Top to bottom: Plenum, Riser, General purpose, Limited use. You may always substitute a higher-rated cable for a lower one (move up the pyramid), never the reverse.">
+  <rect x="6" y="6" width="748" height="418" rx="16" fill="#1a2130" stroke="#33405a"/>
+  <text x="400" y="38" text-anchor="middle" fill="#e8edf5" font-size="21" font-weight="700">The cable substitution pyramid</text>
+  <text x="400" y="60" text-anchor="middle" fill="#94a3b8" font-size="13">Higher rating can always replace a lower one</text>
+
+  <!-- pyramid tiers (top = highest rating) -->
+  <polygon points="400,78 340,148 460,148" fill="#3b82f6" fill-opacity="0.95" stroke="#0f1420" stroke-width="2"/>
+  <polygon points="340,148 460,148 500,218 300,218" fill="#3b82f6" fill-opacity="0.72" stroke="#0f1420" stroke-width="2"/>
+  <polygon points="300,218 500,218 540,288 260,288" fill="#3b82f6" fill-opacity="0.5" stroke="#0f1420" stroke-width="2"/>
+  <polygon points="260,288 540,288 580,358 220,358" fill="#3b82f6" fill-opacity="0.34" stroke="#0f1420" stroke-width="2"/>
+
+  <!-- tier labels -->
+  <text x="400" y="141" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">P · Plenum</text>
+  <text x="400" y="187" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">R · Riser</text>
+  <text x="400" y="205" text-anchor="middle" fill="#dbeafe" font-size="11.5">vertical, floor to floor</text>
+  <text x="400" y="255" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">General purpose</text>
+  <text x="400" y="326" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">X · Limited use</text>
+  <text x="400" y="344" text-anchor="middle" fill="#e8edf5" font-size="11.5">dwellings, short runs</text>
+
+  <!-- most / least rating tags -->
+  <text x="472" y="120" fill="#94a3b8" font-size="11">strictest</text>
+  <text x="588" y="330" fill="#94a3b8" font-size="11">least demanding</text>
+
+  <!-- UP arrow: substitute upward (green) -->
+  <g>
+    <line x1="120" y1="350" x2="120" y2="120" stroke="#22c55e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M120 96 l-16 26 l32 0 z" fill="#22c55e"/>
+    <text x="150" y="150" fill="#22c55e" font-size="13" font-weight="700" transform="rotate(90 150 150)">substitute UP  (allowed)</text>
+  </g>
+  <!-- DOWN arrow: never (red, crossed) -->
+  <g>
+    <line x1="672" y1="120" x2="672" y2="350" stroke="#ef4444" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+    <path d="M672 374 l-16 -26 l32 0 z" fill="#ef4444" opacity="0.55"/>
+    <text x="700" y="150" fill="#ef4444" font-size="13" font-weight="700" transform="rotate(90 700 150)">down = not allowed</text>
+  </g>
+
+  <text x="400" y="404" text-anchor="middle" fill="#94a3b8" font-size="13">A plenum cable can go anywhere below it; a limited cable cannot go up.</text>
+</svg>
