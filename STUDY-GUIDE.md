@@ -105,6 +105,8 @@ Hold this picture in your head:
 > More pressure (voltage) pushes more water (current). A narrower or longer pipe
 > (more resistance) lets less water through for the same pressure.
 
+![Water-pipe analogy: the same pressure (voltage) pushes lots of flow (current) through a wide, low-resistance pipe, but only a little through a narrow, high-resistance pipe.](img/ohm-water.svg)
+
 That one sentence is Ohm's Law stated in plain words, and roughly a fifth of the
 exam is really just this picture wearing different costumes. Everything in the
 next few sections is built on it.

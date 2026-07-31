@@ -579,6 +579,7 @@ body.no-scroll { overflow: hidden; }
   color: var(--muted);
 }
 .guide-content hr { border: 0; border-top: 1px solid var(--border); margin: 2em 0; }
+.guide-content img { max-width: 100%; height: auto; display: block; margin: 14px auto; border-radius: 10px; }
 
 @media (max-width: 480px) {
   .topbar h1 { font-size: 0.95rem; }

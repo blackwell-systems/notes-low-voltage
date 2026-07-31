@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" width="100%" font-family="-apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-label="Water-pipe analogy for Ohm's Law: the same pressure (voltage) pushes lots of flow (current) through a wide, low-resistance pipe, but only a little through a narrow, high-resistance pipe.">
+  <rect x="6" y="6" width="748" height="398" rx="16" fill="#1a2130" stroke="#33405a"/>
+  <text x="380" y="40" text-anchor="middle" fill="#e8edf5" font-size="21" font-weight="700">Voltage, current &amp; resistance as water in a pipe</text>
+  <text x="380" y="64" text-anchor="middle" fill="#94a3b8" font-size="14">V = I × R  ·  pressure = flow × resistance</text>
+
+  <!-- shared pressure source -->
+  <polygon points="70,150 108,150 108,138 138,168 108,198 108,186 70,186" fill="#f5b342"/>
+  <polygon points="70,290 108,290 108,278 138,308 108,338 108,326 70,326" fill="#f5b342"/>
+  <text x="150" y="234" text-anchor="middle" fill="#f5b342" font-size="13" font-weight="700">SAME</text>
+  <text x="150" y="250" text-anchor="middle" fill="#f5b342" font-size="13" font-weight="700">pressure</text>
+  <text x="150" y="266" text-anchor="middle" fill="#94a3b8" font-size="12">(voltage)</text>
+
+  <!-- Row A: WIDE pipe = low resistance -->
+  <text x="410" y="118" text-anchor="middle" fill="#e8edf5" font-size="14" font-weight="600">wide pipe  →  LOW resistance</text>
+  <rect x="205" y="138" width="400" height="54" fill="#3b82f6" opacity="0.30"/>
+  <rect x="205" y="132" width="400" height="6" fill="#94a3b8"/>
+  <rect x="205" y="192" width="400" height="6" fill="#94a3b8"/>
+  <g stroke="#cfe0ff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M250 155 l12 10 l-12 10"/>
+    <path d="M320 155 l12 10 l-12 10"/>
+    <path d="M390 155 l12 10 l-12 10"/>
+    <path d="M460 155 l12 10 l-12 10"/>
+    <path d="M530 155 l12 10 l-12 10"/>
+  </g>
+  <text x="678" y="160" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="700">HIGH</text>
+  <text x="678" y="177" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="700">current</text>
+
+  <!-- Row B: NARROW pipe = high resistance -->
+  <text x="410" y="270" text-anchor="middle" fill="#e8edf5" font-size="14" font-weight="600">narrow pipe  →  HIGH resistance</text>
+  <rect x="205" y="299" width="400" height="18" fill="#3b82f6" opacity="0.30"/>
+  <rect x="205" y="293" width="400" height="6" fill="#94a3b8"/>
+  <rect x="205" y="317" width="400" height="6" fill="#94a3b8"/>
+  <g stroke="#cfe0ff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M330 301 l7 7 l-7 7"/>
+    <path d="M430 301 l7 7 l-7 7"/>
+  </g>
+  <text x="678" y="302" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="700">LOW</text>
+  <text x="678" y="319" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="700">current</text>
+
+  <text x="380" y="386" text-anchor="middle" fill="#94a3b8" font-size="13">Same pressure, but more resistance (narrower pipe) lets less water (current) through.</text>
+</svg>

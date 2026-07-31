@@ -1,6 +1,6 @@
 /* Service worker: makes the quiz installable and fully offline.
    Bump CACHE when you deploy new assets to retire the old cache. */
-const CACHE = "cr67-v5";
+const CACHE = "cr67-v6";
 const ASSETS = [
   "./",
   "index.html",
@@ -8,6 +8,7 @@ const ASSETS = [
   "app.js",
   "questions.json",
   "guide-content.html",
+  "img/ohm-water.svg",
   "manifest.json",
   "icon-192.png",
   "icon-512.png",
