@@ -98,6 +98,7 @@
     resultsScreen: el("results-screen"),
     bankSummary: el("bank-summary"),
     startBtn: el("start-btn"),
+    topicButtons: el("topic-buttons"),
     searchInput: el("search-input"),
     searchCount: el("search-count"),
     searchResults: el("search-results"),
@@ -160,6 +161,7 @@
       renderMissedOption();
       renderHistory();
       renderFlaggedOption();
+      renderTopicButtons();
     })
     .catch((err) => {
       dom.bankSummary.textContent = "Could not load questions.json — is it deployed alongside index.html?";
@@ -589,6 +591,27 @@
     }
     if (dom.optShuffle.checked) shuffle(pool);
     launchQueue(pool, 0);
+  }
+
+  // ---- Practice by topic ----
+  function renderTopicButtons() {
+    const counts = {};
+    state.all.forEach((q) => { if (q.topic) counts[q.topic] = (counts[q.topic] || 0) + 1; });
+    const topics = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+    dom.topicButtons.innerHTML = "";
+    topics.forEach((topic) => {
+      const b = document.createElement("button");
+      b.className = "topic-pick";
+      b.type = "button";
+      b.innerHTML = `<span class="tp-name">${escapeHtml(topic)}</span>` +
+        `<span class="tp-count">${counts[topic]}</span>`;
+      b.addEventListener("click", () => {
+        let pool = state.all.filter((q) => q.topic === topic);
+        if (dom.optShuffle.checked) shuffle((pool = pool.slice()));
+        launchQueue(pool, 0);
+      });
+      dom.topicButtons.appendChild(b);
+    });
   }
 
   // ---- Search ----
