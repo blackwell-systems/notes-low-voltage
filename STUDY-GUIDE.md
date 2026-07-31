@@ -554,6 +554,33 @@ the least demanding. The rating ladder is really a fire-safety ladder.
 hardest place to survive, then **R**iser, then general, then **X** limited. If you
 can rank the environments by fire risk, you can rank the cables.
 
+### Circuit classes: power-limited vs non-power-limited
+
+Behind the cable names sit a few circuit *classes*, and the exam assumes you
+already know what they mean:
+
+- A **power-limited** circuit is one whose energy is capped by a listed power
+  source (a transformer or supply built to hold voltage and current down).
+  Because the energy is inherently limited, the shock and fire risk is low, so the
+  code permits smaller conductors, lighter overcurrent protection, and easier
+  installation. Most low-voltage communications and signaling work is
+  power-limited.
+- A **non-power-limited** circuit has no such built-in cap, so it can carry more
+  energy and must follow stricter wiring and protection rules. Non-power-limited
+  fire alarm cable is the **NPLF** family; power-limited fire alarm cable is the
+  **FPL** family.
+- **Class 1, Class 2, Class 3** rank remote-control and signaling circuits by how
+  much energy and shock hazard they carry. **Class 1** is the highest-energy of
+  the three and is wired much like ordinary power (minimum conductor 18 AWG).
+  **Class 2** is power-limited and low enough energy to be considered safe from
+  both shock and fire; it is the everyday "low-voltage" class, and its cable is
+  **CL2**. **Class 3** is also power-limited but allows higher voltage, so it needs
+  a little more insulation; its cable is **CL3**.
+
+The short version: "power-limited" means the source itself keeps the energy safely
+low, which is exactly why so much low-voltage cable is allowed to be thin and
+lightly protected.
+
 ---
 
 ## 12. Plenum, riser, and shaft
@@ -645,6 +672,27 @@ voltage difference between them.
 **primary protector** (a surge and overvoltage device) is installed, and it must
 be located **as close as practicable to the point of entrance** so a surge is
 diverted to ground before it can travel into the premises wiring.
+
+### The grounding conductor family (four look-alike terms)
+
+Several similar names show up in the grounding questions. Keep them straight:
+
+- **Grounding electrode:** the actual physical connection to the earth, such as a
+  driven ground rod, a metal underground water pipe, or the building's steel. It
+  is the "dirt" end of the system.
+- **Grounding electrode conductor (GEC):** the wire that connects the electrical
+  system to that grounding electrode. It ties the system to earth.
+- **Equipment grounding conductor (EGC):** the green, green-and-yellow, or bare
+  conductor that bonds equipment enclosures together and gives fault current a
+  path back to the source. It protects the metal parts you can touch.
+- **Bonding jumper:** a short conductor that connects two metal parts (or two
+  grounding points) so they sit at the same potential, for example the jumper
+  tying a CATV ground to the power service ground.
+
+A memory split: the **electrode** and its **GEC** are about connecting to *earth*,
+while the **EGC** and **bonding jumpers** are about connecting metal *to each
+other* and back to the *source*. Earth reference versus fault path, the same
+grounding-versus-bonding distinction from the top of this section.
 
 ---
 
@@ -829,6 +877,26 @@ cares about the ceiling's geometry:
 - Fire alarm circuits must be identified at **all terminal and junction
   locations**, and cabling is marked at each fire alarm and each controller.
 
+### More fire-alarm vocabulary
+
+A handful of terms the fire alarm questions use without stopping to explain:
+
+- **Annunciator:** a panel that shows the status and *location* of alarm and
+  trouble conditions, so responders can see where in the building something
+  tripped rather than just that something did.
+- **Supervising station:** the facility that monitors the fire alarm system and
+  acts on its signals. A **proprietary** supervising station is owned and staffed
+  by the same organization that owns the protected property (an on-site
+  monitoring room). A **central station** is a third-party company that monitors
+  for many customers. A **remote** supervising station sends signals off-site,
+  such as to a fire department.
+- **Quiescent:** the normal, non-alarm resting state. The **quiescent load** is
+  the small standby current the system draws when nothing is in alarm, and it is
+  the basis for the 24-hour backup-battery figure.
+- **Sensitivity (calibration) test:** a check that a smoke detector still responds
+  within its listed and marked smoke-obscuration range. Detectors drift with age,
+  so the test confirms they are neither too dull nor too twitchy.
+
 ---
 
 ## 16. Separation and clearance numbers
@@ -864,6 +932,24 @@ opening around them must be **firestopped** with an approved material. The whole
 point of a rated barrier is to stop fire from spreading between areas, and an
 unsealed cable penetration would be a hole that defeats it, so the code requires
 you to restore the rating.
+
+### Wiring-method and service words
+
+Terms the installation questions assume you already know:
+
+- **Raceway:** any enclosed channel designed to hold conductors, such as conduit,
+  tubing, or a wireway. A raised floor built to carry cabling counts as a raceway
+  too.
+- **Conduit:** a tube that protects and routes conductors. **Rigid Metal Conduit
+  (RMC)** is the heavy-wall metal version (supported at least every 10 feet).
+- **Overcurrent device:** a breaker or fuse that opens the circuit when current
+  climbs past a safe value, protecting the conductors from overheating.
+- **Service drop:** the overhead conductors running from the utility to a
+  building. (The underground equivalent is the service lateral.)
+- **Service entrance:** the point and conductors where the utility supply enters
+  the building. **USE** cable is literally Underground Service Entrance cable.
+- **Point of entrance:** the spot where a communication or CATV cable first
+  penetrates the building, which is where the primary protector belongs.
 
 ---
 
@@ -964,6 +1050,22 @@ and may run right beside power conductors up to **1000 volts**), and **security*
 (it is hard to tap without detection). What is **not** an advantage is **cost**:
 fiber and especially its termination and splicing are more expensive than copper.
 That "cost is the exception" framing is exactly how the exam asks it.
+
+### Coax, bandwidth, and attenuation, defined
+
+Three signal terms the audio, video, and telecom questions lean on:
+
+- **Coaxial cable (coax):** a cable built as a single center conductor, a
+  surrounding insulating dielectric, a metallic shield, and an outer jacket, all
+  sharing one axis (hence "co-axial"). The shield keeps interference out and the
+  signal in, which is why coax carries video and RF so well. RG-59 and RG-6 are
+  coax types.
+- **Bandwidth:** the range of frequencies (or, for fiber, wavelengths) a cable can
+  carry. More bandwidth means more information per second, which is why a
+  television channel is allotted a fixed 6 MHz of it.
+- **Attenuation:** the gradual loss of signal strength as it travels along a
+  cable. It is why every cable type has a maximum recommended run length, and why
+  single-mode fiber, with very low attenuation, reaches the farthest.
 
 ---
 

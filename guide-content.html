@@ -748,6 +748,35 @@ sits at the top because it is the hardest place to survive, then
 <strong>R</strong>iser, then general, then <strong>X</strong> limited.
 If you can rank the environments by fire risk, you can rank the
 cables.</p>
+<h3 id="circuit-classes-power-limited-vs-non-power-limited">Circuit
+classes: power-limited vs non-power-limited</h3>
+<p>Behind the cable names sit a few circuit <em>classes</em>, and the
+exam assumes you already know what they mean:</p>
+<ul>
+<li>A <strong>power-limited</strong> circuit is one whose energy is
+capped by a listed power source (a transformer or supply built to hold
+voltage and current down). Because the energy is inherently limited, the
+shock and fire risk is low, so the code permits smaller conductors,
+lighter overcurrent protection, and easier installation. Most
+low-voltage communications and signaling work is power-limited.</li>
+<li>A <strong>non-power-limited</strong> circuit has no such built-in
+cap, so it can carry more energy and must follow stricter wiring and
+protection rules. Non-power-limited fire alarm cable is the
+<strong>NPLF</strong> family; power-limited fire alarm cable is the
+<strong>FPL</strong> family.</li>
+<li><strong>Class 1, Class 2, Class 3</strong> rank remote-control and
+signaling circuits by how much energy and shock hazard they carry.
+<strong>Class 1</strong> is the highest-energy of the three and is wired
+much like ordinary power (minimum conductor 18 AWG). <strong>Class
+2</strong> is power-limited and low enough energy to be considered safe
+from both shock and fire; it is the everyday "low-voltage" class, and
+its cable is <strong>CL2</strong>. <strong>Class 3</strong> is also
+power-limited but allows higher voltage, so it needs a little more
+insulation; its cable is <strong>CL3</strong>.</li>
+</ul>
+<p>The short version: "power-limited" means the source itself keeps the
+energy safely low, which is exactly why so much low-voltage cable is
+allowed to be thin and lightly protected.</p>
 <hr />
 <h2 id="12-plenum-riser-and-shaft">12. Plenum, riser, and shaft</h2>
 <p>The P and R ratings only make sense once you know what these building
@@ -848,6 +877,32 @@ lines enter a building, a <strong>primary protector</strong> (a surge
 and overvoltage device) is installed, and it must be located <strong>as
 close as practicable to the point of entrance</strong> so a surge is
 diverted to ground before it can travel into the premises wiring.</p>
+<h3 id="the-grounding-conductor-family-four-look-alike-terms">The
+grounding conductor family (four look-alike terms)</h3>
+<p>Several similar names show up in the grounding questions. Keep them
+straight:</p>
+<ul>
+<li><strong>Grounding electrode:</strong> the actual physical connection
+to the earth, such as a driven ground rod, a metal underground water
+pipe, or the building's steel. It is the "dirt" end of the system.</li>
+<li><strong>Grounding electrode conductor (GEC):</strong> the wire that
+connects the electrical system to that grounding electrode. It ties the
+system to earth.</li>
+<li><strong>Equipment grounding conductor (EGC):</strong> the green,
+green-and-yellow, or bare conductor that bonds equipment enclosures
+together and gives fault current a path back to the source. It protects
+the metal parts you can touch.</li>
+<li><strong>Bonding jumper:</strong> a short conductor that connects two
+metal parts (or two grounding points) so they sit at the same potential,
+for example the jumper tying a CATV ground to the power service
+ground.</li>
+</ul>
+<p>A memory split: the <strong>electrode</strong> and its
+<strong>GEC</strong> are about connecting to <em>earth</em>, while the
+<strong>EGC</strong> and <strong>bonding jumpers</strong> are about
+connecting metal <em>to each other</em> and back to the <em>source</em>.
+Earth reference versus fault path, the same grounding-versus-bonding
+distinction from the top of this section.</p>
 <hr />
 <h2 id="14-the-codes">14. The codes</h2>
 <p>Nearly every code question traces back to one of two rule books, so
@@ -1089,6 +1144,31 @@ feet</strong> apart.</li>
 junction locations</strong>, and cabling is marked at each fire alarm
 and each controller.</li>
 </ul>
+<h3 id="more-fire-alarm-vocabulary">More fire-alarm vocabulary</h3>
+<p>A handful of terms the fire alarm questions use without stopping to
+explain:</p>
+<ul>
+<li><strong>Annunciator:</strong> a panel that shows the status and
+<em>location</em> of alarm and trouble conditions, so responders can see
+where in the building something tripped rather than just that something
+did.</li>
+<li><strong>Supervising station:</strong> the facility that monitors the
+fire alarm system and acts on its signals. A
+<strong>proprietary</strong> supervising station is owned and staffed by
+the same organization that owns the protected property (an on-site
+monitoring room). A <strong>central station</strong> is a third-party
+company that monitors for many customers. A <strong>remote</strong>
+supervising station sends signals off-site, such as to a fire
+department.</li>
+<li><strong>Quiescent:</strong> the normal, non-alarm resting state. The
+<strong>quiescent load</strong> is the small standby current the system
+draws when nothing is in alarm, and it is the basis for the 24-hour
+backup-battery figure.</li>
+<li><strong>Sensitivity (calibration) test:</strong> a check that a
+smoke detector still responds within its listed and marked
+smoke-obscuration range. Detectors drift with age, so the test confirms
+they are neither too dull nor too twitchy.</li>
+</ul>
 <hr />
 <h2 id="16-separation-and-clearance-numbers">16. Separation and
 clearance numbers</h2>
@@ -1182,6 +1262,29 @@ wall, floor, or ceiling, the opening around them must be
 of a rated barrier is to stop fire from spreading between areas, and an
 unsealed cable penetration would be a hole that defeats it, so the code
 requires you to restore the rating.</p>
+<h3 id="wiring-method-and-service-words">Wiring-method and service
+words</h3>
+<p>Terms the installation questions assume you already know:</p>
+<ul>
+<li><strong>Raceway:</strong> any enclosed channel designed to hold
+conductors, such as conduit, tubing, or a wireway. A raised floor built
+to carry cabling counts as a raceway too.</li>
+<li><strong>Conduit:</strong> a tube that protects and routes
+conductors. <strong>Rigid Metal Conduit (RMC)</strong> is the heavy-wall
+metal version (supported at least every 10 feet).</li>
+<li><strong>Overcurrent device:</strong> a breaker or fuse that opens
+the circuit when current climbs past a safe value, protecting the
+conductors from overheating.</li>
+<li><strong>Service drop:</strong> the overhead conductors running from
+the utility to a building. (The underground equivalent is the service
+lateral.)</li>
+<li><strong>Service entrance:</strong> the point and conductors where
+the utility supply enters the building. <strong>USE</strong> cable is
+literally Underground Service Entrance cable.</li>
+<li><strong>Point of entrance:</strong> the spot where a communication
+or CATV cable first penetrates the building, which is where the primary
+protector belongs.</li>
+</ul>
 <hr />
 <h2 id="17-audio-video-and-telecom-grab-bag">17. Audio, video, and
 telecom grab bag</h2>
@@ -1325,6 +1428,25 @@ beside power conductors up to <strong>1000 volts</strong>), and
 especially its termination and splicing are more expensive than copper.
 That "cost is the exception" framing is exactly how the exam asks
 it.</p>
+<h3 id="coax-bandwidth-and-attenuation-defined">Coax, bandwidth, and
+attenuation, defined</h3>
+<p>Three signal terms the audio, video, and telecom questions lean
+on:</p>
+<ul>
+<li><strong>Coaxial cable (coax):</strong> a cable built as a single
+center conductor, a surrounding insulating dielectric, a metallic
+shield, and an outer jacket, all sharing one axis (hence "co-axial").
+The shield keeps interference out and the signal in, which is why coax
+carries video and RF so well. RG-59 and RG-6 are coax types.</li>
+<li><strong>Bandwidth:</strong> the range of frequencies (or, for fiber,
+wavelengths) a cable can carry. More bandwidth means more information
+per second, which is why a television channel is allotted a fixed 6 MHz
+of it.</li>
+<li><strong>Attenuation:</strong> the gradual loss of signal strength as
+it travels along a cable. It is why every cable type has a maximum
+recommended run length, and why single-mode fiber, with very low
+attenuation, reaches the farthest.</li>
+</ul>
 <hr />
 <h2 id="18-switches-poles-and-throws">18. Switches: poles and
 throws</h2>

@@ -1,6 +1,6 @@
 /* Service worker: makes the quiz installable and fully offline.
    Bump CACHE when you deploy new assets to retire the old cache. */
-const CACHE = "cr67-v2";
+const CACHE = "cr67-v3";
 const ASSETS = [
   "./",
   "index.html",
