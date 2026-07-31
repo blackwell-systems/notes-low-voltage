@@ -1003,15 +1003,6 @@ useful context behind each, not just the answer.
   line (like coax, where the signal rides on the center conductor referenced to
   the shield). This bank refers to it as a "balanced transformer," since a balun
   is often built as a small transformer.
-- **Equalization (EQ):** any intentional alteration of a system's frequency
-  response, including tone controls. If you boost the bass or cut the treble, you
-  are equalizing.
-- **Crossover:** a circuit that splits an audio signal into frequency bands so each
-  band goes to the right speaker (woofer, tweeter). It does this with a
-  **frequency-dividing network**, which is the phrase the exam wants.
-- **ADC (Analog-to-Digital Converter):** turns a continuous analog signal into
-  digital samples. "Analog that converts to digital" is an **ADC**. The reverse is
-  a DAC.
 - **Coax and connectors:** **RG-59** is a common video coax good to roughly
   **1000 ft**; **RG-6** (slightly larger, lower loss) uses an **F connector**, the
   screw-on type on the back of a TV. **BNC** connectors (twist-lock) are common on
@@ -1050,10 +1041,12 @@ Most sound-system questions are simply "what does this part do." The cast:
 - **Fader:** a slider that raises or lowers a level.
 - **Tuner:** selects a station or frequency.
 - **Mixer:** combines several audio sources into one.
-- **Equalizer:** alters frequency response and tone (the EQ described above).
-- **Crossover:** splits audio into frequency bands with a frequency-dividing
-  network so each band reaches the right speaker.
-- **ADC:** an Analog-to-Digital Converter, "analog that converts to digital."
+- **Equalizer (EQ):** any intentional alteration of frequency response, including
+  tone controls; boosting the bass or cutting the treble is equalizing.
+- **Crossover:** splits audio into frequency bands with a **frequency-dividing
+  network** (the phrase the exam wants) so each band reaches the right speaker.
+- **ADC (Analog-to-Digital Converter):** turns an analog signal into digital
+  samples; "analog that converts to digital." The reverse is a DAC.
 
 A frequent real-world fault: **hums and buzzes** in a sound system usually trace
 back to **ground loop** problems, where two pieces of gear sit at slightly
