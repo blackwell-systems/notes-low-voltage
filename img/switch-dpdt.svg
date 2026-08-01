@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="100%" font-family="-apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-label="A switch schematic with two input poles. Each pole has a movable arm that can connect to either of two output contacts, and the two arms are linked by a dashed line so they move together.">
+  <rect x="6" y="6" width="748" height="418" rx="16" fill="#1a2130" stroke="#33405a"/>
+  <text x="400" y="42" text-anchor="middle" fill="#e8edf5" font-size="20" font-weight="700">What type of switch is this?</text>
+
+  <!-- POLE 1 -->
+  <g stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round">
+    <line x1="150" y1="150" x2="250" y2="150"/>            <!-- input -->
+    <line x1="372" y1="120" x2="520" y2="120"/>            <!-- output up -->
+    <line x1="372" y1="190" x2="520" y2="190"/>            <!-- output down -->
+  </g>
+  <line x1="250" y1="150" x2="366" y2="122" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/> <!-- arm -->
+  <circle cx="250" cy="150" r="5" fill="#94a3b8"/>
+  <circle cx="368" cy="120" r="6" fill="#1a2130" stroke="#cfe0ff" stroke-width="2.5"/>
+  <circle cx="368" cy="190" r="6" fill="#1a2130" stroke="#cfe0ff" stroke-width="2.5"/>
+  <text x="140" y="153" text-anchor="end" fill="#94a3b8" font-size="13">pole 1</text>
+
+  <!-- POLE 2 -->
+  <g stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round">
+    <line x1="150" y1="290" x2="250" y2="290"/>
+    <line x1="372" y1="260" x2="520" y2="260"/>
+    <line x1="372" y1="330" x2="520" y2="330"/>
+  </g>
+  <line x1="250" y1="290" x2="366" y2="262" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="250" cy="290" r="5" fill="#94a3b8"/>
+  <circle cx="368" cy="260" r="6" fill="#1a2130" stroke="#cfe0ff" stroke-width="2.5"/>
+  <circle cx="368" cy="330" r="6" fill="#1a2130" stroke="#cfe0ff" stroke-width="2.5"/>
+  <text x="140" y="293" text-anchor="end" fill="#94a3b8" font-size="13">pole 2</text>
+
+  <!-- ganged linkage -->
+  <line x1="305" y1="137" x2="305" y2="277" stroke="#f5b342" stroke-width="2.5" stroke-dasharray="5 5"/>
+  <text x="318" y="212" fill="#f5b342" font-size="12.5" font-weight="600">ganged</text>
+  <text x="318" y="228" fill="#94a3b8" font-size="11.5">(arms move together)</text>
+
+  <!-- throw labels -->
+  <text x="536" y="124" fill="#94a3b8" font-size="12">throw A</text>
+  <text x="536" y="194" fill="#94a3b8" font-size="12">throw B</text>
+  <text x="536" y="264" fill="#94a3b8" font-size="12">throw A</text>
+  <text x="536" y="334" fill="#94a3b8" font-size="12">throw B</text>
+
+  <text x="400" y="400" text-anchor="middle" fill="#94a3b8" font-size="12.5">Count the input poles, then count how many contacts each arm can reach.</text>
+</svg>

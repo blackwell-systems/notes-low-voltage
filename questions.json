@@ -193,14 +193,14 @@
         "15 ohms"
       ],
       "answerIndex": 0,
-      "explanation": "The 1, 6 and 3 ohm resistors are in series: 1 + 6 + 3 = 10 ohms. This then makes two 10 ohm resistors in parallel. RT = R1 x R2 / R1 + R2 (10 x 10 = 100) / (10 + 10 = 20) = 5 ohms. This makes 1, 6, 3, and 10 ohm portion of the circuit look like 5 ohms to the rest of the circuit. This 5 ohms is in series with the 2 and 3 ohm resistors so they can be added together to equal 10 ohms; 2 + 5 + 3 = 10 ohms total",
+      "explanation": "Reduce the network in stages. Right-hand loop: the 1 Ω, 6 Ω, and 3 Ω resistors are in series, so 1 + 6 + 3 = 10 Ω. That 10 Ω is in parallel with the middle 10 Ω resistor, so use product-over-sum: (10 × 10) ÷ (10 + 10) = 100 ÷ 20 = 5 Ω. That 5 Ω is now in series with the 2 Ω (top-left) and 3 Ω (bottom-left) resistors: 2 + 5 + 3 = 10 Ω. So the 10 V source sees 10 Ω total.",
       "references": [
         "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition",
         "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : 276-",
         "Low Voltage Wiring: Security Fire Alarm Systems 3rd Edition : 276-279"
       ],
-      "media": "media/13198.jpg",
-      "mediaDescription": "Circuit diagram popup dialog titled 'Diagram'. A 10 VOLTS battery source. Top branch left: 2 ohms resistor; bottom branch left: 3 ohms resistor. Middle: 10 ohms resistor (vertical). Right side: top 1 ohm resistor, bottom 3 ohms resistor, and a 6 ohms resistor (vertical on far right). The 1, 6, and 3 ohm resistors are in series (=10 ohms), which is in parallel with the 10 ohm resistor (=5 ohms), then in series with the 2 and 3 ohm resistors (2+5+3=10 ohms total).",
+      "media": "img/circuit-13198.svg",
+      "mediaDescription": "Resistor network on a 10 V source: 2 Ω and 3 Ω on the left (top and bottom) with a 10 Ω in the middle, and 1 Ω and 3 Ω on the right with a 6 Ω on the far right.",
       "topic": "Electrical Theory"
     },
     {
@@ -505,9 +505,10 @@
       "references": [
         "Ugly's Electrical References 2023 : 126 (Not allowed in Test)"
       ],
-      "media": "media/52587.jpg",
-      "mediaDescription": "A 'Diagram' popup dialog showing an enlarged electrical switch schematic. The schematic depicts a switch with two input lines on the left (two poles). Each pole has a movable contact arm; the upper arm connects to a common node then can throw between an upper output line and a lower output line, and similarly the lower pole. A dashed vertical line links the two switch arms (ganged mechanical linkage), and there are multiple output lines (four) on the right. This represents a double pole, double throw (DPDT) switch. Text: 'Click to open image in new window' and a 'Close' button.",
-      "topic": "Electrical Theory"
+      "media": "img/switch-dpdt.svg",
+      "mediaDescription": "Switch schematic: two input poles, each with an arm that can connect to either of two output contacts, the two arms linked by a dashed line so they move together.",
+      "topic": "Electrical Theory",
+      "explanation": "Name a switch by counting its poles and throws. Poles = how many separate circuits it switches at once; there are two input lines (two arms), so 2 poles = 'double pole.' Throws = how many contacts each arm can reach; each arm can connect to either of two output contacts, so 2 throws = 'double throw.' The dashed line shows the two arms are ganged (they move together). Two poles plus two throws makes a Double Pole, Double Throw (DPDT) switch."
     },
     {
       "id": "52646",
@@ -612,9 +613,9 @@
         "Sine Wave"
       ],
       "answerIndex": 3,
-      "explanation": "Sinusoidal Waveform The waveform for alternating-current circuits is symmetrical, with positive above and negative below the zero reference level. For most alternating-current circuits, the waveform is called a sine wave or a sinusoidal waveform.",
-      "media": "media/53612.jpg",
-      "mediaDescription": "Enlarged Diagram popup ('Click to open image in new window'): oscilloscope grid graph of a sinusoidal (sine) waveform. Y-axis labeled 'VOLTS = .5/DIV' (vertical), X-axis labeled X, origin at 0. The curve shows multiple cycles; point A marked at a positive peak/crest and point B marked at a negative trough/valley. A dashed horizontal line marks the zero reference level with positive above and negative below.",
+      "explanation": "The trace is a smooth, symmetrical, repeating curve with equal crests above and troughs below a center (zero) line, and no sharp corners. That smooth repeating shape is the natural waveform of alternating current, called a sine wave (also a sinusoidal waveform). 'Peak wave' and 'non-peak wave' are not real waveform names, and an oscilloscope is the instrument that displays a wave, not the wave itself.",
+      "media": "img/sine-wave.svg",
+      "mediaDescription": "A smooth, symmetrical, repeating waveform on a grid, with equal crests above and troughs below a central zero line.",
       "topic": "Electrical Theory"
     },
     {
@@ -1707,9 +1708,9 @@
         "2 volts"
       ],
       "answerIndex": 1,
-      "explanation": "Looking at the diagram, note that it says .5 Volts/DIV. This is \"volts per division\". Each square, or division, is .5, therefore, count the divisions between Y and A, and multiply by .5",
-      "media": "media/54582.jpg",
-      "mediaDescription": "Diagram popup titled 'Diagram'. Oscilloscope-style waveform display on a grid. Y-axis labeled 'VOLTS = .5/DIV', X-axis labeled 'TIME = 10ms/DIV'. Shows a sine wave. Point 'Y' is marked on the y-axis (horizontal dashed reference line at the sine wave's mid/zero level). Point 'A' is marked at a wave peak (upper), point 'B' is marked at a wave trough (lower). The dashed reference from Y goes to peak A. Caption below: 'Click to open image in new window'. Belongs to Question ID 54582 / Question 87. Per the associated help, count divisions between Y and A and multiply by .5; A is 2 divisions above Y = 1 volt.",
+      "explanation": "Read voltage on the vertical axis using the VOLTS/DIV scale. Each square (division) is 0.5 V. Y is the zero center line and A is the peak of the wave. Count the vertical squares from Y up to A: that is 2 divisions. Multiply by the scale: 2 divisions × 0.5 V per division = 1 volt.",
+      "media": "img/scope-waveform.svg",
+      "mediaDescription": "Oscilloscope sine trace. Vertical scale 0.5 V per division, horizontal 10 ms per division. Y is the zero center line; A is a peak two divisions above it; B is a trough; C is on the center line.",
       "topic": "Electrical Theory"
     },
     {
@@ -1725,9 +1726,10 @@
       "references": [
         "Telecommunications Distribution Methods Manual: Telecommunication Distribution Methods Manual 12th ed Vol 1 Page 1-17, 18"
       ],
-      "media": "media/54583.jpg",
-      "mediaDescription": "Oscilloscope/waveform diagram (labeled 'Diagram (click to enlarge)'). A sine wave is plotted on a grid. Vertical axis labeled 'VOLTS' with '5V/DIV'. Horizontal axis labeled 'X' with 'TIME = 10ms/DIV'. Points marked on the waveform: A (first positive peak), Y (a horizontal reference/dashed line at mid-level), B (a trough/lower point), C (a later point on the dashed reference line to the right). The waveform spans from point A to point C across 5 horizontal divisions, giving 5 x 10ms = 50 ms.",
-      "topic": "Electrical Theory"
+      "media": "img/scope-waveform.svg",
+      "mediaDescription": "Oscilloscope sine trace. Horizontal scale 10 ms per division. A is a peak; C is on the center line five divisions to the right of A.",
+      "topic": "Electrical Theory",
+      "explanation": "Read time on the horizontal axis using the TIME/DIV scale. Each square is 10 ms. A is the peak; C is on the center line five squares to its right. Count the horizontal squares from A to C: 5 divisions. Multiply: 5 divisions × 10 ms per division = 50 ms."
     },
     {
       "id": "54584",
@@ -1739,12 +1741,12 @@
         "100 ms"
       ],
       "answerIndex": 2,
-      "explanation": "Note: 10 ms/DIV ( /DIV = \"per division\") each box, or division, is equal to 10 ms. Count the divisions and multiply by 10.",
+      "explanation": "'Time between waves' is the period: the time for one complete cycle, from a point on the wave to the next identical point (for example peak to next peak). On the grid one full cycle spans 4 squares horizontally. Using the TIME scale of 10 ms per division: 4 divisions × 10 ms per division = 40 ms.",
       "references": [
         "Telecommunications Distribution Methods Manual : 1-17"
       ],
-      "media": "media/54584.jpg",
-      "mediaDescription": "Oscilloscope-style diagram (click to enlarge) on a grid. Y-axis labeled VOLTS = 5/DIV, X-axis labeled TIME = 10ms/DIV. A sine-like waveform crosses the grid with point A marked at a peak (upper region) and point B marked at a trough (lower region). The time between the two waves/points spans 4 divisions = 40 ms.",
+      "media": "img/scope-waveform.svg",
+      "mediaDescription": "Oscilloscope sine trace. Horizontal scale 10 ms per division. One full cycle of the wave spans four divisions.",
       "topic": "Electrical Theory"
     },
     {
