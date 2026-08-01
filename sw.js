@@ -1,6 +1,6 @@
 /* Service worker: makes the quiz installable and fully offline.
    Bump CACHE when you deploy new assets to retire the old cache. */
-const CACHE = "cr67-v8";
+const CACHE = "cr67-v9";
 const ASSETS = [
   "./",
   "index.html",
@@ -10,6 +10,7 @@ const ASSETS = [
   "guide-content.html",
   "img/ohm-water.svg",
   "img/scope-waveform.svg",
+  "img/scope-worked.svg",
   "img/sine-wave.svg",
   "img/circuit-13198.svg",
   "img/switch-dpdt.svg",

@@ -333,7 +333,7 @@ The exam shows a sine wave on such a grid and asks you to read a voltage or a ti
 off it. This looks intimidating and is actually just counting squares, as long as
 you first find the scale.
 
-![Oscilloscope sine trace on a grid: Y is the zero center line, A is a peak two divisions above it, B is a trough, C is on the center line to the right. Vertical scale 0.5 volts per division, horizontal scale 10 ms per division.](img/scope-waveform.svg)
+![Worked oscilloscope example: voltage from the Y center line to peak A is 2 divisions times 0.5 V per division = 1 V; time from A to C is 5 divisions times 10 ms per division = 50 ms.](img/scope-worked.svg)
 
 Two labels give you the scale, one per axis:
 
